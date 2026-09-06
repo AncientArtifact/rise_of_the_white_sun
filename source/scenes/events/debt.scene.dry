@@ -1,4 +1,5 @@
 title: The Guomindang out of Funds
+subtitle: Troubling.
 new-page: true
 view-if: funds < 0
 
