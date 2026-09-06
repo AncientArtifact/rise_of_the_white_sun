@@ -40,6 +40,6 @@ The army has been defunded. What does this do for us?
 
 @bad
 subtitle: -1 quarterly income - we are forced to pay loan interest.
-on-arrival: income -= 1;
+on-arrival: interest += 1;
 
 Looks like our financial situation is getting dire. We now have to pay loan interests to keep our deficit managable.
