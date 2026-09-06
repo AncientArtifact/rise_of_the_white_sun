@@ -56,6 +56,7 @@ Q.education = 0;
 Q.centralize = 0;
 Q.gambling = 1;
 Q.corruption = 1;
+Q.infrastructure = 0;
 Q.centralbank = 0;
 Q.justice_reform = 0;
 Q.police_reform = 0;
