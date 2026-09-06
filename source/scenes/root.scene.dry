@@ -49,14 +49,18 @@ Q.use_decimals = 0;
 
 // party resources
 Q.funds = 5;
-// party dues
-Q.income = 2;
+Q.income = 3;
 Q.military_costs = 1;
 Q.total_income = 1;
 Q.education = 0;
+Q.centralize = 0;
+Q.gambling = 1;
+Q.corruption = 1;
+Q.centralbank = 0;
 Q.justice_reform = 0;
 Q.police_reform = 0;
 Q.opium_producing = 0;
+
 
 // the state of the party
 // overall dissent reduces every increase in party support.
@@ -177,9 +181,6 @@ Q.pro_republic = 59;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
-Q.centralize = 0;
-Q.gambling = 1;
-Q.centralbank = 0;
 
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
