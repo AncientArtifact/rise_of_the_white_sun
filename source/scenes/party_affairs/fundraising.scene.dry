@@ -16,22 +16,18 @@ For better or for worse, the party cannot exist without money.
 - @increase: Increase fundraising efforts.
 
 @maintain
-subtitle: [+ income +] funds gained.
-on-arrival: funds += income;
+subtitle: +0 funds per quarter.
 
 We maintain our current income.
 
 @reduce
-subtitle: [+ income - 1 +] funds gained.
-choose-if: income > 1
-on-arrival: income -= 1; funds += income; left_dissent -= 8; center_left_dissent -= 8; center_dissent -= 8; right_dissent -= 8; whmapoa_dissent -= 8
+subtitle: -1 funds per quarter.
+on-arrival: income -= 1;
 
 We decreased fundraising for our party within the province.
 
 @increase
-subtitle: [+ income + 1 +] funds gained.
-on-arrival: income += 1; funds += income; left_dissent += 8; center_left_dissent += 8; center_dissent += 8; right_dissent += 8; whmapoa_dissent += 8
-view-if: income <= 4
+subtitle: +1 funds per quarter.
+on-arrival: income += 1;
 
 We increased fundraising for our party within the province.
-
