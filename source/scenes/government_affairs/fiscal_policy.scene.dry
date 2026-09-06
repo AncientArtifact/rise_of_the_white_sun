@@ -18,6 +18,7 @@ Fiscal policy involves issues of taxation and funds.
 - @raise: Increase overall taxes.
 - @cut: Cut overall taxes.
 - @issue: Issue large sums of money.
+- @loans: Look at possibilities for loans.
 - @root: Do not change the tax system.
 - @easy_discard
 - @cancel_advisor_action
@@ -45,3 +46,26 @@ choose-if: inflation < 10
 on-arrival: funds += 2; inflation += 3; new_middle_kmt -= 4; old_middle_kmt -= 4; workers_kmt -= 4; unemployed += 2; workers_kmt -= 5 if lower_tax_rates > 1; inflation -= 1.1; economic_growth -= 0.6; new_middle_kmt -= 2 if upper_tax_rates > 1; old_middle_kmt -= 2 if upper_tax_rates > 1;
 
 Issuing more sums of cash will start taking a toll on our inflation.
+
+@loans
+
+We have many options to get loans from Cantonese banks or private companies.
+
+- @debt: Take out some loans.
+- @repay: Repay some of our debts.
+
+@debt
+subtitle +3 funds
+choose-if: loans < 4
+unavailable-subtitle: We're running out of lenders.
+on-arrival: funds += 3; loans += 1;
+
+We have taken out a sizable loan. Hopefully we can repay this in time.
+
+@repay
+subtitle: -3 funds
+choose-if: loans > 0
+unavailable-subtitle: There are no loans to repay.
+on-arrival: funds -= 3; loans -= 1;
+
+We have repaid one of our loans.
