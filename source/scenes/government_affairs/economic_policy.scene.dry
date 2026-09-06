@@ -46,7 +46,7 @@ Founding the Central Bank of Canton has greatly improved our efforts in managing
 subtitle: -2 funds - Build more roads, railways and improve our ports.
 unavailable-subtitle: -2 funds
 choose-if: funds >= 2
-on-arrival: funds -= 2; economic_growth += 1; inflation -= 1;
+on-arrival: funds -= 2; economic_growth += 1; inflation -= 1; infrastructure += 1;
 
 Building more infrastructure does well for our income.
 
