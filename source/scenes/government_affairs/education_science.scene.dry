@@ -21,7 +21,7 @@ view-if: not last_advisor_action
 - @easy_discard
 - @cancel_advisor_action
 
-@schoolbuild
+@schoolfund
 title: Fund building schools in the countryside.
 subtitle: -1 funds
 choose-if: funds >= 1
