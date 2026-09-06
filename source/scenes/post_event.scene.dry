@@ -115,8 +115,6 @@ if (Q.week >= 5) {
     }
 }
 
-Q.total_costs = Q.military_costs += Q.corruption;
-
 if (Q.infrastructure === 2) {
  Q.income += 1;
 }
@@ -140,6 +138,12 @@ if (Q.education === 4) {
 if (Q.education >= 5) {
  Q.income += 3;
 }
+
+if (Q.loans > 0) {
+ Q.interest += Q.loans*3;
+}
+
+Q.total_costs = Q.military_costs += Q.corruption += Q.interest;
 
 Q.total_income = Q.income - Q.total_costs;
 
