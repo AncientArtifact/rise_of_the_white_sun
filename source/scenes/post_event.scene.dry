@@ -117,27 +117,27 @@ if (Q.week >= 5) {
 
 Q.total_costs = Q.military_costs += Q.corruption;
 
-if (Q.infrastructure === 1) {
+if (Q.infrastructure === 2) {
  Q.income += 1;
 }
 
-if (Q.infrastructure === 2) {
+if (Q.infrastructure === 4) {
  Q.income += 2;
 }
 
-if (Q.infrastructure === 3) {
+if (Q.infrastructure >= 5) {
  Q.income += 3;
 }
 
-if (Q.education === 1) {
+if (Q.education === 2) {
  Q.income += 1;
 }
 
-if (Q.education === 2) {
+if (Q.education === 4) {
  Q.income += 2;
 }
 
-if (Q.education === 3) {
+if (Q.education >= 5) {
  Q.income += 3;
 }
 
