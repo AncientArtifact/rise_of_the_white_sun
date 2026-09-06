@@ -28,9 +28,17 @@ We have successfully reformed the city police, kicking out corrupt officials, fu
 subtitle: -2 funds
 choose-if: corruption > 0
 unavailable-subtitle: Corruption is low.
-on-arrival: funds -= 2; corruption -= 1;
+on-arrival: funds -= 2;
+go-to: wincorruption if police_reform >= corruption; losecorruption if police_reform < corruption
 
-Corruption has been investigated and corrupt officials have been arrested. Good for our income.
+@wincorruption
+on-arrival: corruption -= 1;
+
+We have successfully cracked down on corruption. This is great for our income.
+
+@losecorruption
+
+Unfortunately, our police failed to catch any targets. We should reform our police further.
 
 @back
 go-to: root
