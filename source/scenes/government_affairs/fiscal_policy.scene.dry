@@ -55,7 +55,7 @@ We have many options to get loans from Cantonese banks or private companies.
 - @repay: Repay some of our debts.
 
 @debt
-subtitle +3 funds
+subtitle: +3 funds
 choose-if: loans < 4
 unavailable-subtitle: We're running out of lenders.
 on-arrival: funds += 3; loans += 1;
