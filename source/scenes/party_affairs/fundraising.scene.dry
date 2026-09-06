@@ -11,8 +11,8 @@ tags: party_affairs
 
 For better or for worse, the party cannot exist without money.
 
-- @maintain: Maintain fundraising efforts.
 - @reduce: Reduce fundraising efforts.
+- @maintain: Maintain fundraising efforts.
 - @increase: Increase fundraising efforts.
 
 @maintain
