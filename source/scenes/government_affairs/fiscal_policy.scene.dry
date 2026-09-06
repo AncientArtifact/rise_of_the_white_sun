@@ -53,6 +53,7 @@ We have many options to get loans from Cantonese banks or private companies.
 
 - @debt: Take out some loans.
 - @repay: Repay some of our debts.
+- @nope: Let's not touch our debts yet.
 
 @debt
 subtitle: +3 funds
@@ -69,3 +70,6 @@ unavailable-subtitle: There are no loans to repay.
 on-arrival: funds -= 3; loans -= 1;
 
 We have repaid one of our loans.
+
+@nope
+go-to: fiscal_policy.fiscal_menu
