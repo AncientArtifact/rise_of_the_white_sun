@@ -63,6 +63,7 @@ Q.justice_reform = 0;
 Q.police_reform = 0;
 Q.opium_producing = 0;
 Q.loans = 0;
+Q.interest = 0;
 
 
 // the state of the party
