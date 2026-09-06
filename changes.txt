@@ -1,23 +1,26 @@
-v0.2-
+av0.2-
 fixing all the parties, advisors, factions and status
 
-v0.3-
+av0.3-
 first events, scenes and advisors
 
-v0.4-
+av0.4-
 almost all advisors finished, events until 1924
 
-v0.5-
+av0.5-
 events until 1925, right sidebar, biweekly turns
 
-v0.6-
+av0.6-
 quarterly income, budget and resource merge, first warlord affairs card,
 
-v0.7-
+av0.7-
 police, justice, opium cards, deng benyin & liu zhenhuan added
 
-v0.8-
+av0.8-
 all 1926 events, northern expedition opener
+
+bv0.9-
+debt event, loans, corruption, education, police options, extra warlord cards
 
 **v1- The National Revolution**
 
