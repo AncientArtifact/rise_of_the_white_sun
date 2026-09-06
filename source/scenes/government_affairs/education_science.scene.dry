@@ -34,7 +34,7 @@ title: Change the educational curriculum.
 choose-if: curriculum_timer = 0
 unavailable-subtitle: [? if curriculum_timer > 0 : It is too early to change the curriculum again. ?]
 
-Many intellectuals believe that education in China is not fit for the modern era. Much of the educational system still follows imperial-era traditions of militaristic discipline, and far-right professors and students rule the universities. Nevertheless, there have been strides in bringing poor children into the schools.
+Many intellectuals believe that education in China is not fit for the modern era. Much of the educational system still follows imperial-era traditions focusing on old Confuscian and Buddhist values while keeping it only for the rich. Nevertheless, there have been strides in bringing more children into the schools.
 
 What should be the major focus of our new curriculum?
 
