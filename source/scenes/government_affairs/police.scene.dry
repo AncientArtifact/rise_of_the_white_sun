@@ -11,6 +11,7 @@ card-image: img/kmtpolice.jpg
 It is necessary to keep order in our regions and keep our citizens safe from criminals.
 
 - @reform: Reform the Guangzhou police.
+- @corruption : Crack down on corruption.
 - @back: Leave security alone for now.
 - @easy_discard
 - @cancel_advisor_action
@@ -22,6 +23,14 @@ unavailable-subtitle: Not enough funds.
 on-arrival: funds -= 1; police_reform += 1; workers_kmt += 5;
 
 We have successfully reformed the city police, kicking out corrupt officials, funding more equipment and hiring more officers.
+
+@corruption
+subtitle: -2 funds
+choose-if: corruption > 0
+unavailable-subtitle: Corruption is low.
+on-arrival: funds -= 2; corruption -= 1;
+
+Corruption has been investigated and corrupt officials have been arrested. Good for our income.
 
 @back
 go-to: root
