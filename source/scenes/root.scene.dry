@@ -50,8 +50,9 @@ Q.use_decimals = 0;
 // party resources
 Q.funds = 5;
 Q.income = 3;
-Q.military_costs = 1;
+Q.total_costs = 2;
 Q.total_income = 1;
+Q.military_costs = 1;
 Q.education = 0;
 Q.centralize = 0;
 Q.gambling = 1;
