@@ -662,11 +662,6 @@ table {
   margin: 0 auto;
 }
 
-.province {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .province:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 12px #ffffff;
-}
+  transform: translate(10px 0 0 10px);
+  filter: drop-shadow(0 0 #ffffff)
