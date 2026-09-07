@@ -563,6 +563,7 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 if (typeof updateMap === 'function') {
         updateMap();
     }
+!}
 
 set-bg: img/bgchina.jpg
 new-page: true
@@ -589,6 +590,7 @@ difficulty = -1;
 income = 3; 
 funds = 6;
 !}
+
 go-to: 1924_main
 
 @1924_hard
