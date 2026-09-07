@@ -350,8 +350,10 @@ if (Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) {
 
 Q.hainan_faction = Q.guangdong_faction
 Q.zhejiang_n_faction = Q.zhejiang_faction
+Q.guangzhou_faction = Q.guangdong_faction
 Q.hainan_governor = Q.guangdong_governor
 Q.zhejiang_n_governor = Q.zhejiang_governor
+Q.guangzhou_governor = Q.guangdong_governor
 
  Q.has_event = 0;
  // check if there are any cards in #event, and then go to main if not.
