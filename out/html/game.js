@@ -182,6 +182,19 @@ window.hideMap = function() {
     }
   };
 
+  function updateMap() {
+    if (typeof Q === 'undefined') return;
+    provinces.forEach(province => {
+        const faction = Q[province + "_faction"];
+        const color = factionColors[faction];
+        const path = document.getElementById(province);
+        if (path && color) {
+            path.setAttribute('fill', color);
+            path.style.fill = color + ' !important';
+        }
+    });
+}
+
   
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
