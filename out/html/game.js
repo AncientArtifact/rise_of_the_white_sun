@@ -264,7 +264,6 @@ window.hideMap = function() {
 
     window.onDisplayContent = function () {
         window.updateSidebar();
-        window.updateSidebarRight();
     };
   
   // keep track of initial values
@@ -294,16 +293,16 @@ window.hideMap = function() {
     );
 
     if (rightActive) {
-        window.statusTabId = rightActive.id || 'main_concerns_tab';
-        window.statusTabRight = 'concern';
-    } else if (leftActive) {
-        window.statusTabId = leftActive.id || 'main_tab';
-        window.statusTab = 'status';
-    } else {
-        window.statusTabId = 'main_tab';
-        window.statusTab = 'status';
-        window.statusTabRight = 'concern';
-    }
+    window.statusTabId = rightActive.id || 'main_concerns_tab';
+    window.statusTabRight = 'status_right';
+} else if (leftActive) {
+    window.statusTabId = leftActive.id || 'main_tab';
+    window.statusTab = 'status';
+} else {
+    window.statusTabId = 'main_tab';
+    window.statusTab = 'status';
+    window.statusTabRight = 'status_right';
+}
 
     window.updateSidebar();
     window.updateSidebarRight();
