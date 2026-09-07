@@ -919,25 +919,25 @@ const provinces = [
 ];
 
 window.updateMap = function() {
-    if (typeof window.dendryUI === 'undefined' || !window.dendryUI.dendryEngine) return;
+    if (
+        typeof window.dendryUI === 'undefined' ||
+        !window.dendryUI.dendryEngine
+    ) {
+        return;
+    }
+
     const Q = window.dendryUI.dendryEngine.state.qualities;
-    
+
     provinces.forEach(province => {
         const faction = Q[province + "_faction"];
         const color = factionColors[faction];
         const path = document.getElementById(province);
 
         if (path && color) {
-            path.setAttribute('fill', color);
-            path.style.fill = color + ' !important';
+            path.setAttribute("fill", color);
+            path.style.setProperty("fill", color, "important");
         }
     });
-};
-
-const originalShowMap = window.showMap;
-window.showMap = function() {
-    originalShowMap();
-    window.updateMap();
 };
 </script>
        <button onclick="closeMap()">Close</button>
