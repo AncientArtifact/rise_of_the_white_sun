@@ -377,6 +377,9 @@ Q.guangzhou_governor = Q.guangdong_governor
 
  if (typeof window !== "undefined" && window.generateBar) {
  }
+
+window.updateMap();
+
  !}
 go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0; main.main_easy if has_event = 0 and difficulty < 0
 
