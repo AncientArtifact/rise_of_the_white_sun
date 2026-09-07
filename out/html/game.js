@@ -336,9 +336,4 @@ window.hideMap = function() {
     }
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
-
-document.addEventListener('DOMContentLoaded', function() {
-    updateMap();
-});
-
 }());
