@@ -937,7 +937,7 @@ window.updateMap = function() {
 const originalShowMap = window.showMap;
 window.showMap = function() {
     originalShowMap();
-    updateMap();
+    window.updateMap();
 };
 </script>
        <button onclick="closeMap()">Close</button>
