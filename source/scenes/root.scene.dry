@@ -388,6 +388,8 @@ Q.guangxi_governor = 'Lu Rongting';
 Q.guangxi_faction = 'Old Guangxi';
 Q.guangdong_governor = 'Sun Yat-sen';
 Q.guangdong_faction = 'Guomindang';
+Q.guangzhou_governor = 'Sun Yat-sen';
+Q.guangzhou_faction = 'Guomindang';
 Q.hainan_governor = 'Sun Yat-sen';
 Q.hainan_faction = 'Guomindang';
 
