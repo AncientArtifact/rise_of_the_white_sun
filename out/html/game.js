@@ -264,6 +264,7 @@ window.hideMap = function() {
 
     window.onDisplayContent = function () {
         window.updateSidebar();
+        window.updateSidebarRight();
     };
   
   // keep track of initial values
@@ -271,42 +272,37 @@ window.hideMap = function() {
   window.statusTab = "status";
   window.statusTabRight = "status_right";
   window.statusTabId = "main_tab";
+  window.statusTabRightId = "main_concerns_tab";
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
   window.onload = function() {
     window.dendryUI.loadSettings({show_portraits: false});
-
     if (window.dendryUI.dark_mode) {
         document.body.classList.add('dark-mode');
     }
+    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
 
-    window.pinnedCardsDescription =
-        "Advisor cards - actions are only usable once per 6 months.";
-
-    var rightActive = document.querySelector(
-        '#stats_sidebar_right .tab_button.active'
-    );
-
-    var leftActive = document.querySelector(
-        '#stats_sidebar .tab_button.active'
-    );
+    // Determine which tab/button is active in the DOM and initialize statusTab/statusTabId accordingly.
+    // Prefer right panel active if present.
+    var rightActive = document.querySelector('#stats_sidebar_right .tab_button.active');
+    var leftActive = document.querySelector('#stats_sidebar .tab_button.active');
 
     if (rightActive) {
-    window.statusTabId = rightActive.id || 'main_concerns_tab';
-    window.statusTabRight = 'status_right';
-} else if (leftActive) {
-    window.statusTabId = leftActive.id || 'main_tab';
-    window.statusTab = 'status';
-} else {
-    window.statusTabId = 'main_tab';
-    window.statusTab = 'status';
-    window.statusTabRight = 'status_right';
-}
+        window.statusTabId = rightActive.id || 'main_concerns_tab';
+        // right panel buttons use scene key 'concern' in your markup
+        window.statusTab = 'status_right';
+    } else if (leftActive) {
+        window.statusTabId = leftActive.id || 'main_tab';
+        // left panel uses 'status' scenes
+        window.statusTab = 'status';
+    } else {
+        window.statusTabId = 'main_tab';
+        window.statusTab = 'status';
+    }
 
-    window.updateSidebar();
-    window.updateSidebarRight();
-};
+     window.updateSidebar();
+  };
 
   /*
    * This function copied from the code for Infinite Space Battle Simulator
@@ -341,6 +337,15 @@ window.hideMap = function() {
   
   window.justLoaded = true;
   window.statusTab = "status";
+  window.statusTabRight = "status_right";
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
-});
+
+  window.onload = function() {
+    window.dendryUI.loadSettings({show_portraits: false});
+    if (window.dendryUI.dark_mode) {
+        document.body.classList.add('dark-mode');
+    }
+    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
+  };
+}());
