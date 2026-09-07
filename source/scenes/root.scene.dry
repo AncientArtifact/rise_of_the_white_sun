@@ -330,6 +330,8 @@ Q.shenyang_governor = 'Zhang Zuolin';
 Q.shenyang_faction = 'Fengtian';
 Q.hebei_governor = 'Wu Peifu';
 Q.hebei_faction = 'Zhili';
+Q.beijing_governor = 'Cao Kun';
+Q.beijing_faction = 'Zhili';
 Q.hubei_governor = 'Wu Peifu';
 Q.hubei_faction = 'Zhili';
 Q.shandong_governor = 'Zheng Shiqi';
@@ -346,6 +348,8 @@ Q.jiangxi_governor = 'Deng Huzhou';
 Q.jiangxi_faction = 'Zhili';
 Q.zhejiang_governor = 'Lu Yongxiang';
 Q.zhejiang_faction = 'Anhui';
+Q.zhejiang_n_governor = 'Lu Yongxiang';
+Q.zhejiang_n_faction = 'Anhui';
 Q.henan_governor = 'Wu Peifu';
 Q.henan_faction = 'Zhili';
 Q.shanxi_governor = 'Yan Xishan';
@@ -382,6 +386,8 @@ Q.guangxi_governor = 'Lu Rongting';
 Q.guangxi_faction = 'Old Guangxi';
 Q.guangdong_governor = 'Sun Yat-sen';
 Q.guangdong_faction = 'Guomindang';
+Q.hainan_governor = 'Sun Yat-sen';
+Q.hainan_faction = 'Guomindang';
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
