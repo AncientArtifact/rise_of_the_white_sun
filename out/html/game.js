@@ -257,6 +257,76 @@ window.hideMap = function() {
  window.onDisplayContent = function () {
         window.updateSidebar();
  };
+
+  const factionColors = {
+    "Guomindang": "#10186e",
+    "Communists": "#9e1515",
+    "Zhili": "#aba133",
+    "Fengtian": "#d1b24b",
+    "Anhui": "#46703e",
+    "New Guangxi Clique": "#8aa87d",
+    "Yunnan": "#723d85",
+    "Guizhou": "#b38e40",
+    "Guominjun": "#943452",
+    "Ma Clique": "#db6756",
+    "Sinkiang Clique": "#e3d620",
+    "Tibet": "#dfeded",
+    "Mongolia": "#115e16",
+    "Neutral": "#919191",
+    "N/A": "#919191"
+};
+
+const provinces = [
+    "liaoning",
+    "jilin",
+    "heilongjiang",
+    "rehe",
+    "chahar",
+    "suiyuan",
+    "ningxia",
+    "mongolia",
+    "xinjiang",
+    "gansu",
+    "shaanxi",
+    "shanxi",
+    "hebei",
+    "henan",
+    "shandong",
+    "hubei",
+    "tibet",
+    "sichuan",
+    "yunnan",
+    "guizhou",
+    "hunan",
+    "guangdong",
+    "guangxi",
+    "fujian",
+    "jiangxi",
+    "zhejiang",
+    "anhui",
+    "jiangsu",
+    "shenyang",
+    "beijing",
+    "nanjing",
+    "shanghai",
+    "wuhan",
+    "guangzhou",
+];
+
+function updateMap() {
+    provinces.forEach(province => {
+        const faction = Q[province + "_faction"];
+        const color = factionColors[faction];
+
+        const path = document.getElementById(province);
+
+        if (path && color) {
+            path.style.fill = color;
+        }
+    });
+}
+
+updateMap();
   
   // keep track of initial values
   window.justLoaded = true;
