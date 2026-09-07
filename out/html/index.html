@@ -918,18 +918,26 @@ const provinces = [
     "guangzhou",
 ];
 
-provinces.forEach(province => {
+function updateMap() {
+    if (typeof Q === 'undefined') return;
+    provinces.forEach(province => {
         const faction = Q[province + "_faction"];
         const color = factionColors[faction];
         const path = document.getElementById(province);
-
         if (path && color) {
             path.setAttribute('fill', color);
             path.style.fill = color + ' !important';
         }
     });
-         
-       </script>
+}
+
+
+const originalShowMap = window.showMap;
+window.showMap = function() {
+    originalShowMap();
+    updateMap();
+};
+</script>
        <button onclick="closeMap()">Close</button>
      </div>
     </div>
