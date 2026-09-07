@@ -325,8 +325,6 @@ function updateMap() {
         }
     });
 }
-
-updateMap();
   
   // keep track of initial values
   window.justLoaded = true;
@@ -393,7 +391,7 @@ updateMap();
       bar.appendChild(value);
       return bar;
   };
-
+  
   window.justLoaded = true;
   window.statusTab = "status";
   window.dendryModifyUI = main;
@@ -406,5 +404,9 @@ updateMap();
     }
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateMap();
+});
 
 }());
