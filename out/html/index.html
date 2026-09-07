@@ -918,19 +918,21 @@ const provinces = [
     "guangzhou",
 ];
 
-function updateMap() {
-    if (typeof Q === 'undefined') return;
+window.updateMap = function() {
+    if (typeof window.dendryUI === 'undefined' || !window.dendryUI.dendryEngine) return;
+    const Q = window.dendryUI.dendryEngine.state.qualities;
+    
     provinces.forEach(province => {
         const faction = Q[province + "_faction"];
         const color = factionColors[faction];
         const path = document.getElementById(province);
+
         if (path && color) {
             path.setAttribute('fill', color);
             path.style.fill = color + ' !important';
         }
     });
-}
-
+};
 
 const originalShowMap = window.showMap;
 window.showMap = function() {
