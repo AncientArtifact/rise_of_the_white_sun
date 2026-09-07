@@ -265,11 +265,7 @@ window.hideMap = function() {
     window.onDisplayContent = function () {
         window.updateSidebar();
         window.updateSidebarRight();
-    }
-
- window.onDisplayContent = function () {
-        window.updateSidebar();
- };
+    };
   
   // keep track of initial values
   window.justLoaded = true;
