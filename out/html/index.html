@@ -918,21 +918,17 @@ const provinces = [
     "guangzhou",
 ];
 
-function updateMap() {
-    provinces.forEach(province => {
+rovinces.forEach(province => {
         const faction = Q[province + "_faction"];
         const color = factionColors[faction];
-
         const path = document.getElementById(province);
 
         if (path && color) {
-            path.style.fill = color;
+            path.setAttribute('fill', color);
+            path.style.fill = color + ' !important';
         }
-
-      updateMap();
-      
     });
-}
+         
        </script>
        <button onclick="closeMap()">Close</button>
      </div>
