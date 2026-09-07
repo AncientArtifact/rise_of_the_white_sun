@@ -664,4 +664,5 @@ table {
 
 .province:hover {
   transform: translate(10px 0 0 10px);
-  filter: drop-shadow(0 0 #ffffff)
+  filter: drop-shadow(0 0 #333333)
+}
