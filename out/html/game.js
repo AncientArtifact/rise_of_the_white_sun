@@ -304,22 +304,65 @@ window.hideMap = function() {
      window.updateSidebar();
   };
 
-  document.querySelectorAll(".province").forEach(province => {
-    province.addEventListener("mouseenter", () => {
-        const provinceId = province.id;
-        const tooltip = document.getElementById(provinceId + "-tooltip");
-        if (tooltip) {
-            tooltip.classList.add("show");
-        }
+  function setupProvinceTooltips() {
+    const provinces = document.querySelectorAll(".province");
+    const labels = document.querySelectorAll(".province_tooltip");
+    const provinceNames = {
+        xinjiang: "Xinjiang",
+        tibet: "Tibet",
+        qinghai: "Qinghai",
+        gansu: "Gansu",
+        ningxia: "Ningxia",
+        mongolia: "Mongolia",
+        suiyuan: "Suiyuan",
+        chahar: "Chahar",
+        rehe: "Rehe/Jehol",
+        liaoning: "Liaoning/Fengtian",
+        jilin: "Jilin",
+        heilongjiang: "Heilongjiang",
+        shaanxi: "Shaanxi",
+        shanxi: "Shanxi",
+        hebei: "Hebei",
+        shandong: "Shandong",
+        henan: "Henan",
+        sichuan: "Sichuan",
+        hubei: "Hubei",
+        anhui: "Anhui",
+        jiangsu: "Jiangsu",
+        zhejiang: "Zhejiang",
+        jiangxi: "Jiangxi",
+        fujian: "Fujian",
+        hunan: "Hunan",
+        guizhou: "Guizhou",
+        yunnan: "Yunnan",
+        guangxi: "Guangxi",
+        guangdong: "Guangdong",
+
+        shenyang: "Shenyang/Mukden",
+        beijing: "Beijing",
+        nanjing: "Nanjing",
+        shanghai: "Shanghai",
+        wuhan: "Wuhan",
+        guangzhou: "Guangzhou"
+    };
+    provinces.forEach(province => {
+        const name = provinceNames[province.id];
+        if (!name) return;
+        let label = null;
+        labels.forEach(text => {
+            if (text.textContent.trim() === name) {
+                label = text;
+            }
+        });
+        if (!label) return;
+        province.addEventListener("mouseenter", () => {
+            label.classList.add("show");
+        });
+        province.addEventListener("mouseleave", () => {
+            label.classList.remove("show");
+        });
     });
-    province.addEventListener("mouseleave", () => {
-        const provinceId = province.id;
-        const tooltip = document.getElementById(provinceId + "-tooltip");
-        if (tooltip) {
-            tooltip.classList.remove("show");
-        }
-    });
-});
+}
   
   /*
    * This function copied from the code for Infinite Space Battle Simulator
@@ -365,4 +408,5 @@ window.hideMap = function() {
     }
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
+  setupProvinceTooltips();
 }());
