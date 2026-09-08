@@ -669,7 +669,7 @@ table {
 
 .province_tooltip {
   position: absolute;
-  visibility: hidden;
+  display: none;
   width: 150px;
   max-width: 200px;
   font-size: 0.9em;
@@ -680,5 +680,5 @@ table {
 }
 
 .province_tooltip:hover {
-  visibility:visible;
+  display: block;
 }
