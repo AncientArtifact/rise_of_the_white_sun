@@ -666,3 +666,15 @@ table {
   transform: translate(50px 0 0 50px);
   filter: drop-shadow(0 0 #333333)
 }
+
+.province_tooltip {
+  position: absolute;
+  visibility: hidden;
+  width: 150px;
+  max-width: 200px;
+  font-size: 0.9em;
+  z-index: 2;
+  padding: 0.2em;
+  border: 1px solid var(--border-color);
+  background-color: var(--content-bg-color);
+}
