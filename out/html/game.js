@@ -304,6 +304,23 @@ window.hideMap = function() {
      window.updateSidebar();
   };
 
+  document.querySelectorAll(".province").forEach(province => {
+    province.addEventListener("mouseenter", () => {
+        const provinceId = province.id;
+        const tooltip = document.getElementById(provinceId + "-tooltip");
+        if (tooltip) {
+            tooltip.classList.add("show");
+        }
+    });
+    province.addEventListener("mouseleave", () => {
+        const provinceId = province.id;
+        const tooltip = document.getElementById(provinceId + "-tooltip");
+        if (tooltip) {
+            tooltip.classList.remove("show");
+        }
+    });
+});
+  
   /*
    * This function copied from the code for Infinite Space Battle Simulator
    *
