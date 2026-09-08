@@ -678,3 +678,7 @@ table {
   border: 1px solid var(--border-color);
   background-color: var(--content-bg-color);
 }
+
+.province_tooltip:hover {
+  visibility:visible;
+}
