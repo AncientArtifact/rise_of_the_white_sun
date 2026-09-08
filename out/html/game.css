@@ -668,17 +668,22 @@ table {
 }
 
 .province_tooltip {
-  position: absolute;
-  display: none;
-  width: 150px;
-  max-width: 200px;
-  font-size: 0.9em;
-  z-index: 2;
-  padding: 0.2em;
-  border: 1px solid var(--border-color);
-  background-color: var(--content-bg-color);
+    display: none;
+    pointer-events: none;
+
+    font-family: "Minion Pro", Georgia, serif;
+    font-size: 50px;
+    font-weight: normal;
+
+    fill: #000000;
+    text-anchor: middle;
+    dominant-baseline: middle;
 }
 
-.province_tooltip:hover {
-  display: block;
+.province_tooltip.show {
+    display: block;
+}
+
+.city-label {
+    font-size: 35px;
 }
