@@ -58,7 +58,7 @@ We have many options to get loans from Cantonese banks or private companies.
 @debt
 subtitle: +3 funds
 choose-if: loans < 4
-unavailable-subtitle: We're running out of lenders.
+unavailable-subtitle: We have too much loans.
 on-arrival: funds += 3; loans += 1;
 
 We have taken out a sizable loan. Hopefully we can repay this in time.
