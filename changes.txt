@@ -19,9 +19,8 @@ police, justice, opium cards, deng benyin & liu zhenhuan added
 av0.8-
 all 1926 events, northern expedition opener
 
-bv0.9-
+av0.9-
 debt event, loans, corruption, education, police options, extra warlord cards
 
-**v1- The National Revolution**
-
-*Coming soon..*
+av0.10-
+map, new music, new advisors, income screen
