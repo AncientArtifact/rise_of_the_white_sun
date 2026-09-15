@@ -542,6 +542,7 @@ Q.southexped_timer = 0;
 Q.tanyankai_advisor = 1; // Tan Yankai
 Q.sunyatsen_advisor = 1; // Sun Yat-sen
 Q.sunyatsen_dead = 0;
+Q.sunfo_advisor = 0;
 
 
 // left advisors
@@ -565,11 +566,12 @@ Q.eugenechen_advisor = 0;
 
 // Whampoa advisors
 Q.chiangkaishek_advisor = 0;
+Q.chiangkaishek_exile = 0;
 Q.xuchongzhi_advisor = 0;
 Q.xuchongzhi_dead = 0;
-
-Q.leber_advisor = 0; // Julius Leber (post-1930)
-Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
+Q.heyingqin_advisor = 0;
+Q.lizongren_advisor = 0;
+Q.tangshengzhi_advisor = 0;
 
 // Nonfactional advisors
 Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
