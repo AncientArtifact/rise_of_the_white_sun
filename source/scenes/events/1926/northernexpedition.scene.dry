@@ -138,5 +138,5 @@ Probably. Maybe, maybe not. But whatever the costs, we'll fight for the National
 @eight
 on-arrival: northern_expedition_begun = 1;
 set-bg: img/bgnorthernexped.jpg
-audio: shuffle audio/ihaveagun.mp4
+audio: shuffle audio/indomitablespirit.mp4 audio/heroicwarriors.mp4
 go-to: root
