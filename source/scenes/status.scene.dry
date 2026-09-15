@@ -105,25 +105,27 @@ Economic growth: [+ economic_growth_2 +]%
 
 @finances
 
+= **Finances**
+
 Income: [? if income > 0 : <span style="color: #66BB6A;">+[+ income +]</span> ?][? if income < 0 : <span style="color: #d42f2f;">-[+ income +]</span> ?][? if income = 0 : <span style="color: #FFB74D;">[+ income +]</span> ?]
 
-Income from taxes: [? if tax_income > 0 : <span style="color: #66BB6A;">+[+ tax_income +]</span> ?][? if tax_income = 0 : <span style="color: #FFB74D;">[+ tax_income +]</span> ?]
+   Income from taxes: [? if tax_income > 0 : <span style="color: #66BB6A;">+[+ tax_income +]</span> ?][? if tax_income = 0 : <span style="color: #FFB74D;">[+ tax_income +]</span> ?]
 
-Income from tax reform: [? if centralize_bonus > 0 : <span style="color: #66BB6A;">+[+ centralize_bonus +]</span> ?][? if tax_income = 0 : <span style="color: #FFB74D;">[+ centralize_bonus +]</span> ?]
+   Income from tax reform: [? if centralize_bonus > 0 : <span style="color: #66BB6A;">+[+ centralize_bonus +]</span> ?][? if tax_income = 0 : <span style="color: #FFB74D;">[+ centralize_bonus +]</span> ?]
 
-Income from education bonuses: [? if education_bonus > 0 : <span style="color: #66BB6A;">+[+ education_bonus +]</span> ?][? if education_bonus = 0 : <span style="color: #FFB74D;">[+ education_bonus +]</span> ?]
+   Income from education bonuses: [? if education_bonus > 0 : <span style="color: #66BB6A;">+[+ education_bonus +]</span> ?][? if education_bonus = 0 : <span style="color: #FFB74D;">[+ education_bonus +]</span> ?]
 
-Income from infrastructure projects: [? if infrastructure_bonus > 0 : <span style="color: #66BB6A;">+[+ infrastructure_bonus +]</span> ?][? if infrastructure_bonus = 0 : <span style="color: #FFB74D;">[+ infrastructure_bonus +]</span> ?]
+   Income from infrastructure projects: [? if infrastructure_bonus > 0 : <span style="color: #66BB6A;">+[+ infrastructure_bonus +]</span> ?][? if infrastructure_bonus = 0 : <span style="color: #FFB74D;">[+ infrastructure_bonus +]</span> ?]
 
-Other income sources: [? if other_income > 0 : <span style="color: #66BB6A;">+[+ other_income +]</span> ?][? if other_income = 0 : <span style="color: #FFB74D;">[+ other_income +]</span> ?]
+   Other income sources: [? if other_income > 0 : <span style="color: #66BB6A;">+[+ other_income +]</span> ?][? if other_income = 0 : <span style="color: #FFB74D;">[+ other_income +]</span> ?]
 
 Expenses: [? if total_costs < 0 : <span style="color: #66BB6A;">+[+ total_costs +]</span> ?][? if total_costs > 0 : <span style="color: #d42f2f;">-[+ total_costs +]</span> ?][? if total_costs = 0 : <span style="color: #FFB74D;">[+ total_costs +]</span> ?]
 
-Expenses from the military: [? if military_costs < 0 : <span style="color: #d42f2f;">-[+ military_costs +]</span> ?][? if military_costs = 0 : <span style="color: #FFB74D;">[+ military_costs +]</span> ?]
+   Expenses from the military: [? if military_costs < 0 : <span style="color: #d42f2f;">-[+ military_costs +]</span> ?][? if military_costs = 0 : <span style="color: #FFB74D;">[+ military_costs +]</span> ?]
 
-Expenses from debt interest: [? if interest < 0 : <span style="color: #d42f2f;">-[+ interest +]</span> ?][? if interest = 0 : <span style="color: #FFB74D;">[+ interest +]</span> ?]
+   Expenses from debt interest: [? if interest < 0 : <span style="color: #d42f2f;">-[+ interest +]</span> ?][? if interest = 0 : <span style="color: #FFB74D;">[+ interest +]</span> ?]
 
-Income lost to corruption: [? if corruption < 0 : <span style="color: #d42f2f;">-[+ corruption +]</span> ?][? if corruption = 0 : <span style="color: #FFB74D;">[+ corruption +]</span> ?]
+   Income lost to corruption: [? if corruption < 0 : <span style="color: #d42f2f;">-[+ corruption +]</span> ?][? if corruption = 0 : <span style="color: #FFB74D;">[+ corruption +]</span> ?]
 
 Total Income: [? if total_income > 0 : <span style="color: #66BB6A;">+[+ total_income +]</span> ?][? if total_income < 0 : <span style="color: #d42f2f;">-[+ total_income +]</span> ?][? if total_income = 0 : <span style="color: #FFB74D;">[+ total_income +]</span> ?]
 
