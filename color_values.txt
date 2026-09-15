@@ -68,3 +68,25 @@
     <text class="province_tooltip city-label"
           x="74.5%" y="88%">Guangzhou</text>
 </g>
+
+.province_tooltip {
+    display: none;
+    pointer-events: none;
+
+    font-family: "Minion Pro", Georgia, serif;
+    font-size: 50px;
+    font-weight: normal;
+
+    fill: #000000;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.province_tooltip.show {
+    display: block;
+}
+
+.city-label {
+    font-size: 35px;
+}
+
