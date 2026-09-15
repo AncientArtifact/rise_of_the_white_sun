@@ -62,7 +62,7 @@ The middle class likes this, and our economy grows higher.
 subtitle: -1 funds, -1 corruption - Gambling was recently relegalized to raise more funds. Should we illegalize it once more?
 view-if: gambling = 1
 choose-if: gambling = 1
-on-arrival: gambling = 0; economic_growth -= 0.5; old_middle_kmt += 4; new_middle_kmt += 4; workers_kmt += 4; funds -= 1;
+on-arrival: gambling = 0; economic_growth -= 0.5; old_middle_kmt += 4; new_middle_kmt += 4; workers_kmt += 4;
 
 Gambling is illegal once again, giving us some support with the people.
 
@@ -70,6 +70,6 @@ Gambling is illegal once again, giving us some support with the people.
 subtitle: +1 funds, +1 corruption - Gambling was recently illegalized. Should we relegalize it once more?
 view-if: gambling = 0
 choose-if: gambling = 0
-on-arrival: gambling = 1; funds += 1; economic_growth += 0.5; old_middle_kmt -= 4; new_middle_kmt -= 4; workers_kmt -= 4; corruption += 1;
+on-arrival: gambling = 1; economic_growth += 0.5; old_middle_kmt -= 4; new_middle_kmt -= 4; workers_kmt -= 4; corruption += 1;
 
 Gambling is legal once again, giving us more funds but decreasing our support.
