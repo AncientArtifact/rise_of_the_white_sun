@@ -59,6 +59,7 @@ Q.education_bonus = 0;
 Q.centralize = 0;
 Q.centralize_bonus = 0;
 Q.gambling = 1;
+Q.other_income = 1;
 Q.corruption = 1;
 Q.infrastructure = 0;
 Q.infrastructure_bonus = 0;
@@ -66,6 +67,7 @@ Q.centralbank = 0;
 Q.justice_reform = 0;
 Q.police_reform = 0;
 Q.opium_producing = 0;
+Q.opium_money = 0;
 Q.loans = 0;
 Q.interest = 0;
 
