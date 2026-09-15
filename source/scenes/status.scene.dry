@@ -36,7 +36,7 @@ President of the <span style="color: #10186e">Nationalist Government</span>: [+ 
 
 Income: [? if income > 0 : <span style="color: #66BB6A;">+[+ income +]</span> ?][? if income < 0 : <span style="color: #d42f2f;">-[+ income +]</span> ?][? if income = 0 : <span style="color: #FFB74D;">[+ income +]</span> ?]
 
-Military Expenses: [? if military_costs < 0 : <span style="color: #66BB6A;">+[+ military_costs +]</span> ?][? if military_costs > 0 : <span style="color: #d42f2f;">-[+ military_costs +]</span> ?][? if military_costs = 0 : <span style="color: #FFB74D;">[+ military_costs +]</span> ?]
+Expenses: [? if total_costs < 0 : <span style="color: #66BB6A;">+[+ total_costs +]</span> ?][? if total_costs > 0 : <span style="color: #d42f2f;">-[+ total_costs +]</span> ?][? if total_costs = 0 : <span style="color: #FFB74D;">[+ total_costs +]</span> ?]
 
 Total: [? if total_income > 0 : <span style="color: #66BB6A;">+[+ total_income +]</span> ?][? if total_income < 0 : <span style="color: #d42f2f;">-[+ total_income +]</span> ?][? if total_income = 0 : <span style="color: #FFB74D;">[+ total_income +]</span> ?]
 
