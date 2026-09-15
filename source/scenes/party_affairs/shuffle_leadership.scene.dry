@@ -39,7 +39,7 @@ tags: remove_advisor
 on-arrival: tanyankai_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Tan Yankai has been removed as an advisor. The Centrist faction disapproves.
+Tan Yankai has been removed as an advisor.
 
 @remove_sunyatsen
 title: Remove Sun Yat-sen
@@ -48,7 +48,15 @@ tags: remove_advisor
 on-arrival: sunyatsen_advisor = 0; center_dissent += 10; n_advisors -= 1
 go-to: rm_main
 
-Sun Yat-sen has been removed as an advisor. The Centrist faction disapproves.
+Sun Yat-sen has been removed as an advisor.
+
+@remove_sunfo
+title: Remove Sun Fo
+view-if: sunfo_advisor = 1
+tags: remove_advisor
+on-arrival: sunfo_advisor = 0; center_dissent += 10; n_advisors -= 1
+
+Sun Fo has been removed as an advisor.
 
 # right
 
@@ -191,6 +199,33 @@ go-to: rm_main
 
 Chiang Kai-shek has been removed as an advisor. The Whampoa faction disapproves.
 
+@remove_heyingqin
+title: Remove He Yingqin
+view-if: heyingqin_advisor = 1
+tags: remove_advisor
+on-arrival: heyingqin_advisor = 0; whampoa_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+He Yingqin has been removed as an advisor. The Whampoa faction disapproves.
+
+@remove_lizongren
+title: Remove Li Zongren
+view-if: lizongren_advisor = 1
+tags: remove_advisor
+on-arrival: lizongren_advisor = 0; whampoa_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Li Zongren has been removed as an advisor. The Whampoa faction disapproves.
+
+@remove_tangshengzhi
+title: Remove Tang Shengzhi
+view-if: tangshengzhi_advisor = 1
+tags: remove_advisor
+on-arrival: tangshengzhi_advisor = 0; whampoa_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Tang Shengzhi has been removed as an advisor. The Whampoa faction disapproves.
+
 ## nonfactional
 
 # tbh I'm not sure if Baade should be a right or nonfactional. same for stampfer. they were vaguely right-aligned but had pretty different ideas from the other rights here. so they're non-factional.
@@ -309,11 +344,21 @@ subtitle: Sun Yat-sen is the father of our party and our nation. {!<br><br>!}[? 
 is-card: true
 card-image: img/portraits/SunYat-sen.jpg
 tags: center_advisor
-view-if: sunyatsen_advisor = 0 and sunyatsen_dead = 0 and n_advisors < 4 and centrists_resign = 0
+view-if: sunyatsen_advisor = 0 and sunyatsen_dead = 0 and n_advisors < 4
 on-arrival: sunyatsen_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Sun Yat-sen is now an advisor.
+
+@add_sunfo
+title: Sun Fo
+subtitle: Sun Fo is the son of Sun Yat-sen.
+is-card: true
+card-image: img/portraits/SunFo.jpg
+tags: center_advisor
+view-if: sunfo_advisor = 0 and n_advisors < 4 
+on-arrival: sunfo_advisor = 1; n_advisors += 1
+go-to: advisor_menu
 
 # right
 
@@ -483,6 +528,42 @@ go-to: advisor_menu
 tags: whampoa_advisor
 
 Chiang Kai-shek is now an advisor.
+
+@add_heyingqin
+title: He Yingqin
+subtitle: He Yingqin is one of Chiang Kai-shek's foremost allies within the Kuomintang and it's Whampoa Officer Clique.
+is-card: true
+card-image: img/portraits/HeYingqin.jpg
+view-if: heyingqin_advisor = 0 and whampoa_built = 1 and n_advisors < 4
+on-arrival: heyingqin_advisor = 1; n_advisors += 1; whampoa_strength += 5
+go-to: advisor_menu
+tags: whampoa_advisor
+
+He Yingqin is now an advisor.
+
+@add_lizongren
+title: Li Zongren
+subtitle: [? if guangxi_governor = "Li Zongren" : Li Zongren is the ruling warlord of Guangxi, and the leader of it's New Guangxi Clique. ?][? if guangxi_governor = "Shen Hongying" : Li Zongren is a KMT general from Guangxi who escaped after Shen Hongying's takeover. ?][? if guangxi_governor = "Lu Rongting" : Li Zongren is a KMT general from Guangxi who escaped after Lu Rongting's takeover. ?]
+is-card: true
+card-image: img/portraits/LiZongren.jpg
+view-if: lizongren_advisor = 0 and whampoa_built = 1 and n_advisors < 4
+on-arrival: lizongren_advisor = 1; n_advisors += 1; whampoa_strength += 5
+go-to: advisor_menu
+tags: whampoa_advisor
+
+Li Zongren is now an advisor.
+
+@add_tangshengzhi
+title: Tang Shengzhi
+subtitle: Tang Shengzhi is a KMT-sympathetic warlord in Hunan.
+is-card: true
+card-image: img/portraits/TangShengzhi.jpg
+view-if: tangshengzhi_advisor = 0 and whampoa_built = 1 and n_advisors < 4
+on-arrival: tangshengzhi_advisor = 1; n_advisors += 1; whampoa_strength += 5
+go-to: advisor_menu
+tags: whampoa_advisor
+
+Tang Shengzhi is now an advisor.
 
 @add_xuchongzhi
 title: Xu Chongzhi
