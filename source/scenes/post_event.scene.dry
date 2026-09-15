@@ -168,7 +168,7 @@ Q.other_income = Q.gambling + Q.opium_money
 
 Q.total_costs = Q.military_costs + Q.corruption + Q.interest;
 
-Q.total_income = Q.income - Q.total_costs;
+Q.total_income = Q.income + Q.other_income - Q.total_costs;
 
 if (Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) {
     Q.funds += Q.total_income;
