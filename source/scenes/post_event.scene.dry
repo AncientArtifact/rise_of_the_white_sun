@@ -115,48 +115,39 @@ if (Q.week >= 5) {
     }
 }
 
-if (Q.infrastructure === 2) {
- Q.income += 1; 
+if (Q.infrastructure = 2 || Q.infrastructure = 3) { 
  Q.infrastructure_bonus += 1;
 }
 
-if (Q.infrastructure === 4) {
- Q.income += 2;
+if (Q.infrastructure = 4 || Q.infrastructure = 5) {
  Q.infrastructure_bonus += 2;
 }
 
-if (Q.infrastructure >= 5) {
- Q.income += 3;
+if (Q.infrastructure > 6) {
  Q.infrastructure_bonus += 3;
 }
 
-if (Q.education === 2) {
- Q.income += 1;
+if (Q.education = 2 || Q.education = 3) {
  Q.education_bonus += 1;
 }
 
-if (Q.education === 4) {
- Q.income += 2;
+if (Q.education = 4 || Q.education = 5) {
  Q.education_bonus += 2;
 }
 
-if (Q.education >= 5) {
- Q.income += 3;
+if (Q.education > 6) {
  Q.education_bonus += 3;
 }
 
-if (Q.centralize === 2) {
- Q.income += 1;
+if (Q.centralize = 2 || Q.centralize = 3) {
  Q.centralize_bonus += 1;
 }
 
-if (Q.centralize === 4) {
- Q.income += 2;
+if (Q.centralize = 4 || Q.centralize = 5) {
  Q.centralize_bonus += 2;
 }
 
-if (Q.centralize >= 5) {
- Q.income += 3;
+if (Q.centralize > 6) {
  Q.centralize_bonus += 3;
 }
 
@@ -168,7 +159,9 @@ Q.other_income = Q.gambling + Q.opium_money
 
 Q.total_costs = Q.military_costs + Q.corruption + Q.interest;
 
-Q.total_income = Q.income + Q.other_income - Q.total_costs;
+Q.income = Q.tax_income + Q.other_income + Q.centralize_bonus + Q.infrastructure_bonus + Q.education_bonus;
+
+Q.total_income = Q.income - Q.total_costs;
 
 if (Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) {
     Q.funds += Q.total_income;
