@@ -155,7 +155,7 @@ if (Q.loans > 0) {
  Q.interest += Q.loans*3;
 }
 
-Q.other_income = Q.gambling + Q.opium_money
+Q.other_income = Q.gambling + Q.opium_money;
 
 Q.total_costs = Q.military_costs + Q.corruption + Q.interest;
 
