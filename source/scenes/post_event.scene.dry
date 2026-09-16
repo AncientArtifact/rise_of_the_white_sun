@@ -115,11 +115,11 @@ if (Q.week >= 5) {
     }
 }
 
-if (Q.infrastructure = 2 || Q.infrastructure = 3) { 
+if (Q.infrastructure === 2 || Q.infrastructure === 3) { 
  Q.infrastructure_bonus += 1;
 }
 
-if (Q.infrastructure = 4 || Q.infrastructure = 5) {
+if (Q.infrastructure === 4 || Q.infrastructure === 5) {
  Q.infrastructure_bonus += 2;
 }
 
@@ -127,11 +127,11 @@ if (Q.infrastructure > 6) {
  Q.infrastructure_bonus += 3;
 }
 
-if (Q.education = 2 || Q.education = 3) {
+if (Q.education === 2 || Q.education === 3) {
  Q.education_bonus += 1;
 }
 
-if (Q.education = 4 || Q.education = 5) {
+if (Q.education === 4 || Q.education === 5) {
  Q.education_bonus += 2;
 }
 
@@ -139,11 +139,11 @@ if (Q.education > 6) {
  Q.education_bonus += 3;
 }
 
-if (Q.centralize = 2 || Q.centralize = 3) {
+if (Q.centralize === 2 || Q.centralize === 3) {
  Q.centralize_bonus += 1;
 }
 
-if (Q.centralize = 4 || Q.centralize = 5) {
+if (Q.centralize === 4 || Q.centralize === 5) {
  Q.centralize_bonus += 2;
 }
 
