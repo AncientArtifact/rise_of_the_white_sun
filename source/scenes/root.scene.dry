@@ -538,28 +538,29 @@ Q.opium_timer = 0;
 Q.southexped_timer = 0;
 
 
-// all the initial advisors are centrists.
-Q.tanyankai_advisor = 1; // Tan Yankai
+Q.tanyankai_advisor = 0; // Tan Yankai
 Q.sunyatsen_advisor = 1; // Sun Yat-sen
 Q.sunyatsen_dead = 0;
 Q.sunfo_advisor = 0;
 
 
 // left advisors
-Q.liaozhongkai_advisor = 0;
+Q.liaozhongkai_advisor = 1;
 Q.liaozhongkai_dead = 0;
-Q.mikhailborodin_advisor = 1;
+Q.mikhailborodin_advisor = 0;
 Q.dengyanda_advisor = 0;
 Q.soongchingling_advisor = 0;
 
 // Right advisors
 Q.huhanmin_advisor = 0;
+Q.huhanmin_exile = 0;
 Q.daijitao_advisor = 0;
 Q.linsen_advisor = 0;
 Q.zhangrenjie_advisor = 0;
 
 // Labor advisors
 Q.wangjingwei_advisor = 0;
+Q.wangjingwei_exile = 0;
 Q.tvsoong_advisor = 0;
 Q.zhangfakui_advisor = 0;
 Q.eugenechen_advisor = 0;
