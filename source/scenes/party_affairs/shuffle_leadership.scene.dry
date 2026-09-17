@@ -277,8 +277,8 @@ Radbruch has been removed as an advisor.
 
 @add_advisors
 title: Add advisors
-choose-if: n_advisors < 4
-unavailable-subtitle: Maximum of 4 advisors.
+choose-if: n_advisors < 6
+unavailable-subtitle: Maximum of 6 advisors.
 go-to: advisor_menu
 
 @advisor_menu
@@ -297,32 +297,32 @@ frequency: 1
 - @remove_none: Stop changing advisors.
 
 @centrist
-view-if: n_advisors < 4
+view-if: n_advisors < 6
 
 - #center_advisor
 
 @right
-view-if: n_advisors < 4
+view-if: n_advisors < 6
 
 - #right_advisor
 
 @left
-view-if: n_advisors < 4
+view-if: n_advisors < 6
 
 - #left_advisor
 
 @center_left
-view-if: n_advisors < 4
+view-if: n_advisors < 6
 
 - #center_left_advisor
 
 @whampoa
-view-if: whampoa_built > 0 and n_advisors < 4 
+view-if: whampoa_built > 0 and n_advisors < 6 
 
 - #whampoa_advisor
 
 @nonfactional
-view-if: n_advisors < 4
+view-if: n_advisors < 6
 
 - #nonfactional_advisor
 
@@ -332,7 +332,7 @@ subtitle: Tan Yankai is a statesman and organizer within the party. {!<br><br>!}
 is-card: true
 card-image: img/portraits/TanYankai.jpg
 tags: center_advisor
-view-if: tanyankai_advisor = 0 and n_advisors < 4
+view-if: tanyankai_advisor = 0 and n_advisors < 6
 on-arrival: tanyankai_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -344,7 +344,7 @@ subtitle: Sun Yat-sen is the father of our party and our nation. {!<br><br>!}[? 
 is-card: true
 card-image: img/portraits/SunYat-sen.jpg
 tags: center_advisor
-view-if: sunyatsen_advisor = 0 and sunyatsen_dead = 0 and n_advisors < 4
+view-if: sunyatsen_advisor = 0 and sunyatsen_dead = 0 and n_advisors < 6
 on-arrival: sunyatsen_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -356,7 +356,7 @@ subtitle: Sun Fo is the son of Sun Yat-sen.
 is-card: true
 card-image: img/portraits/SunFo.jpg
 tags: center_advisor
-view-if: sunfo_advisor = 0 and n_advisors < 4 
+view-if: sunfo_advisor = 0 and n_advisors < 6 
 on-arrival: sunfo_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -369,7 +369,7 @@ subtitle: Hu Hanmin is a veteran right politician in our party. {!<br><br>!}[? i
 is-card: true
 card-image: img/portraits/HuHanmin.jpg
 tags: right_advisor
-view-if: huhanmin_advisor = 0 and n_advisors < 4
+view-if: huhanmin_advisor = 0 and n_advisors < 6
 on-arrival: huhanmin_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
 
@@ -381,7 +381,7 @@ subtitle: Dai Jitao is a right member, and a powerful propagandist in our party.
 is-card: true
 card-image: img/portraits/DaiJitao.jpg
 tags: right_advisor
-view-if: daijitao_advisor = 0 and n_advisors < 4
+view-if: daijitao_advisor = 0 and n_advisors < 6
 on-arrival: daijitao_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
 
@@ -392,7 +392,7 @@ title: Lin Sen
 subtitle: Lin Sen is a member of the Western Hills faction of the right. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
 is-card: true
 card-image: img/portraits/LinSen.jpg
-view-if: juchacz_advisor = 0 and n_advisors < 4
+view-if: juchacz_advisor = 0 and n_advisors < 6
 on-arrival: juchacz_advisor = 1; n_advisors += 1; right_strength += 5
 go-to: advisor_menu
 tags: right_advisor
@@ -404,7 +404,7 @@ title: Zhang Renjie
 subtitle: Zhang Renjie is a right-wing financier. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
 is-card: true
 card-image: img/portraits/ZhangRenjie.jpg
-view-if: zhangrenjie_advisor = 0 and n_advisors < 4
+view-if: zhangrenjie_advisor = 0 and n_advisors < 6
 on-arrival: zhangrenjie_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: right_advisor
@@ -420,7 +420,7 @@ title: Liao Zhongkai
 subtitle: Liao Zhongkai is a radical leftist leader and veteran statesman. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the CPC ?]
 is-card: true
 card-image: img/portraits/LiaoZhongkai.jpg
-view-if: liaozhongkai_advisor = 0 and liaozhongkai_dead = 0 and n_advisors < 4 and left_split = 0
+view-if: liaozhongkai_advisor = 0 and liaozhongkai_dead = 0 and n_advisors < 6 and left_split = 0
 on-arrival: liaozhongkai_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
@@ -432,7 +432,7 @@ title: Mikhail Borodin
 subtitle: Mikhail Borodin is a Soviet advisor for the KMT sent by the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/MikhailBorodin.jpg
-view-if: mikhailborodin_advisor = 0 and n_advisors < 4
+view-if: mikhailborodin_advisor = 0 and n_advisors < 6
 on-arrival: mikhailborodin_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
@@ -444,7 +444,7 @@ title: Deng Yanda
 subtitle: Deng Yanda is a left-wing general. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
 is-card: true
 card-image: img/portraits/DengYanda.jpg
-view-if: dengyanda_advisor = 0 and n_advisors < 4 and left_split = 0
+view-if: dengyanda_advisor = 0 and n_advisors < 6 and left_split = 0
 on-arrival: dengyanda_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
@@ -456,7 +456,7 @@ title: Soong Ching-ling
 subtitle: Soong Ching-ling is [? if sunyatsen_dead = 0: the wife ?][? if sunyatsen_dead = 0: the widow ?] of Sun Yat-sen. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
 is-card: true
 card-image: img/portraits/SoongChing-ling.jpg
-view-if: soongchingling_advisor = 0 and n_advisors < 4 and left_split = 0
+view-if: soongchingling_advisor = 0 and n_advisors < 6 and left_split = 0
 on-arrival: soongchingling_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
@@ -472,7 +472,7 @@ title: Wang Jingwei
 subtitle: Wang Jingwei is a major party leader in the left that advocates for democracy. {!<br><br>!}[? if difficulty < 0 : Actions - Cooperation with the CPC, Increase Center-Left Influence, Limit Whampoa Influence ?]
 is-card: true
 card-image: img/portraits/WangJingwei.jpg
-view-if: wangjingwei_advisor = 0 and n_advisors < 4
+view-if: wangjingwei_advisor = 0 and n_advisors < 6
 on-arrival: wangjingwei_advisor = 1; n_advisors += 1; center_left_strength += 5
 go-to: advisor_menu
 tags: center_left_advisor
@@ -485,7 +485,7 @@ subtitle: T.V. Soong is a chinese businessman associated with Wang Jingwei. He h
 is-card: true
 card-image: img/portraits/TVSoong.jpg
 tags: center_left_advisor
-view-if: tvsoong_advisor = 0 and n_advisors < 4
+view-if: tvsoong_advisor = 0 and n_advisors < 6
 on-arrival: tvsoong_advisor = 1; n_advisors += 1; center_left_strength += 5
 go-to: advisor_menu
 
@@ -497,7 +497,7 @@ subtitle: Zhang Fakui is a left-wing general. {!<br><br>!}[? if difficulty < 0 :
 is-card: true
 card-image: img/portraits/ZhangFakui.jpg
 tags: center_left_advisor
-view-if: zhangfakui_advisor = 0 and n_advisors < 4
+view-if: zhangfakui_advisor = 0 and n_advisors < 6
 on-arrival: zhangfakui_advisor = 1; n_advisors += 1; center_left_strength += 5
 go-to: advisor_menu
 
@@ -509,7 +509,7 @@ subtitle: Eugene Chen is a left-wing member with foreign affairs skills. {!<br><
 is-card: true
 card-image: img/portraits/EugeneChen.jpg
 tags: center_left_advisor
-view-if: eugenechen_advisor = 0 and n_advisors < 4
+view-if: eugenechen_advisor = 0 and n_advisors < 6
 on-arrival: eugenechen_advisor = 1; n_advisors += 1; center_left_strength += 3
 go-to: advisor_menu
 
@@ -522,7 +522,7 @@ title: Chiang Kai-shek
 subtitle: Chiang Kai-shek is a young officer and superintendent of the Whampoa Military Academy {!<br><br>!}[? if difficulty < 0 : Actions - NRA Buildup, NRA Training, Succeeding Sun Yat-sen ?]
 is-card: true
 card-image: img/portraits/ChiangKai-shek.jpg
-view-if: chiangkaishek_advisor = 0 and whampoa_built = 1 and n_advisors < 4
+view-if: chiangkaishek_advisor = 0 and whampoa_built = 1 and n_advisors < 6
 on-arrival: chiangkaishek_advisor = 1; n_advisors += 1; whampoa_strength += 5
 go-to: advisor_menu
 tags: whampoa_advisor
@@ -534,7 +534,7 @@ title: He Yingqin
 subtitle: He Yingqin is one of Chiang Kai-shek's foremost allies within the Kuomintang and it's Whampoa Officer Clique.
 is-card: true
 card-image: img/portraits/HeYingqin.jpg
-view-if: heyingqin_advisor = 0 and whampoa_built = 1 and n_advisors < 4
+view-if: heyingqin_advisor = 0 and whampoa_built = 1 and n_advisors < 6
 on-arrival: heyingqin_advisor = 1; n_advisors += 1; whampoa_strength += 5
 go-to: advisor_menu
 tags: whampoa_advisor
@@ -546,7 +546,7 @@ title: Li Zongren
 subtitle: [? if guangxi_governor = "Li Zongren" : Li Zongren is the ruling warlord of Guangxi, and the leader of it's New Guangxi Clique. ?][? if guangxi_governor = "Shen Hongying" : Li Zongren is a KMT general from Guangxi who escaped after Shen Hongying's takeover. ?][? if guangxi_governor = "Lu Rongting" : Li Zongren is a KMT general from Guangxi who escaped after Lu Rongting's takeover. ?]
 is-card: true
 card-image: img/portraits/LiZongren.jpg
-view-if: lizongren_advisor = 0 and whampoa_built = 1 and n_advisors < 4
+view-if: lizongren_advisor = 0 and whampoa_built = 1 and n_advisors < 6
 on-arrival: lizongren_advisor = 1; n_advisors += 1; whampoa_strength += 5
 go-to: advisor_menu
 tags: whampoa_advisor
@@ -558,7 +558,7 @@ title: Tang Shengzhi
 subtitle: Tang Shengzhi is a KMT-sympathetic warlord in Hunan.
 is-card: true
 card-image: img/portraits/TangShengzhi.jpg
-view-if: tangshengzhi_advisor = 0 and whampoa_built = 1 and n_advisors < 4
+view-if: tangshengzhi_advisor = 0 and whampoa_built = 1 and n_advisors < 6
 on-arrival: tangshengzhi_advisor = 1; n_advisors += 1; whampoa_strength += 5
 go-to: advisor_menu
 tags: whampoa_advisor
@@ -571,7 +571,7 @@ subtitle: Xu Chongzhi is a Guangdongese general and head of the NRA. {!<br><br>!
 is-card: true
 card-image: img/portraits/XuChongzhi.jpg
 tags: whampoa_advisor
-view-if: xuchongzhi_advisor = 0 and n_advisors < 4 and whampoa_built = 1
+view-if: xuchongzhi_advisor = 0 and n_advisors < 6 and whampoa_built = 1
 on-arrival: xuchongzhi_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
@@ -584,7 +584,7 @@ title: Fritz Baade
 subtitle: Fritz Baade is one of the few agricultural policy experts in the SPD. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/BaadeFritz.jpg
-view-if: baade_advisor = 0 and n_advisors < 4
+view-if: baade_advisor = 0 and n_advisors < 6
 on-arrival: baade_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
@@ -597,7 +597,7 @@ title: Magnus Hirschfeld
 subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
 is-card: true
 card-image: img/portraits/HirschfeldMagnus.jpg
-view-if: hirschfeld_advisor = 0 and n_advisors < 4
+view-if: hirschfeld_advisor = 0 and n_advisors < 6
 on-arrival: hirschfeld_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
@@ -611,7 +611,7 @@ title: Gustav Radbruch
 subtitle: Gustav Radbruch is a renowned legal scholar and long-time SPD justice minister. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
 is-card: true
 card-image: img/portraits/RadbruchGustav.jpg
-view-if: radbruch_advisor = 0 and n_advisors < 4
+view-if: radbruch_advisor = 0 and n_advisors < 6
 on-arrival: radbruch_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
@@ -624,7 +624,7 @@ title: Friedrich Stampfer
 subtitle: Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper. {!<br><br>!}[? if difficulty < 0 : Actions - Media, Editorial Line, Cooperation with the KPD ?]
 is-card: true
 card-image: img/portraits/StampferFriedrich.jpg
-view-if: stampfer_advisor = 0 and n_advisors < 4
+view-if: stampfer_advisor = 0 and n_advisors < 6
 on-arrival: stampfer_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
