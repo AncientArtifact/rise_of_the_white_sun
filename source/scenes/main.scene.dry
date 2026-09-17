@@ -2,7 +2,9 @@ title: **Next month**
 set-bg: img/bgchina.jpg
 is-hand: true
 on-arrival: {!
+
 var advisorCount = Q.n_advisors + ' /6 advisors available.';
+
 if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Advisors - an action is available. -' + 'advisorCount';
 } else if (Q.advisor_action_timer == 1) {
@@ -10,6 +12,7 @@ if (Q.advisor_action_timer <= 0) {
 } else {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' weeks.' ' - ' + 'advisorCount';
 }
+
 !}
 max-cards: 5
 
