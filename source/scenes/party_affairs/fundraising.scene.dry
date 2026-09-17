@@ -22,12 +22,12 @@ We maintain our current income.
 
 @reduce
 subtitle: -1 funds per quarter.
-on-arrival: income -= 1;
+on-arrival: party_income -= 1;
 
 We decreased fundraising for our party within the province.
 
 @increase
 subtitle: +1 funds per quarter.
-on-arrival: income += 1;
+on-arrival: party_income += 1;
 
 We increased fundraising for our party within the province.
