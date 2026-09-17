@@ -111,6 +111,8 @@ Income: [? if income > 0 : <span style="color: #66BB6A;">+[+ income +]</span> ?]
 
    Income from taxes: [? if tax_income > 0 : <span style="color: #66BB6A;">+[+ tax_income +]</span> ?][? if tax_income = 0 : <span style="color: #FFB74D;">[+ tax_income +]</span> ?]
 
+   Income from party fundraising: [? if party_income > 0 : <span style="color: #66BB6A;">+[+ party_income +]</span> ?][? if party_income = 0 : <span style="color: #FFB74D;">[+ party_income +]</span> ?]
+
    Income from tax reform: [? if centralize_bonus > 0 : <span style="color: #66BB6A;">+[+ centralize_bonus +]</span> ?][? if tax_income = 0 : <span style="color: #FFB74D;">[+ centralize_bonus +]</span> ?]
 
    Income from education bonuses: [? if education_bonus > 0 : <span style="color: #66BB6A;">+[+ education_bonus +]</span> ?][? if education_bonus = 0 : <span style="color: #FFB74D;">[+ education_bonus +]</span> ?]
