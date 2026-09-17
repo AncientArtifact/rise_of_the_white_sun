@@ -50,7 +50,8 @@ Q.use_decimals = 0;
 // party resources
 Q.funds = 5;
 Q.income = 4;
-Q.tax_income = 3;
+Q.tax_income = 2;
+Q.party_income = 1;
 Q.total_costs = 2;
 Q.total_income = 2;
 Q.military_costs = 1;
