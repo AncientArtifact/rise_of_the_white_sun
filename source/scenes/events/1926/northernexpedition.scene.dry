@@ -80,7 +80,7 @@ Warlord Tang Shengzhi of Hunan has defected and joined us. We have a strong foot
 - @four: Guangxi?
 
 @four
-go-to: wingxc if guangxi_governor = "Li Zongren"; losegxc
+go-to: wingxc if guangxi_leader = "Li Zongren"; losegxc
 
 @wingxc
 new-page: true
