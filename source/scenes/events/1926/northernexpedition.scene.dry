@@ -29,6 +29,8 @@ go-to: winarmy if nra_power >= 4; losearmy if nra_power <= 4
 new-page: true
 face-image: img/nrastreet.jpg
 
+= The Northern Expedition
+
 The army is <span style="color: #66BB6A;">very ready</span> for the campaign. We have [+ nra_strength +] thousand soldiers ready and armed to fight.
 
 - @two: The United Front.
@@ -36,6 +38,8 @@ The army is <span style="color: #66BB6A;">very ready</span> for the campaign. We
 @losearmy
 new-page: true
 face-image: img/nrastreet.jpg
+
+= The Northern Expedition
 
 The army is <span style="color: #d42f2f;">less than ready</span>, we will have to improvise during our campaign.
 
@@ -48,6 +52,8 @@ go-to: winfront if cpc_relation >= 50; losefront if cpc_relation < 50
 new-page: true
 face-image: img/cpc.jpg
 
+= The Northern Expedition
+
 Our alliance with the Chinese Communist Party is <span style="color: #66BB6A;">still strong</span>, even after some unsavory moments.
 
 - @three: The Warlords.
@@ -55,6 +61,8 @@ Our alliance with the Chinese Communist Party is <span style="color: #66BB6A;">s
 @losefront
 new-page: true
 face-image: img/cpc.jpg
+
+= The Northern Expedition
 
 Our alliance with the Chinese Communist Party is <span style="color: #d42f2f;">tenuous, if not hostile</span>. We probably won't get their services in peasant recruiting.
 
@@ -64,6 +72,8 @@ Our alliance with the Chinese Communist Party is <span style="color: #d42f2f;">t
 new-page: true
 face-image: img/portraits/TangShengzhi.jpg
 on-arrival: nra_strength += 20;
+
+= The Northern Expedition
 
 Warlord Tang Shengzhi of Hunan has defected and joined us. We have a strong foothold leading up to the city of Wuchang, the base of Wu Peifu.
 
@@ -77,6 +87,8 @@ new-page: true
 face-image: img/lizongren2.jpg
 on-arrival: guangxi_faction = "Guomindang"; gxc_relation += 10; nra_strength += 20;
 
+= The Northern Expedition
+
 Li Zongren has sworn to join the Guomindang in our national revolution. His forces will be of good use.
 
 - @five: Yunnan?
@@ -84,6 +96,8 @@ Li Zongren has sworn to join the Guomindang in our national revolution. His forc
 @losegxc
 new-page: true
 face-image: img/portraits/LuRongting.jpg
+
+= The Northern Expedition
 
 [+ guangxi_governor +] has refused to fight with us. Looks like we have to contact more warlords for help.
 
@@ -97,6 +111,8 @@ new-page: true
 on-arrival: yun_relation += 10; nra_strength += 20;
 face-image: img/portraits/TangJiyao.jpg
 
+= The Northern Expedition
+
 After Tang Jiyao's failed invasion of Yunnan, our relations have soured. Still, Tang joins our efforts to reunify China. Yunnanese general Zhu Peide also joins us in the fight.
 
 - @six: Guangdong.
@@ -104,6 +120,8 @@ After Tang Jiyao's failed invasion of Yunnan, our relations have soured. Still, 
 @loseyun
 new-page: true
 face-image: img/portraits/ZhuPeide.jpg
+
+= The Northern Expedition
 
 After Tang Jiyao's failed invasion of Yunnan, our relations have soured. Looks like we're better off without him. However, Zhu Peide, a Yunnanese general has decided to join us.
 
@@ -116,6 +134,8 @@ go-to: wingdc if fourthtrialdone = 1; losegdc if fourthtrialdone = 0
 new-page: true
 face-image: img/kmt.png
 
+= The Northern Expedition
+
 After defeating Chen Jiongming, Yang Ximin, Liu Zhenhuan and Deng Benyin, Guangdong is finally <span style="color: #66BB6A;">completely secure</span>. There won't be any problems back there while we march north.
 
 - @seven: Are we ready?
@@ -124,6 +144,8 @@ After defeating Chen Jiongming, Yang Ximin, Liu Zhenhuan and Deng Benyin, Guangd
 new-page: true
 face-image: img/portraits/DengBenyin.jpg
 
+= The Northern Expedition
+
 Deng Benyin <span style="color: #d42f2f;">still controls the south</span>. Looks like we'll have some problems back home while fighting.
 
 - @seven: Are we ready?
@@ -131,7 +153,9 @@ Deng Benyin <span style="color: #d42f2f;">still controls the south</span>. Looks
 @seven
 new-page: true
 
-Probably. Maybe, maybe not. But whatever the costs, we'll fight for the National Revolution.
+= The Northern Expedition
+
+Probably. Maybe, maybe not. But whatever the costs, we'll fight for the National Revolution and fight to put China back in one piece.
 
 - @eight: Whatever it takes.
 
