@@ -32,7 +32,6 @@ view-if: sunyatsen_dead = 1
 
 = **The Power Struggle**
 
-<div style="display: flex; gap: 5px; margin-bottom: 5px; margin-left: -3px;">
 <div>
   <span style="color: #9e1515">**Communists**</span>: Liao Zhongkai
   <p>Influence: [+ left_strength : strength +]</p>
@@ -54,9 +53,7 @@ view-if: sunyatsen_dead = 1
     <img src="img/portraits/WangJingwei.jpg" width="150px" height="205px" style="opacity: 0.45;">
   ?]
 </div>
-</div>
 
-<div style="display: flex; gap: 5px; margin-bottom: 5px; margin-left: -3px;">
 <div>
   <span style="color: #10186e">**Right-KMT**</span>: Hu Hanmin
   <p>Influence: [+ right_strength : strength +]</p>
@@ -78,7 +75,6 @@ view-if: sunyatsen_dead = 1
    [? if chiangkaishek_exile = 1 :
     <img src="img/portraits/ChiangKai-shek.jpg" width="150px" height="205px" style="opacity: 0.45;">
   ?]
-</div>
 </div>
 
 @northernexpedition
