@@ -7,9 +7,7 @@ on-arrival: week_actions += 1; shuffle_leadership_timer = 8;
 card-image: img/kmtshuffle.jpg
 go-to: rm_main
 
-Changing the leadership of the party is painful, but perhaps it is necessary to adapt to changing circumstances.
-
-Removing advisors will increase dissent from their faction of the party, while selecting advisors will increase a faction's strength.
+We can hire members of our party as advisors for our upper organizations. Doing so needs money.
 
 - @rm_main: Remove advisors
 - @add_advisors: Add advisors
@@ -36,16 +34,16 @@ tags: remove_advisor
 title: Remove Tan Yankai
 view-if: tanyankai_advisor = 1
 tags: remove_advisor
-on-arrival: tanyankai_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: tanyankai_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
 Tan Yankai has been removed as an advisor.
 
 @remove_sunyatsen
 title: Remove Sun Yat-sen
-view-if: sunyatsen_advisor = 1
+view-if: false
 tags: remove_advisor
-on-arrival: sunyatsen_advisor = 0; center_dissent += 10; n_advisors -= 1
+on-arrival: sunyatsen_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
 Sun Yat-sen has been removed as an advisor.
@@ -54,7 +52,7 @@ Sun Yat-sen has been removed as an advisor.
 title: Remove Sun Fo
 view-if: sunfo_advisor = 1
 tags: remove_advisor
-on-arrival: sunfo_advisor = 0; center_dissent += 10; n_advisors -= 1
+on-arrival: sunfo_advisor = 0; n_advisors -= 1
 
 Sun Fo has been removed as an advisor.
 
@@ -65,37 +63,37 @@ Sun Fo has been removed as an advisor.
 title: Remove Hu Hanmin
 view-if: huhanmin_advisor = 1
 tags: remove_advisor
-on-arrival: huhanmin_advisor = 0; right_dissent += 5; n_advisors -= 1
+on-arrival: huhanmin_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Hu Hanmin has been removed as an advisor. The Right faction disapproves.
+Hu Hanmin has been removed as an advisor.
 
 @remove_daijitao
 title: Remove Dai Jitao
 view-if: daijitao_advisor = 1
 tags: remove_advisor
-on-arrival: daijitao_advisor = 0; right_dissent += 5; n_advisors -= 1
+on-arrival: daijitao_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Dai Jitao has been removed as an advisor. The right faction disapproves.
+Dai Jitao has been removed as an advisor.
 
 @remove_linsen
 title: Remove Lin Sen
 view-if: linsen_advisor = 1
 tags: remove_advisor
-on-arrival: linsen_advisor = 0; right_dissent += 5; n_advisors -= 1
+on-arrival: linsen_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Lin Sen has been removed as an advisor. The right faction disapproves.
+Lin Sen has been removed as an advisor.
 
 @remove_zhangrenjie
 title: Remove Zhang Renjie
 view-if: zhangrenjie_advisor = 1
 tags: remove_advisor
-on-arrival: zhangrenjie_advisor = 0; right_dissent += 5; n_advisors -= 1
+on-arrival: zhangrenjie_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Zhang Renjie has been removed as an advisor. The right faction disapproves.
+Zhang Renjie has been removed as an advisor.
 
 
 # left
@@ -104,38 +102,37 @@ Zhang Renjie has been removed as an advisor. The right faction disapproves.
 title: Remove Wang Jingwei
 view-if: wangjingwei_advisor = 1
 tags: remove_advisor
-on-arrival: wangjingwei_advisor = 0; center_left_dissent += 3; n_advisors -= 1
+on-arrival: wangjingwei_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Wang Jingwei has been removed as an advisor. The Center Left faction disapproves.
+Wang Jingwei has been removed as an advisor.
 
 @remove_tvsoong
 title: Remove T.V. Soong
 view-if: tvsoong_advisor = 1
 tags: remove_advisor
-on-arrival: tvsoong_advisor = 0; center_left_dissent += 3; n_advisors -= 1
+on-arrival: tvsoong_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-T.V. Soong has been removed as an advisor. The Center Left faction disapproves.
-
+T.V. Soong has been removed as an advisor.
 
 @remove_zhangfakui
 title: Remove Zhang Fakui
 view-if: zhangfakui_advisor = 1
 tags: remove_advisor
-on-arrival: zhangfakui_advisor = 0; center_left_dissent += 5; n_advisors -= 1
+on-arrival: zhangfakui_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Zhang Fakui has been removed as an advisor. The Center Left faction disapproves.
+Zhang Fakui has been removed as an advisor.
 
 @remove_eugenechen
 title: Remove Eugene Chen
 view-if: eugenechen_advisor = 1
 tags: remove_advisor
-on-arrival: eugenechen_advisor = 0; center_left_dissent += 5; n_advisors -= 1
+on-arrival: eugenechen_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Eugene Chen has been removed as an advisor. The center_left faction disapproves.
+Eugene Chen has been removed as an advisor. 
 
 # communist
 
@@ -143,37 +140,37 @@ Eugene Chen has been removed as an advisor. The center_left faction disapproves.
 title: Remove Liao Zhongkai
 view-if: liaozhongkai_advisor = 1
 tags: remove_advisor
-on-arrival: liaozhongkai_advisor = 0; left_dissent += 5; n_advisors -= 1
+on-arrival: liaozhongkai_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Liao Zhongkai has been removed as an advisor. The Leftist faction disapproves.
+Liao Zhongkai has been removed as an advisor. 
 
 @remove_mikhailborodin
 title: Remove Mikhail Borodin
 view-if: mikhailborodin_advisor = 1
 tags: remove_advisor
-on-arrival: mikhailborodin_advisor = 0; left_dissent += 3; east_relation -= 1; n_advisors -= 1
+on-arrival: mikhailborodin_advisor = 0; east_relation -= 1; n_advisors -= 1
 go-to: rm_main
 
-Mikhail Borodin has been removed as an advisor. The Leftists and Soviets disapprove.
+Mikhail Borodin has been removed as an advisor. 
 
 @remove_dengyanda
 title: Remove Deng Yanda
 view-if: dengyanda_advisor = 1
 tags: remove_advisor
-on-arrival: dengyanda_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: dengyanda_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Deng Yanda has been removed as an advisor. The Leftist faction disapproves.
+Deng Yanda has been removed as an advisor.
 
 @remove_soongchingling
 title: Remove Soong Ching-ling
 view-if: soongchingling_advisor = 1
 tags: remove_advisor
-on-arrival: soongchingling_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: soongchingling_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Soong Ching-ling has been removed as an advisor. The Leftist faction disapproves.
+Soong Ching-ling has been removed as an advisor. 
 
 
 
@@ -183,48 +180,48 @@ Soong Ching-ling has been removed as an advisor. The Leftist faction disapproves
 @remove_xuchongzhi
 title: Remove Xu Chongzhi
 view-if: xuchongzhi_advisor = 1
-on-arrival: xuchongzhi_advisor = 0; whampoa_dissent += 5; n_advisors -= 1
+on-arrival: xuchongzhi_advisor = 0; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Xu Chongzhi has been removed as an advisor. The Whampoa faction disapproves.
+Xu Chongzhi has been removed as an advisor. 
 
 
 @remove_chiangkaishek
 title: Remove Chiang Kai-shek
 view-if: chiangkaishek_advisor = 1
 tags: remove_advisor
-on-arrival: chiangkaishek_advisor = 0; whampoa_dissent += 5; n_advisors -= 1
+on-arrival: chiangkaishek_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Chiang Kai-shek has been removed as an advisor. The Whampoa faction disapproves.
+Chiang Kai-shek has been removed as an advisor.
 
 @remove_heyingqin
 title: Remove He Yingqin
 view-if: heyingqin_advisor = 1
 tags: remove_advisor
-on-arrival: heyingqin_advisor = 0; whampoa_dissent += 5; n_advisors -= 1
+on-arrival: heyingqin_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-He Yingqin has been removed as an advisor. The Whampoa faction disapproves.
+He Yingqin has been removed as an advisor.
 
 @remove_lizongren
 title: Remove Li Zongren
 view-if: lizongren_advisor = 1
 tags: remove_advisor
-on-arrival: lizongren_advisor = 0; whampoa_dissent += 5; n_advisors -= 1
+on-arrival: lizongren_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Li Zongren has been removed as an advisor. The Whampoa faction disapproves.
+Li Zongren has been removed as an advisor.
 
 @remove_tangshengzhi
 title: Remove Tang Shengzhi
 view-if: tangshengzhi_advisor = 1
 tags: remove_advisor
-on-arrival: tangshengzhi_advisor = 0; whampoa_dissent += 5; n_advisors -= 1
+on-arrival: tangshengzhi_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Tang Shengzhi has been removed as an advisor. The Whampoa faction disapproves.
+Tang Shengzhi has been removed as an advisor.
 
 ## nonfactional
 
@@ -292,7 +289,6 @@ frequency: 1
 - @right: Add Rightists
 - @center_left: Add Leftists
 - @whampoa: Add Whampoa Officers
-- @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
@@ -320,11 +316,6 @@ view-if: n_advisors < 6
 view-if: whampoa_built > 0 and n_advisors < 6 
 
 - #whampoa_advisor
-
-@nonfactional
-view-if: n_advisors < 6
-
-- #nonfactional_advisor
 
 @add_tanyankai
 title: Tan Yankai
@@ -469,7 +460,7 @@ Soong Ching-ling is now an advisor.
 
 @add_wangjingwei
 title: Wang Jingwei
-subtitle: Wang Jingwei is a major party leader in the left that advocates for democracy. {!<br><br>!}[? if difficulty < 0 : Actions - Cooperation with the CPC, Increase Center-Left Influence, Limit Whampoa Influence ?]
+subtitle: Wang Jingwei is a major party leader in the left. {!<br><br>!}[? if difficulty < 0 : Actions - Cooperation with the CPC, Increase Center-Left Influence, Limit Whampoa Influence ?]
 is-card: true
 card-image: img/portraits/WangJingwei.jpg
 view-if: wangjingwei_advisor = 0 and n_advisors < 6
@@ -576,57 +567,3 @@ on-arrival: xuchongzhi_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Xu Chongzhi is now an advisor.
-
-# Nonfactional advisors
-
-@add_baade
-title: Fritz Baade
-subtitle: Fritz Baade is one of the few agricultural policy experts in the SPD. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/BaadeFritz.jpg
-view-if: baade_advisor = 0 and n_advisors < 6
-on-arrival: baade_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Fritz Baade is now an advisor.
-
-
-@add_hirschfeld
-title: Magnus Hirschfeld
-subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
-is-card: true
-card-image: img/portraits/HirschfeldMagnus.jpg
-view-if: hirschfeld_advisor = 0 and n_advisors < 6
-on-arrival: hirschfeld_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Magnus Hirschfeld is now an advisor.
-
-# TODO: add radbruch, stampfer
-
-@add_radbruch
-title: Gustav Radbruch
-subtitle: Gustav Radbruch is a renowned legal scholar and long-time SPD justice minister. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
-is-card: true
-card-image: img/portraits/RadbruchGustav.jpg
-view-if: radbruch_advisor = 0 and n_advisors < 6
-on-arrival: radbruch_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Gustav Radbruch is now an advisor.
-
-
-@add_stampfer
-title: Friedrich Stampfer
-subtitle: Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper. {!<br><br>!}[? if difficulty < 0 : Actions - Media, Editorial Line, Cooperation with the KPD ?]
-is-card: true
-card-image: img/portraits/StampferFriedrich.jpg
-view-if: stampfer_advisor = 0 and n_advisors < 6
-on-arrival: stampfer_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Friedrich Stampfer is now an advisor.
