@@ -95,11 +95,11 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Communists interested in radical, transformative policies and cooperation with the CPC.">Communists</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Left is interested in the transition to democracy and rights for workers.">Left</span>!} strength: [+ center_left_strength : strength +], dissent: [+ center_left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left is interested in cooperating with the CPC, but still sticks with the Three Principles.">Left</span>!} strength: [+ center_left_strength : strength +], dissent: [+ center_left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center is a faction of centrist Tridemists led by Sun Yat-sen in the middle.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Center is comprised of the non-factionals, princelings and neutral members of the party.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Right are conservatives, nationalists and anti-commmunists within the party that seek to begin Political Tutelage on their own terms.">Right</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
+{!<span class="tooltip-text" title="The Right are conservatives, nationalists and anti-commmunists within the party that seek to cut ties with the CPC.">Right</span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Whampoa clique is a faction of newly appointed officers of the Whampoa Military Academy.">Whampoa</span>!} strength: [+ whampoa_strength : strength +], dissent: [+ whampoa_dissent : dissent +]
 
