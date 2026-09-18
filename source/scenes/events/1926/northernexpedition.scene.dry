@@ -5,7 +5,7 @@ view-if: year = 1926 and month = 7 and week = 1
 max-visits: 1
 priority: 2
 new-page: true
-face-image: img/northernexpedition.jpg
+face-image: img/chiangleavescanton.jpg
 on-arrival: {!
 
 Q.nra_power = Q.nra_strength*Q.nra_militancy
