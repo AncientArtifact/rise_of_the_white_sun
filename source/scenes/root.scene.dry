@@ -538,35 +538,34 @@ Q.eastexped_timer = 0;
 Q.opium_timer = 0;
 Q.southexped_timer = 0;
 
-
+Q.advisors = ['tanyankai', 'sunyatsen', 'sunfo', 'liaozhongkai', 'mikhailborodin', 'dengyanda', 'soongchingling', 'huhanmin', 'daijitao', 'linsen', 'zhangrenjie', 'wangjingwei', 'tvsoong', 'zhangfakui', 'eugenechen', 'chiangkaishek', 'xuchongzhi', 'lizongren', 'tangshengzhi', 'heyingqin'];
 Q.tanyankai_advisor = 0; // Tan Yankai
 Q.sunyatsen_advisor = 1; // Sun Yat-sen
 Q.sunyatsen_dead = 0;
 Q.sunfo_advisor = 0;
 
-
-// left advisors
+// commie advisors
 Q.liaozhongkai_advisor = 1;
 Q.liaozhongkai_dead = 0;
 Q.mikhailborodin_advisor = 0;
 Q.dengyanda_advisor = 0;
 Q.soongchingling_advisor = 0;
 
-// Right advisors
+// right advisors
 Q.huhanmin_advisor = 0;
 Q.huhanmin_exile = 0;
 Q.daijitao_advisor = 0;
 Q.linsen_advisor = 0;
 Q.zhangrenjie_advisor = 0;
 
-// Labor advisors
+// left advisors
 Q.wangjingwei_advisor = 0;
 Q.wangjingwei_exile = 0;
 Q.tvsoong_advisor = 0;
 Q.zhangfakui_advisor = 0;
 Q.eugenechen_advisor = 0;
 
-// Whampoa advisors
+// whampoa advisors
 Q.chiangkaishek_advisor = 0;
 Q.chiangkaishek_exile = 0;
 Q.xuchongzhi_advisor = 0;
@@ -574,11 +573,6 @@ Q.xuchongzhi_dead = 0;
 Q.heyingqin_advisor = 0;
 Q.lizongren_advisor = 0;
 Q.tangshengzhi_advisor = 0;
-
-// Nonfactional advisors
-Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
-Q.radbruch_advisor = 0; // Gustav Radbruch
-Q.stampfer_advisor = 0; // Friedrich Stampfer
 
 updateMap();
 
