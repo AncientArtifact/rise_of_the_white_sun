@@ -164,7 +164,7 @@ Q.income = Q.tax_income + Q.party_income + Q.other_income + Q.centralize_bonus +
 
 Q.total_income = Q.income - Q.total_costs;
 
-if (Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) {
+if (Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && (Q.week === 1) {
     Q.funds += Q.total_income;
 }
 
