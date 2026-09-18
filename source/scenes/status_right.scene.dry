@@ -39,7 +39,7 @@ view-if: sunyatsen_dead = 1
     <img src="img/portraits/LiaoZhongkai.jpg" width="150px" height="205px">
   ?]
   [? if liaozhongkai_dead = 1 :
-    <img src="img/portraits/LiaoZhongkai.jpg" width="150px" height="205px" style="opacity: 0.45;">
+    <img src="img/portraits/LiaoZhongkai.jpg" width="150px" height="205px" style="filter: brightness(40%);">
   ?]
 </div>
 
@@ -50,7 +50,7 @@ view-if: sunyatsen_dead = 1
     <img src="img/portraits/WangJingwei.jpg" width="150px" height="205px">
   ?]
   [? if wangjingwei_exile = 1 :
-    <img src="img/portraits/WangJingwei.jpg" width="150px" height="205px" style="opacity: 0.45;">
+    <img src="img/portraits/WangJingwei.jpg" width="150px" height="205px" style="filter: brightness(40%);">
   ?]
 </div>
 
@@ -62,7 +62,7 @@ view-if: sunyatsen_dead = 1
   ?]
 
   [? if huhanmin_exile = 1 :
-    <img src="img/portraits/HuHanmin.jpg" width="150px" height="205px" style="opacity: 0.45;">
+    <img src="img/portraits/HuHanmin.jpg" width="150px" height="205px" style="filter: brightness(40%);">
   ?]
 </div>
 
@@ -73,7 +73,7 @@ view-if: sunyatsen_dead = 1
     <img src="img/portraits/ChiangKai-shek.jpg" width="150px" height="205px">
   ?]
    [? if chiangkaishek_exile = 1 :
-    <img src="img/portraits/ChiangKai-shek.jpg" width="150px" height="205px" style="opacity: 0.45;">
+    <img src="img/portraits/ChiangKai-shek.jpg" width="150px" height="205px" style="filter: brightness(40%);">
   ?]
 </div>
 
