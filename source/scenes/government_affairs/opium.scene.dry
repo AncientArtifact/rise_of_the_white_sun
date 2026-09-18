@@ -2,7 +2,7 @@ title: Opium Policy
 new-page: true
 is-card: true
 tags: govt_affairs, cabinet
-on-arrival: opium_timer += 9; month_actions += 1
+on-arrival: opium_timer += 9; week_actions += 1
 view-if: opium_timer <= 0
 card-image: img/kmtopium.jpg
 
