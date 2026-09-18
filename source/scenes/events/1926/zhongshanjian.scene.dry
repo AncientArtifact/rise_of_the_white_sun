@@ -28,7 +28,7 @@ unavailable-subtitle: No path yet, sorry. :(
 
 @chiang
 face-image: img/portraits/ChiangKai-shek.jpg
-on-arrival: center_left_strength -= 10; whampoa_strength += 10; cpc_relation -= 5; east_relation -= 1; kmt_leader = "Chiang Kai-shek"; 
+on-arrival: center_left_strength -= 10; whampoa_strength += 10; cpc_relation -= 5; east_relation -= 1; kmt_leader = "Chiang Kai-shek"; wangjingweiexile = 1;
 
 Chiang's order of martial law worked. The Left faction under Wang Jingwei went completely silent.
 
