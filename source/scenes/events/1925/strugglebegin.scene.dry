@@ -18,7 +18,7 @@ After Sun Yat-sen's death, a power struggle has erupted between the three main f
 @left
 on-arrival: {!
 
-function clearAdvisors();
+clearAdvisors();
 
 Q.liaozhongkai_advisor = 1;
 Q.mikhailborodin_advisor = 1;
@@ -45,7 +45,7 @@ go-to: main
 @centerleft
 on-arrival: {!
 
-function clearAdvisors();
+clearAdvisors();
 
 Q.wangjingwei_advisor = 1;
 Q.tvsoong_advisor = 1;
@@ -71,7 +71,7 @@ You have chosen the Leftist Faction. You have picked the advisors: Wang Jingwei,
 @right
 on-arrival: {!
 
-function clearAdvisors();
+clearAdvisors();
 
 Q.huhanmin_advisor = 1;
 Q.daijitao_advisor = 1;
