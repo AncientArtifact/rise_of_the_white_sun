@@ -324,7 +324,9 @@ is-card: true
 card-image: img/portraits/TanYankai.jpg
 tags: center_advisor
 view-if: tanyankai_advisor = 0 and n_advisors < 6
-on-arrival: tanyankai_advisor = 1; n_advisors += 1
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: tanyankai_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 Tan Yankai is now an advisor.
@@ -336,7 +338,9 @@ is-card: true
 card-image: img/portraits/SunYat-sen.jpg
 tags: center_advisor
 view-if: sunyatsen_advisor = 0 and sunyatsen_dead = 0 and n_advisors < 6
-on-arrival: sunyatsen_advisor = 1; n_advisors += 1
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: sunyatsen_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 Sun Yat-sen is now an advisor.
@@ -348,7 +352,9 @@ is-card: true
 card-image: img/portraits/SunFo.jpg
 tags: center_advisor
 view-if: sunfo_advisor = 0 and n_advisors < 6 
-on-arrival: sunfo_advisor = 1; n_advisors += 1
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: sunfo_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 # right
@@ -361,7 +367,9 @@ is-card: true
 card-image: img/portraits/HuHanmin.jpg
 tags: right_advisor
 view-if: huhanmin_advisor = 0 and n_advisors < 6
-on-arrival: huhanmin_advisor = 1; n_advisors += 1; right_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: huhanmin_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 Hu Hanmin is now an advisor.
@@ -373,7 +381,9 @@ is-card: true
 card-image: img/portraits/DaiJitao.jpg
 tags: right_advisor
 view-if: daijitao_advisor = 0 and n_advisors < 6
-on-arrival: daijitao_advisor = 1; n_advisors += 1; right_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: daijitao_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 Dai Jitao is now an advisor.
@@ -384,7 +394,9 @@ subtitle: Lin Sen is a member of the Western Hills faction of the right. {!<br><
 is-card: true
 card-image: img/portraits/LinSen.jpg
 view-if: juchacz_advisor = 0 and n_advisors < 6
-on-arrival: juchacz_advisor = 1; n_advisors += 1; right_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: juchacz_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: right_advisor
 
@@ -396,7 +408,9 @@ subtitle: Zhang Renjie is a right-wing financier. {!<br><br>!}[? if difficulty <
 is-card: true
 card-image: img/portraits/ZhangRenjie.jpg
 view-if: zhangrenjie_advisor = 0 and n_advisors < 6
-on-arrival: zhangrenjie_advisor = 1; n_advisors += 1
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: zhangrenjie_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: right_advisor
 
@@ -411,8 +425,10 @@ title: Liao Zhongkai
 subtitle: Liao Zhongkai is a radical leftist leader and veteran statesman. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the CPC ?]
 is-card: true
 card-image: img/portraits/LiaoZhongkai.jpg
-view-if: liaozhongkai_advisor = 0 and liaozhongkai_dead = 0 and n_advisors < 6 and left_split = 0
-on-arrival: liaozhongkai_advisor = 1; n_advisors += 1; left_strength += 5
+view-if: liaozhongkai_advisor = 0 and liaozhongkai_dead = 0 and n_advisors < 6
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: liaozhongkai_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: left_advisor
 
@@ -424,7 +440,9 @@ subtitle: Mikhail Borodin is a Soviet advisor for the KMT sent by the Comintern.
 is-card: true
 card-image: img/portraits/MikhailBorodin.jpg
 view-if: mikhailborodin_advisor = 0 and n_advisors < 6
-on-arrival: mikhailborodin_advisor = 1; n_advisors += 1; left_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: mikhailborodin_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: left_advisor
 
@@ -436,7 +454,9 @@ subtitle: Deng Yanda is a left-wing general. {!<br><br>!}[? if difficulty < 0 : 
 is-card: true
 card-image: img/portraits/DengYanda.jpg
 view-if: dengyanda_advisor = 0 and n_advisors < 6 and left_split = 0
-on-arrival: dengyanda_advisor = 1; n_advisors += 1; left_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: dengyanda_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: left_advisor
 
@@ -448,7 +468,9 @@ subtitle: Soong Ching-ling is [? if sunyatsen_dead = 0: the wife ?][? if sunyats
 is-card: true
 card-image: img/portraits/SoongChing-ling.jpg
 view-if: soongchingling_advisor = 0 and n_advisors < 6 and left_split = 0
-on-arrival: soongchingling_advisor = 1; n_advisors += 1; left_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: soongchingling_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: left_advisor
 
@@ -464,7 +486,9 @@ subtitle: Wang Jingwei is a major party leader in the left. {!<br><br>!}[? if di
 is-card: true
 card-image: img/portraits/WangJingwei.jpg
 view-if: wangjingwei_advisor = 0 and n_advisors < 6
-on-arrival: wangjingwei_advisor = 1; n_advisors += 1; center_left_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: wangjingwei_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: center_left_advisor
 
@@ -477,7 +501,9 @@ is-card: true
 card-image: img/portraits/TVSoong.jpg
 tags: center_left_advisor
 view-if: tvsoong_advisor = 0 and n_advisors < 6
-on-arrival: tvsoong_advisor = 1; n_advisors += 1; center_left_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: tvsoong_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 Theodor Leipart is now an advisor.
@@ -489,7 +515,9 @@ is-card: true
 card-image: img/portraits/ZhangFakui.jpg
 tags: center_left_advisor
 view-if: zhangfakui_advisor = 0 and n_advisors < 6
-on-arrival: zhangfakui_advisor = 1; n_advisors += 1; center_left_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: zhangfakui_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 Zhang Fakui is now an advisor.
@@ -501,7 +529,9 @@ is-card: true
 card-image: img/portraits/EugeneChen.jpg
 tags: center_left_advisor
 view-if: eugenechen_advisor = 0 and n_advisors < 6
-on-arrival: eugenechen_advisor = 1; n_advisors += 1; center_left_strength += 3
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: eugenechen_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 Eugene Chen is now an advisor.
@@ -514,7 +544,9 @@ subtitle: Chiang Kai-shek is a young officer and superintendent of the Whampoa M
 is-card: true
 card-image: img/portraits/ChiangKai-shek.jpg
 view-if: chiangkaishek_advisor = 0 and whampoa_built = 1 and n_advisors < 6
-on-arrival: chiangkaishek_advisor = 1; n_advisors += 1; whampoa_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: chiangkaishek_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: whampoa_advisor
 
@@ -526,7 +558,9 @@ subtitle: He Yingqin is one of Chiang Kai-shek's foremost allies within the Kuom
 is-card: true
 card-image: img/portraits/HeYingqin.jpg
 view-if: heyingqin_advisor = 0 and whampoa_built = 1 and n_advisors < 6
-on-arrival: heyingqin_advisor = 1; n_advisors += 1; whampoa_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: heyingqin_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: whampoa_advisor
 
@@ -538,7 +572,9 @@ subtitle: [? if guangxi_governor = "Li Zongren" : Li Zongren is the ruling warlo
 is-card: true
 card-image: img/portraits/LiZongren.jpg
 view-if: lizongren_advisor = 0 and whampoa_built = 1 and n_advisors < 6
-on-arrival: lizongren_advisor = 1; n_advisors += 1; whampoa_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: lizongren_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: whampoa_advisor
 
@@ -550,7 +586,9 @@ subtitle: Tang Shengzhi is a KMT-sympathetic warlord in Hunan.
 is-card: true
 card-image: img/portraits/TangShengzhi.jpg
 view-if: tangshengzhi_advisor = 0 and whampoa_built = 1 and n_advisors < 6
-on-arrival: tangshengzhi_advisor = 1; n_advisors += 1; whampoa_strength += 5
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: tangshengzhi_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: whampoa_advisor
 
@@ -563,7 +601,9 @@ is-card: true
 card-image: img/portraits/XuChongzhi.jpg
 tags: whampoa_advisor
 view-if: xuchongzhi_advisor = 0 and n_advisors < 6 and whampoa_built = 1
-on-arrival: xuchongzhi_advisor = 1; n_advisors += 1
+choose-if: funds >= 2
+unavailable-subtitle: Not enough funds. 
+on-arrival: xuchongzhi_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
 Xu Chongzhi is now an advisor.
