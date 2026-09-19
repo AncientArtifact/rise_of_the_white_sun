@@ -562,7 +562,7 @@ title: Xu Chongzhi
 subtitle: -2 funds
 is-card: true
 card-image: img/portraits/XuChongzhi.jpg
-card-image: img/portraits/XuChongzhi.jpg
+face-image: img/portraits/XuChongzhi.jpg
 tags: whampoa_advisor
 view-if: xuchongzhi_advisor = 0 and n_advisors < 6 and whampoa_built = 1
 choose-if: funds >= 2
