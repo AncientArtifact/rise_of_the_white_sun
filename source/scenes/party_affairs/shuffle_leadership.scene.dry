@@ -273,9 +273,10 @@ view-if: tanyankai_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: tanyankai_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 Tan Yankai is a statesman and organizer within the party. 
+
+- @exit: Continue...
 
 @add_sunyatsen
 title: Sun Yat-sen
@@ -288,9 +289,10 @@ view-if: sunyatsen_advisor = 0 and sunyatsen_dead = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: sunyatsen_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 Sun Yat-sen is the father of our party and our nation.
+
+- @exit: Continue...
 
 @add_sunfo
 title: Sun Fo
@@ -303,9 +305,10 @@ view-if: sunfo_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: sunfo_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 Sun Fo is the son of Sun Yat-sen.
+
+- @exit: Continue...
 
 # right
 
@@ -321,9 +324,10 @@ view-if: huhanmin_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: huhanmin_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 Hu Hanmin is a veteran right politician in our party. 
+
+- @exit: Continue...
 
 @add_daijitao
 title: Dai Jitao
@@ -336,9 +340,10 @@ view-if: daijitao_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: daijitao_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 Dai Jitao is a right member, and a powerful propagandist in our party.
+
+- @exit: Continue...
 
 @add_linsen
 title: Lin Sen
@@ -350,10 +355,11 @@ view-if: linsen_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: linsen_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: right_advisor
 
 Lin Sen is a member of the Western Hills faction of the right.
+
+- @exit: Continue...
 
 @add_zhangrenjie
 title: Zhang Renjie
@@ -365,10 +371,11 @@ view-if: zhangrenjie_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: zhangrenjie_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: right_advisor
 
 Zhang Renjie is a right-wing financier. 
+
+- @exit: Continue...
 
 # left
 
@@ -382,10 +389,11 @@ view-if: liaozhongkai_advisor = 0 and liaozhongkai_dead = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: liaozhongkai_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: left_advisor
 
 Liao Zhongkai is a radical leftist leader and veteran statesman.
+
+- @exit: Continue...
 
 @add_mikhailborodin
 title: Mikhail Borodin
@@ -397,10 +405,11 @@ view-if: mikhailborodin_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: mikhailborodin_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: left_advisor
 
 Mikhail Borodin is a Soviet advisor for the KMT sent by the Comintern. 
+
+- @exit: Continue...
 
 @add_dengyanda
 title: Deng Yanda
@@ -412,10 +421,11 @@ view-if: dengyanda_advisor = 0 and n_advisors < 6 and left_split = 0
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: dengyanda_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: left_advisor
 
 Deng Yanda is a left-wing general.
+
+- @exit: Continue...
 
 @add_soongchingling
 title: Soong Ching-ling
@@ -427,10 +437,11 @@ view-if: soongchingling_advisor = 0 and n_advisors < 6 and left_split = 0
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: soongchingling_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: left_advisor
 
 Soong Ching-ling is [? if sunyatsen_dead = 0: the wife ?][? if sunyatsen_dead = 0: the widow ?] of Sun Yat-sen. 
+
+- @exit: Continue...
 
 
 # center_left
@@ -445,10 +456,11 @@ view-if: wangjingwei_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: wangjingwei_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: center_left_advisor
 
 Wang Jingwei is a major party leader in the left.
+
+- @exit: Continue...
 
 @add_tvsoong
 title: T.V. Soong
@@ -461,9 +473,10 @@ view-if: tvsoong_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: tvsoong_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 T.V. Soong is a chinese businessman associated with Wang Jingwei. He handles government finances.
+
+- @exit: Continue...
 
 @add_zhangfakui
 title: Zhang Fakui
@@ -476,9 +489,10 @@ view-if: zhangfakui_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: zhangfakui_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 Zhang Fakui is a left-wing general.
+
+- @exit: Continue...
 
 @add_eugenechen
 title: Eugene Chen
@@ -491,9 +505,10 @@ view-if: eugenechen_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: eugenechen_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 Eugene Chen is a left-wing member with foreign affairs skills.
+
+- @exit: Continue...
 
 # whampoa leaders
 
@@ -507,10 +522,11 @@ view-if: chiangkaishek_advisor = 0 and whampoa_built = 1 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: chiangkaishek_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: whampoa_advisor
 
 Chiang Kai-shek is a young officer and superintendent of the Whampoa Military Academy
+
+- @exit: Continue...
 
 @add_heyingqin
 title: He Yingqin
@@ -522,10 +538,11 @@ view-if: heyingqin_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and nort
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: heyingqin_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: whampoa_advisor
 
 He Yingqin is one of Chiang Kai-shek's foremost allies within the Kuomintang and it's Whampoa Officer Clique.
+
+- @exit: Continue...
 
 @add_lizongren
 title: Li Zongren
@@ -537,10 +554,11 @@ view-if: lizongren_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and nort
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: lizongren_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: whampoa_advisor
 
 [? if guangxi_governor = "Li Zongren" : Li Zongren is the ruling warlord of Guangxi, and the leader of it's New Guangxi Clique. ?][? if guangxi_governor = "Shen Hongying" : Li Zongren is a KMT general from Guangxi who escaped after Shen Hongying's takeover. ?][? if guangxi_governor = "Lu Rongting" : Li Zongren is a KMT general from Guangxi who escaped after Lu Rongting's takeover. ?]
+
+- @exit: Continue...
 
 @add_tangshengzhi
 title: Tang Shengzhi
@@ -552,10 +570,11 @@ view-if: tangshengzhi_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and n
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: tangshengzhi_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 tags: whampoa_advisor
 
 Tang Shengzhi is a KMT-sympathetic warlord in Hunan.
+
+- @exit: Continue...
 
 @add_xuchongzhi
 title: Xu Chongzhi
@@ -568,9 +587,10 @@ view-if: xuchongzhi_advisor = 0 and n_advisors < 6 and whampoa_built = 1
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: xuchongzhi_advisor = 1; n_advisors += 1; funds -= 2
-go-to: exit
 
 Xu Chongzhi is a Guangdongese general and head of the NRA.
+
+- @exit: Continue...
 
 @exit
 go-to: main
