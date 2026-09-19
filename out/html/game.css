@@ -251,7 +251,6 @@ blockquote + blockquote.attribution {
     margin-top: -0.6em;
     margin-left: -0.6em;
     margin-right: -0.6em;
-    display: flex;
 }
 .tab_button {
     font-family: "Minion Pro", Georgia, serif;
