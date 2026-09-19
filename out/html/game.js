@@ -200,10 +200,10 @@ window.hideMap = function() {
        dendryUI.dendryEngine.state.qualities.sunyatsen_dead === 1 ? "block" : "none";
 
     document.getElementById("northernexpedition_tab").style.display =
-        dendryUI.dendryEngine.state.qualities.northernexpedition_begun === 1 ? "block" : "none";
+        dendryUI.dendryEngine.state.qualities.northern_expedition_begun === 1 ? "block" : "none";
 
     document.getElementById("wuhannanjing_tab").style.display =
-        dendryUI.dendryEngine.state.qualities.wuhannanjing_split === 1 ? "block" : "none";
+        dendryUI.dendryEngine.state.qualities.wuhan_nanjing_split === 1 ? "block" : "none";
 
     document.getElementById("civilwar_tab").style.display =
         dendryUI.dendryEngine.state.qualities.cpc_civilwar === 1 ? "block" : "none";
