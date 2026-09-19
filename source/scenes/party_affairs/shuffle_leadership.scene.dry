@@ -238,6 +238,8 @@ title: Add other advisors.
 tags: center_advisor, left_advisor, right_advisor, center_left_advisor, whampoa_advisor, nonfactional_advisor
 frequency: 1
 
+We can appoint some of our party members as advisors:
+
 - @add_tanyankai
 - @add_sunfo
 - @add_sunyatsen
@@ -262,7 +264,7 @@ frequency: 1
 
 @add_tanyankai
 title: Tan Yankai
-subtitle: -2 funds - Tan Yankai is a statesman and organizer within the party. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/TanYankai.jpg
 tags: center_advisor
@@ -272,11 +274,11 @@ unavailable-subtitle: Not enough funds.
 on-arrival: tanyankai_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-Tan Yankai is now an advisor.
+Tan Yankai is a statesman and organizer within the party. 
 
 @add_sunyatsen
 title: Sun Yat-sen
-subtitle: -2 funds - Sun Yat-sen is the father of our party and our nation. {!<br><br>!}[? if difficulty < 0 : Actions - Party Mediation, National Revolutionary Army, International Relations ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/SunYat-sen.jpg
 tags: center_advisor
@@ -286,11 +288,11 @@ unavailable-subtitle: Not enough funds.
 on-arrival: sunyatsen_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-Sun Yat-sen is now an advisor.
+Sun Yat-sen is the father of our party and our nation.
 
 @add_sunfo
 title: Sun Fo
-subtitle: -2 funds - Sun Fo is the son of Sun Yat-sen.
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/SunFo.jpg
 tags: center_advisor
@@ -300,12 +302,14 @@ unavailable-subtitle: Not enough funds.
 on-arrival: sunfo_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
+Sun Fo is the son of Sun Yat-sen.
+
 # right
 
 
 @add_huhanmin
 title: Hu Hanmin
-subtitle: -2 funds - Hu Hanmin is a veteran right politician in our party. {!<br><br>!}[? if difficulty < 0 : Actions - Cut ties with the CPC, Increase Right Influence ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/HuHanmin.jpg
 tags: right_advisor
@@ -315,11 +319,11 @@ unavailable-subtitle: Not enough funds.
 on-arrival: huhanmin_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-Hu Hanmin is now an advisor.
+Hu Hanmin is a veteran right politician in our party. 
 
 @add_daijitao
 title: Dai Jitao
-subtitle: -2 funds - Dai Jitao is a right member, and a powerful propagandist in our party. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/DaiJitao.jpg
 tags: right_advisor
@@ -329,11 +333,11 @@ unavailable-subtitle: Not enough funds.
 on-arrival: daijitao_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-Dai Jitao is now an advisor.
+Dai Jitao is a right member, and a powerful propagandist in our party.
 
 @add_linsen
 title: Lin Sen
-subtitle: -2 funds - Lin Sen is a member of the Western Hills faction of the right. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/LinSen.jpg
 view-if: linsen_advisor = 0 and n_advisors < 6
@@ -343,11 +347,11 @@ on-arrival: linsen_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: right_advisor
 
-Lin Sen is now an advisor.
+Lin Sen is a member of the Western Hills faction of the right.
 
 @add_zhangrenjie
 title: Zhang Renjie
-subtitle: -2 funds - Zhang Renjie is a right-wing financier. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/ZhangRenjie.jpg
 view-if: zhangrenjie_advisor = 0 and n_advisors < 6
@@ -357,15 +361,13 @@ on-arrival: zhangrenjie_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: right_advisor
 
-Zhang Renjie is now an advisor.
-
-
+Zhang Renjie is a right-wing financier. 
 
 # left
 
 @add_liaozhongkai
 title: Liao Zhongkai
-subtitle: -2 funds - Liao Zhongkai is a radical leftist leader and veteran statesman. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the CPC ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/LiaoZhongkai.jpg
 view-if: liaozhongkai_advisor = 0 and liaozhongkai_dead = 0 and n_advisors < 6
@@ -375,11 +377,11 @@ on-arrival: liaozhongkai_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: left_advisor
 
-Liao Zhongkai is now an advisor.
+Liao Zhongkai is a radical leftist leader and veteran statesman.
 
 @add_mikhailborodin
 title: Mikhail Borodin
-subtitle: -2 funds - Mikhail Borodin is a Soviet advisor for the KMT sent by the Comintern. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/MikhailBorodin.jpg
 view-if: mikhailborodin_advisor = 0 and n_advisors < 6
@@ -389,11 +391,11 @@ on-arrival: mikhailborodin_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: left_advisor
 
-Mikhail Borodin is now an advisor.
+Mikhail Borodin is a Soviet advisor for the KMT sent by the Comintern. 
 
 @add_dengyanda
 title: Deng Yanda
-subtitle: -2 funds - Deng Yanda is a left-wing general. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/DengYanda.jpg
 view-if: dengyanda_advisor = 0 and n_advisors < 6 and left_split = 0
@@ -403,11 +405,11 @@ on-arrival: dengyanda_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: left_advisor
 
-Deng Yanda is now an advisor.
+Deng Yanda is a left-wing general.
 
 @add_soongchingling
 title: Soong Ching-ling
-subtitle: -2 funds - Soong Ching-ling is [? if sunyatsen_dead = 0: the wife ?][? if sunyatsen_dead = 0: the widow ?] of Sun Yat-sen. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/SoongChing-ling.jpg
 view-if: soongchingling_advisor = 0 and n_advisors < 6 and left_split = 0
@@ -417,7 +419,7 @@ on-arrival: soongchingling_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: left_advisor
 
-Soong Ching-ling is now an advisor.
+Soong Ching-ling is [? if sunyatsen_dead = 0: the wife ?][? if sunyatsen_dead = 0: the widow ?] of Sun Yat-sen. 
 
 
 
@@ -425,7 +427,7 @@ Soong Ching-ling is now an advisor.
 
 @add_wangjingwei
 title: Wang Jingwei
-subtitle: -2 funds - Wang Jingwei is a major party leader in the left. {!<br><br>!}[? if difficulty < 0 : Actions - Cooperation with the CPC, Increase Center-Left Influence, Limit Whampoa Influence ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/WangJingwei.jpg
 view-if: wangjingwei_advisor = 0 and n_advisors < 6
@@ -435,11 +437,11 @@ on-arrival: wangjingwei_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: center_left_advisor
 
-Wang Jingwei is now an advisor.
+Wang Jingwei is a major party leader in the left.
 
 @add_tvsoong
 title: T.V. Soong
-subtitle: -2 funds - T.V. Soong is a chinese businessman associated with Wang Jingwei. He handles government finances. {!<br><br>!}[? if difficulty < 0 : Actions - Organize the Middle Class, Finances ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/TVSoong.jpg
 tags: center_left_advisor
@@ -449,11 +451,11 @@ unavailable-subtitle: Not enough funds.
 on-arrival: tvsoong_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-T.V. Soong is now an advisor.
+T.V. Soong is a chinese businessman associated with Wang Jingwei. He handles government finances.
 
 @add_zhangfakui
 title: Zhang Fakui
-subtitle: -2 funds - Zhang Fakui is a left-wing general. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/ZhangFakui.jpg
 tags: center_left_advisor
@@ -463,11 +465,11 @@ unavailable-subtitle: Not enough funds.
 on-arrival: zhangfakui_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-Zhang Fakui is now an advisor.
+Zhang Fakui is a left-wing general.
 
 @add_eugenechen
 title: Eugene Chen
-subtitle: -2 funds - Eugene Chen is a left-wing member with foreign affairs skills. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, center_left Rights ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/EugeneChen.jpg
 tags: center_left_advisor
@@ -477,13 +479,13 @@ unavailable-subtitle: Not enough funds.
 on-arrival: eugenechen_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-Eugene Chen is now an advisor.
+Eugene Chen is a left-wing member with foreign affairs skills.
 
 # whampoa leaders
 
 @add_chiangkaishek
 title: Chiang Kai-shek
-subtitle: -2 funds - Chiang Kai-shek is a young officer and superintendent of the Whampoa Military Academy {!<br><br>!}[? if difficulty < 0 : Actions - NRA Buildup, NRA Training, Succeeding Sun Yat-sen ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/ChiangKai-shek.jpg
 view-if: chiangkaishek_advisor = 0 and whampoa_built = 1 and n_advisors < 6
@@ -493,11 +495,11 @@ on-arrival: chiangkaishek_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: whampoa_advisor
 
-Chiang Kai-shek is now an advisor.
+Chiang Kai-shek is a young officer and superintendent of the Whampoa Military Academy
 
 @add_heyingqin
 title: He Yingqin
-subtitle: -2 funds - He Yingqin is one of Chiang Kai-shek's foremost allies within the Kuomintang and it's Whampoa Officer Clique.
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/HeYingqin.jpg
 view-if: heyingqin_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and northern_expedition_begun = 1
@@ -507,11 +509,11 @@ on-arrival: heyingqin_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: whampoa_advisor
 
-He Yingqin is now an advisor.
+He Yingqin is one of Chiang Kai-shek's foremost allies within the Kuomintang and it's Whampoa Officer Clique.
 
 @add_lizongren
 title: Li Zongren
-subtitle: -2 funds - [? if guangxi_governor = "Li Zongren" : Li Zongren is the ruling warlord of Guangxi, and the leader of it's New Guangxi Clique. ?][? if guangxi_governor = "Shen Hongying" : Li Zongren is a KMT general from Guangxi who escaped after Shen Hongying's takeover. ?][? if guangxi_governor = "Lu Rongting" : Li Zongren is a KMT general from Guangxi who escaped after Lu Rongting's takeover. ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/LiZongren.jpg
 view-if: lizongren_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and northern_expedition_begun = 1
@@ -521,11 +523,11 @@ on-arrival: lizongren_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: whampoa_advisor
 
-Li Zongren is now an advisor.
+[? if guangxi_governor = "Li Zongren" : Li Zongren is the ruling warlord of Guangxi, and the leader of it's New Guangxi Clique. ?][? if guangxi_governor = "Shen Hongying" : Li Zongren is a KMT general from Guangxi who escaped after Shen Hongying's takeover. ?][? if guangxi_governor = "Lu Rongting" : Li Zongren is a KMT general from Guangxi who escaped after Lu Rongting's takeover. ?]
 
 @add_tangshengzhi
 title: Tang Shengzhi
-subtitle: -2 funds - Tang Shengzhi is a KMT-sympathetic warlord in Hunan.
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/TangShengzhi.jpg
 view-if: tangshengzhi_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and northern_expedition_begun = 1
@@ -535,11 +537,11 @@ on-arrival: tangshengzhi_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: whampoa_advisor
 
-Tang Shengzhi is now an advisor.
+Tang Shengzhi is a KMT-sympathetic warlord in Hunan.
 
 @add_xuchongzhi
 title: Xu Chongzhi
-subtitle: -2 funds - Xu Chongzhi is a Guangdongese general and head of the NRA. {!<br><br>!}[? if difficulty < 0 : Actions - NRA Buildup, NRA Training ?]
+subtitle: -2 funds
 is-card: true
 card-image: img/portraits/XuChongzhi.jpg
 tags: whampoa_advisor
@@ -549,4 +551,4 @@ unavailable-subtitle: Not enough funds.
 on-arrival: xuchongzhi_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-Xu Chongzhi is now an advisor.
+Xu Chongzhi is a Guangdongese general and head of the NRA.
