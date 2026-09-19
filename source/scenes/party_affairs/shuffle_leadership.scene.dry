@@ -1,11 +1,11 @@
-title: Shuffle Leadership
+title: Hire Advisors
 new-page: true
 is-card: true
 tags: party_affairs, shuffle_leadership
 view-if: shuffle_leadership_timer = 0 and difficulty >= 0
 on-arrival: week_actions += 1; shuffle_leadership_timer = 8;
 card-image: img/kmtshuffle.jpg
-go-to: rm_main
+go-to: add_advisors
 
 We can hire members of our party as advisors for our upper organizations. Doing so needs money.
 
