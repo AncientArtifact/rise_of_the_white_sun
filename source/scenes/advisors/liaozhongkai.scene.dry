@@ -12,7 +12,6 @@ Liao Zhongkai is a veteran KMT member staunchly aligned with leftist ideals and 
 - @building_the_left
 - @cpc_cooperation
 - @emergency_fundraising
-- @ne
 - @root: Return to main
 
 @building_the_left
@@ -42,10 +41,3 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; funds += 3
 
 We have gained +3 funds.
-
-@ne
-title: Launch the Northern Expedition
-subtitle: (debugging only)
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0
-on-arrival: advisor_action_timer += 6; northern_expedition_begun = 1;
