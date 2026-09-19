@@ -4,5 +4,5 @@ is-card: true
 is-pinned-card: true
 on-arrival: view_activities += 1; shuffle_leadership_timer = 6;
 card-image: img/kmtshuffle.jpg
-go-to: shuffle_leadership
+go-to: shuffle_leadership.rm_main
 
