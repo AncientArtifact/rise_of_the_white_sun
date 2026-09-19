@@ -12,6 +12,7 @@ Liao Zhongkai is a veteran KMT member staunchly aligned with leftist ideals and 
 - @building_the_left
 - @cpc_cooperation
 - @emergency_fundraising
+- @ne
 - @root: Return to main
 
 @building_the_left
@@ -26,7 +27,7 @@ We have increased the strength of the communist faction within the KMT. This rai
 @cpc_cooperation
 title: Cooperation with the CPC
 subtitle: Cooperating with the Communists is one of Liao Zhongkai's biggest demands.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if cpc_civil_war = 1 : The Communists don't trust us anymore.?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if cpc_civil_war = 1 : The Communists don't trust us anymore.?]
 choose-if: advisor_action_timer = 0 and cpc_civil_war = 0
 on-arrival: advisor_action_timer = 6; left_strength += 5; cpc_relation += 6*(1-dissent); right_dissent += 3;
 
@@ -40,4 +41,11 @@ choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; funds += 3
 
-We have gained +[+ income +] funds.
+We have gained +3 funds.
+
+@ne
+title: Launch the Northern Expedition
+subtitle: (debugging only)
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: advisor_action_timer += 6; northern_expedition_begun = 1;
