@@ -18,7 +18,7 @@ go-to: start_menu_2
 @start
 on-arrival: {!
 Q.started = 1;
-// time elapsed (in months)
+// time elapsed
 Q.time = 1;
 Q.year = 1924;
 Q.month = 1;
@@ -610,7 +610,7 @@ difficulty = -1;
 income = 3; 
 funds = 6;
 !}
-go-to: 1924_main
+go-to: 1924_easy
 
 @1924_hard
 on-arrival: {! difficulty = 1;
@@ -622,7 +622,7 @@ center_left_dissent = 25;
 center_dissent = 25; 
 funds = 3;
 !}
-go-to: 1924_main
+go-to: 1924_hard
 
 @1924_historical
 on-arrival: {!
