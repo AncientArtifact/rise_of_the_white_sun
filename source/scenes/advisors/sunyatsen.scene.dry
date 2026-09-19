@@ -13,6 +13,7 @@ Sun Yat-sen is the founder of our party and a revolutionary who took down the Ma
 - @mediation
 - @nra
 - @internat
+- @kill
 - @root: Return to main
 
 @mediation
@@ -39,6 +40,11 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer == 0
 on-arrival: advisor_action_timer = 6;
 go-to: international_relations
+
+@kill
+title: Commit Suicide
+subtitle: (for debugging only)
+on-arrival: sunyatsen_dead = 1;
 
 @root
 title: Return to main
