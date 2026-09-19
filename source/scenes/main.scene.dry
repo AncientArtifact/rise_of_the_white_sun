@@ -65,9 +65,3 @@ card-image: img/warlord.jpg
 is-deck: true
 
 - #warlord_affairs
-
-@shuffle_leadership_pinned
-title: Shuffle Leadership
-card-image: img/kmtshuffle.jpg
-is-deck: false
-go-to: shuffle_leadership_pinned
