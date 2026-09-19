@@ -199,16 +199,16 @@ window.hideMap = function() {
     const qualities = window.dendryUI.dendryEngine.state.qualities;
 
     document.getElementById("powerstruggle_tab").style.display =
-        qualities.sunyatsen_dead === 1 ? "inline_block" : "none";
+        qualities.sunyatsen_dead === 1 ? "" : "none";
 
     document.getElementById("northernexpedition_tab").style.display =
-        qualities.northern_expedition_begun === 1 ? "inline_block" : "none";
+        qualities.northern_expedition_begun === 1 ? "" : "none";
 
     document.getElementById("wuhannanjing_tab").style.display =
-        qualities.wuhan_nanjing_split === 1 ? "inline_block" : "none";
+        qualities.wuhan_nanjing_split === 1 ? "" : "none";
 
     document.getElementById("civilwar_tab").style.display =
-        qualities.cpc_civilwar === 1 ? "inline_block" : "none";
+        qualities.cpc_civilwar === 1 ? "" : "none";
 };
   
   // This function allows you to modify the text before it's displayed.
