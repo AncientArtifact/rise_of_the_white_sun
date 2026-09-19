@@ -197,16 +197,16 @@ window.hideMap = function() {
 
   function updateTabs() {
     document.getElementById("powerstruggle_tab").style.display =
-        Q.sunyatsen_dead === 1 ? "block" : "none";
+       dendryUI.dendryEngine.state.qualities.sunyatsen_dead === 1 ? "block" : "none";
 
     document.getElementById("northernexpedition_tab").style.display =
-        Q.northernexpedition_begun === 1 ? "block" : "none";
+        dendryUI.dendryEngine.state.qualities.northernexpedition_begun === 1 ? "block" : "none";
 
     document.getElementById("wuhannanjing_tab").style.display =
-        Q.wuhannanjing_split === 1 ? "block" : "none";
+        dendryUI.dendryEngine.state.qualities.wuhannanjing_split === 1 ? "block" : "none";
 
     document.getElementById("civilwar_tab").style.display =
-        Q.cpc_civilwar === 1 ? "block" : "none";
+        dendryUI.dendryEngine.state.qualities.cpc_civilwar === 1 ? "block" : "none";
 }
   
   // This function allows you to modify the text before it's displayed.
