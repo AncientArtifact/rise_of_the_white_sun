@@ -44,7 +44,9 @@ go-to: international_relations
 @kill
 title: Commit Suicide
 subtitle: (for debugging only)
-on-arrival: sunyatsen_dead = 1;
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0
+on-arrival: sunyatsen_dead = 1; sunyatsen_advisor = 0; advisor_action_timer = 0;
 
 @root
 title: Return to main
