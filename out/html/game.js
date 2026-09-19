@@ -195,19 +195,21 @@ window.hideMap = function() {
     });
 }
 
-  function updateTabs() {
+  window.updateTabs = function() {
+    const qualities = window.dendryUI.dendryEngine.state.qualities;
+
     document.getElementById("powerstruggle_tab").style.display =
-       dendryUI.dendryEngine.state.qualities.sunyatsen_dead === 1 ? "block" : "none";
+        qualities.sunyatsen_dead === 1 ? "block" : "none";
 
     document.getElementById("northernexpedition_tab").style.display =
-        dendryUI.dendryEngine.state.qualities.northern_expedition_begun === 1 ? "block" : "none";
+        qualities.northern_expedition_begun === 1 ? "block" : "none";
 
     document.getElementById("wuhannanjing_tab").style.display =
-        dendryUI.dendryEngine.state.qualities.wuhan_nanjing_split === 1 ? "block" : "none";
+        qualities.wuhan_nanjing_split === 1 ? "block" : "none";
 
     document.getElementById("civilwar_tab").style.display =
-        dendryUI.dendryEngine.state.qualities.cpc_civilwar === 1 ? "block" : "none";
-}
+        qualities.cpc_civilwar === 1 ? "block" : "none";
+};
   
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
