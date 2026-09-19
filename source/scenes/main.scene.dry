@@ -27,11 +27,11 @@ set-bg: img/bgchina.jpg
 is-hand: true
 on-arrival: {!
 if (Q.advisor_action_timer <= 0) {
-    Q.pinnedCardsDescription = 'Advisors - an action is available.';
+    Q.pinnedCardsDescription = 'Advisors - an action is available.' + advisorCount;
 } else if (Q.advisor_action_timer == 1) {
-    Q.pinnedCardsDescription = 'Advisors - next action available in 2 weeks.';
+    Q.pinnedCardsDescription = 'Advisors - next action available in 2 weeks.' + advisorCount;
 } else {
-    Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' weeks.';
+    Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' weeks.' + advisorCount;
 }
 !}
 max-cards: 5
@@ -70,4 +70,4 @@ is-deck: true
 title: Shuffle Leadership
 card-image: img/kmtshuffle.jpg
 is-deck: false
-go-to: shuffle_leadership.rm_main
+go-to: shuffle_leadership_pinned
