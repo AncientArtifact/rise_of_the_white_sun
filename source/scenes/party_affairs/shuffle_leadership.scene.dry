@@ -223,54 +223,9 @@ go-to: rm_main
 
 Tang Shengzhi has been removed as an advisor.
 
-## nonfactional
-
-# tbh I'm not sure if Baade should be a right or nonfactional. same for stampfer. they were vaguely right-aligned but had pretty different ideas from the other rights here. so they're non-factional.
-
-@remove_baade
-title: Remove Baade
-view-if: baade_advisor = 1
-tags: remove_advisor
-on-arrival: baade_advisor = 0; n_advisors -= 1
-go-to: rm_main
-
-Baade has been removed as an advisor.
-
-#The right faction disapproves.
-
-
-@remove_hirschfeld
-title: Remove Hirschfeld
-view-if: hirschfeld_advisor = 1
-tags: remove_advisor
-on-arrival: hirschfeld_advisor = 0; n_advisors -= 1
-go-to: rm_main
-
-Hirschfeld has been removed as an advisor. 
-
-@remove_stampfer
-title: Remove Stampfer
-view-if: stampfer_advisor = 1
-tags: remove_advisor
-on-arrival: stampfer_advisor = 0; n_advisors -= 1
-go-to: rm_main
-
-Stampfer has been removed as an advisor. 
-
-@remove_radbruch
-title: Remove Radbruch
-view-if: radbruch_advisor = 1
-tags: remove_advisor
-on-arrival: radbruch_advisor = 0; n_advisors -= 1
-go-to: rm_main
-
-Radbruch has been removed as an advisor. 
-
-
-
-
 
 ####################### adding advisors
+
 
 @add_advisors
 title: Add advisors
@@ -283,39 +238,27 @@ title: Add other advisors.
 tags: center_advisor, left_advisor, right_advisor, center_left_advisor, whampoa_advisor, nonfactional_advisor
 frequency: 1
 
-
-- @centrist: Add Centrists
-- @left: Add Communists
-- @right: Add Rightists
-- @center_left: Add Leftists
-- @whampoa: Add Whampoa Officers
-- @rm_main: Remove advisors instead.
-- @remove_none: Stop changing advisors.
-
-@centrist
-view-if: n_advisors < 6
-
-- #center_advisor
-
-@right
-view-if: n_advisors < 6
-
-- #right_advisor
-
-@left
-view-if: n_advisors < 6
-
-- #left_advisor
-
-@center_left
-view-if: n_advisors < 6
-
-- #center_left_advisor
-
-@whampoa
-view-if: whampoa_built > 0 and n_advisors < 6 
-
-- #whampoa_advisor
+- @add_tanyankai
+- @add_sunfo
+- @add_sunyatsen
+- @add_liaozhongkai
+- @add_mikhailborodin
+- @add_soongchingling
+- @add_dengyanda
+- @add_wangjingwei
+- @add_tvsoong
+- @add_zhangfakui
+- @add_eugenechen
+- @add_huhanmin
+- @add_linsen
+- @add_daijitao
+- @add_zhangrenjie
+- @add_chiangkaishek
+- @add_xuchongzhi
+- @add_heyingqin
+- @add_lizongren
+- @add_tangshengzhi
+- @rm_main
 
 @add_tanyankai
 title: Tan Yankai
@@ -393,10 +336,10 @@ title: Lin Sen
 subtitle: -2 funds - Lin Sen is a member of the Western Hills faction of the right. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
 is-card: true
 card-image: img/portraits/LinSen.jpg
-view-if: juchacz_advisor = 0 and n_advisors < 6
+view-if: linsen_advisor = 0 and n_advisors < 6
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
-on-arrival: juchacz_advisor = 1; n_advisors += 1; funds -= 2
+on-arrival: linsen_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 tags: right_advisor
 
@@ -506,7 +449,7 @@ unavailable-subtitle: Not enough funds.
 on-arrival: tvsoong_advisor = 1; n_advisors += 1; funds -= 2
 go-to: advisor_menu
 
-Theodor Leipart is now an advisor.
+T.V. Soong is now an advisor.
 
 @add_zhangfakui
 title: Zhang Fakui
@@ -557,7 +500,7 @@ title: He Yingqin
 subtitle: -2 funds - He Yingqin is one of Chiang Kai-shek's foremost allies within the Kuomintang and it's Whampoa Officer Clique.
 is-card: true
 card-image: img/portraits/HeYingqin.jpg
-view-if: heyingqin_advisor = 0 and whampoa_built = 1 and n_advisors < 6
+view-if: heyingqin_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and northern_expedition_begun = 1
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: heyingqin_advisor = 1; n_advisors += 1; funds -= 2
@@ -571,7 +514,7 @@ title: Li Zongren
 subtitle: -2 funds - [? if guangxi_governor = "Li Zongren" : Li Zongren is the ruling warlord of Guangxi, and the leader of it's New Guangxi Clique. ?][? if guangxi_governor = "Shen Hongying" : Li Zongren is a KMT general from Guangxi who escaped after Shen Hongying's takeover. ?][? if guangxi_governor = "Lu Rongting" : Li Zongren is a KMT general from Guangxi who escaped after Lu Rongting's takeover. ?]
 is-card: true
 card-image: img/portraits/LiZongren.jpg
-view-if: lizongren_advisor = 0 and whampoa_built = 1 and n_advisors < 6
+view-if: lizongren_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and northern_expedition_begun = 1
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: lizongren_advisor = 1; n_advisors += 1; funds -= 2
@@ -585,7 +528,7 @@ title: Tang Shengzhi
 subtitle: -2 funds - Tang Shengzhi is a KMT-sympathetic warlord in Hunan.
 is-card: true
 card-image: img/portraits/TangShengzhi.jpg
-view-if: tangshengzhi_advisor = 0 and whampoa_built = 1 and n_advisors < 6
+view-if: tangshengzhi_advisor = 0 and whampoa_built = 1 and n_advisors < 6 and northern_expedition_begun = 1
 choose-if: funds >= 2
 unavailable-subtitle: Not enough funds. 
 on-arrival: tangshengzhi_advisor = 1; n_advisors += 1; funds -= 2
