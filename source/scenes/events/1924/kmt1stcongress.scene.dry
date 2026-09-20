@@ -17,6 +17,7 @@ After the opening ceremonies and remarks, the party could now decide on some imp
 
 @congress1
 new-page: true
+face-image: img/portraits/SunYat-sen.jpg
 
 = First National Congress of the Zhongguo Guomindang
 
@@ -28,6 +29,7 @@ This has solidified Sun Yat-sen's control over the party but his unifying power 
 @congress2
 new-page: true
 on-arrival: right_dissent += 10; cpc_relation += 5;
+face-image: img/cpc.jpg
 
 = First National Congress of the Zhongguo Guomindang
 
