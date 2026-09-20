@@ -3,3 +3,10 @@ new-page: true
 is-special: true
 on-arrival: {!             
 !}
+
+<div id="province_tab">
+<header>**[+ current_province_name +]**</header>
+<p>Ruling Faction:</p>
+<p>Order:</p>
+<p>Supply Limit:</p>
+</div>
