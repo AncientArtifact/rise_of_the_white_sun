@@ -379,20 +379,20 @@ window.hideProvinceTab = function() {
         tab.style.display = "none";
     }
 };
-
-document.addEventListener("click", function(event) {
+  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("click", function (event) {
     var province = event.target.closest(".province");
     if (!province) return;
 
     var clickedProvince = province.id.replace(/_n$/, "");
     var capitalizedProvinceName =
-        clickedProvince.charAt(0).toUpperCase() +
-        clickedProvince.slice(1);
+      clickedProvince.charAt(0).toUpperCase() +
+      clickedProvince.slice(1);
 
     window.dendryUI.dendryEngine.state.qualities.current_province_name =
-        capitalizedProvinceName;
+      capitalizedProvinceName;
 
     window.showProvinceTab(capitalizedProvinceName);
+  });
 });
-  
 }());
