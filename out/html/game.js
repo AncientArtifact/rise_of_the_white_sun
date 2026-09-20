@@ -379,7 +379,7 @@ window.hideProvinceTab = function() {
         tab.style.display = "none";
     }
 };
-  document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", function (event) {
     var province = event.target.closest(".province");
     if (!province) return;
