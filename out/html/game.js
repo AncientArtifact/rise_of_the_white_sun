@@ -363,22 +363,36 @@ window.hideMap = function() {
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
   
-   window.showProvinceTab = function() {
-    window.dendryUI.dendryEngine.goToScene("province_tab");
+ window.showProvinceTab = function(name) {
+    var tab = document.getElementById("province_tab");
+    var title = document.getElementById("province_tab_name");
+
+    if (tab && title) {
+        title.textContent = name;
+        tab.style.display = "block";
+    }
 };
-document.querySelectorAll('.province').forEach(function(provinceElement) {
-    provinceElement.addEventListener('click', function() {
-        var clickedProvince = this.id;
-        if (clickedProvince.endsWith('_n')) {
-            clickedProvince = clickedProvince.replace(/_n$/, '');
-        }
-        var capitalizedProvinceName =
-            clickedProvince.charAt(0).toUpperCase() +
-            clickedProvince.slice(1);
-        window.dendryUI.dendryEngine.state.qualities.current_province_name =
-            capitalizedProvinceName;
-        window.showProvinceTab();
-    });
+
+window.hideProvinceTab = function() {
+    var tab = document.getElementById("province_tab");
+    if (tab) {
+        tab.style.display = "none";
+    }
+};
+
+document.addEventListener("click", function(event) {
+    var province = event.target.closest(".province");
+    if (!province) return;
+
+    var clickedProvince = province.id.replace(/_n$/, "");
+    var capitalizedProvinceName =
+        clickedProvince.charAt(0).toUpperCase() +
+        clickedProvince.slice(1);
+
+    window.dendryUI.dendryEngine.state.qualities.current_province_name =
+        capitalizedProvinceName;
+
+    window.showProvinceTab(capitalizedProvinceName);
 });
   
 }());
