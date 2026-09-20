@@ -5,8 +5,9 @@ on-arrival: {!
 !}
 
 <div id="province_tab">
-<header>**[+ current_province_name +]**</header>
-<p>Ruling Faction:</p>
-<p>Order:</p>
-<p>Supply Limit:</p>
+  <header><strong id="province_tab_name">[+ current_province_name +]</strong></header>
+  <p>Ruling Faction:</p>
+  <p>Order:</p>
+  <p>Supply Limit:</p>
+  <button type="button" onclick="window.hideProvinceTab();">Close</button>
 </div>
