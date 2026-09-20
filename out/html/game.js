@@ -349,6 +349,12 @@ window.hideMap = function() {
       bar.appendChild(value);
       return bar;
   };
+
+  window.showProvinceTab = function() {
+    dendryUI.dendryEngine.goToScene("province_tab");
+  }
+  const provinceTab = document.getElementsByClassName("province")
+    provinceTab.addEventListener("click", showProvinceTab)
   
   window.justLoaded = true;
   window.statusTab = "status";
