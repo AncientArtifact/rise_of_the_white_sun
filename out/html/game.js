@@ -349,13 +349,6 @@ window.hideMap = function() {
       bar.appendChild(value);
       return bar;
   };
-
-  window.showProvinceTab = function() {
-    dendryUI.dendryEngine.goToScene("province_tab");
-  }
-  const provinceTab = document.getElementsByClassName("province")
-    provinceTab.addEventListener("click", showProvinceTab)
-  
   window.justLoaded = true;
   window.statusTab = "status";
   window.statusTabRight = "status_right";
@@ -369,5 +362,23 @@ window.hideMap = function() {
     }
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
-  setupProvinceTooltips();
+  
+   window.showProvinceTab = function() {
+    window.dendryUI.dendryEngine.goToScene("province_tab");
+};
+document.querySelectorAll('.province').forEach(function(provinceElement) {
+    provinceElement.addEventListener('click', function() {
+        var clickedProvince = this.id;
+        if (clickedProvince.endsWith('_n')) {
+            clickedProvince = clickedProvince.replace(/_n$/, '');
+        }
+        var capitalizedProvinceName =
+            clickedProvince.charAt(0).toUpperCase() +
+            clickedProvince.slice(1);
+        window.dendryUI.dendryEngine.state.qualities.current_province_name =
+            capitalizedProvinceName;
+        window.showProvinceTab();
+    });
+});
+  
 }());
