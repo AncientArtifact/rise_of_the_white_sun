@@ -386,7 +386,7 @@ window.hideProvinceTab = function() {
 
     var clickedProvince = province.id.replace(/_n$/, "");
     var capitalizedProvinceName =
-      clickedProvince.toUpperCase() + ' Province';
+      clickedProvince.toUpperCase() + ' PROVINCE';
 
     window.dendryUI.dendryEngine.state.qualities.current_province_name =
       capitalizedProvinceName;
