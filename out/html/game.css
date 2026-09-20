@@ -666,3 +666,13 @@ table {
   transform: translate(50px 0 0 50px);
   filter: drop-shadow(0 0 #f3f3f3)
 }
+
+#province_tab {
+  position: relative;
+  background-color: var(--content-bg-color);
+  font-size: 1.1em;
+  padding: 1em 1.5em 1.5em 1.5em;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 350px;
+}
