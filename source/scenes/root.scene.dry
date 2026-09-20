@@ -324,7 +324,7 @@ Q.minority_government = 0;
 // ministries - which parties control the ministries?
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
-
+Q.current_province_name = '';
 Q.liaoning_governor = 'Zhang Zuolin';
 Q.liaoning_faction = 'Fengtian';
 Q.jilin_governor = 'Zhang Zuolin';
