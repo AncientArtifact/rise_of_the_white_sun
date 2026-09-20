@@ -674,9 +674,13 @@ table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-sizing: border-box;
   width: min(500px, calc(100vw - 2rem));
+  min-height: 350px;
+  padding: 1em 1.5em;
+  color: var(--text-color);
   background: var(--content-bg-color);
   border: 2px solid var(--border-color);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
-  padding: 1em 1.5em;
+  pointer-events: auto;
 }
