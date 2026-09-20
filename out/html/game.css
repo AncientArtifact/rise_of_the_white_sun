@@ -668,11 +668,15 @@ table {
 }
 
 #province_tab {
-  position: relative;
-  background-color: var(--content-bg-color);
-  font-size: 1.1em;
-  padding: 1em 1.5em 1.5em 1.5em;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-  width: 500px;
-  height: 350px;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(500px, calc(100vw - 2rem));
+  background: var(--content-bg-color);
+  border: 2px solid var(--border-color);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+  padding: 1em 1.5em;
 }
