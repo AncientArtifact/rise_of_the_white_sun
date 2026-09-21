@@ -127,7 +127,7 @@ Expenses: [? if total_costs < 0 : <span style="color: #66BB6A;">+[+ total_costs 
 
    Expenses from debt interest: [? if interest < 0 : <span style="color: #d42f2f;">-[+ interest +]</span> ?][? if interest = 0 : <span style="color: #FFB74D;">[+ interest +]</span> ?]
 
-   Income lost to corruption: [? if corruption < 0 : <span style="color: #d42f2f;">-[+ corruption +]</span> ?][? if corruption = 0 : <span style="color: #FFB74D;">[+ corruption +]</span> ?]
+   Income lost to corruption: [? if corruption > 0 : <span style="color: #d42f2f;">-[+ corruption +]</span> ?][? if corruption = 0 : <span style="color: #FFB74D;">[+ corruption +]</span> ?]
 
 Total Income: [? if total_income > 0 : <span style="color: #66BB6A;">+[+ total_income +]</span> ?][? if total_income < 0 : <span style="color: #d42f2f;">-[+ total_income +]</span> ?][? if total_income = 0 : <span style="color: #FFB74D;">[+ total_income +]</span> ?]
 
