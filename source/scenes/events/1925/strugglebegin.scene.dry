@@ -17,15 +17,12 @@ After Sun Yat-sen's death, a power struggle has erupted between the three main f
 
 @left
 on-arrival: {!
-
 clearAdvisors();
-
-Q.liaozhongkai_advisor = 1;
-Q.mikhailborodin_advisor = 1;
-Q.soongchingling_advisor = 1;
-Q.dengyanda_advisor = 1;
-
 !}
+go-to: left2
+
+@left2
+on-arrival: liaozhongkai_advisor = 1; mikhailborodin_advisor = 1; soongchingling_advisor = 1; dengyanda_advisor = 1;
 
 You have chosen the Communist Faction. You have picked the advisors: Liao Zhongkai, Mikhail Borodin, Deng Yanda and Soong Ching-ling. Is your choice correct?
 
@@ -44,15 +41,13 @@ go-to: main
 
 @centerleft
 on-arrival: {!
-
 clearAdvisors();
-
-Q.wangjingwei_advisor = 1;
-Q.tvsoong_advisor = 1;
-Q.zhangfakui_advisor = 1;
-Q.eugenechen_advisor = 1;
-
 !}
+go-to: centerleft2
+
+@centerleft2
+on-arrival: wangjingwei_advisor = 1; tvsoong_advisor = 1; zhangfakui_advisor = 1; eugenechen_advisor = 1;
+
 
 You have chosen the Leftist Faction. You have picked the advisors: Wang Jingwei, T.V. Soong, Zhang Fakui and Eugene Chen. Is your choice correct?
 
@@ -70,15 +65,12 @@ You have chosen the Leftist Faction. You have picked the advisors: Wang Jingwei,
 
 @right
 on-arrival: {!
-
 clearAdvisors();
-
-Q.huhanmin_advisor = 1;
-Q.daijitao_advisor = 1;
-Q.linsen_advisor = 1;
-Q.zhangrenjie_advisor = 1;
-
 !}
+go-to: right2
+
+@right2
+on-arrival: huhanmin_advisor = 1; daijitao_advisor = 1; linsen_advisor = 1; zhangrenjie_advisor = 1;
 
 You have chosen the Rightist Faction. You have picked the advisors: Hu Hanmin, Dai Jitao, Lin Sen and Zhang Renjie. Is your choice correct?
 
@@ -95,6 +87,12 @@ You have chosen the Rightist Faction. You have picked the advisors: Hu Hanmin, D
 - @center: None of them, i'll pick my own advisors.
 
 @center
+on-arrival: {!
+clearAdvisors();
+!}
+go-to: center2
+
+@center2
 go-to: shuffle_leadership
 
 You have chosen to pick your own advisors. To which: here's the advisor shuffle card.
