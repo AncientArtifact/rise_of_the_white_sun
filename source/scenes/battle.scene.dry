@@ -1,0 +1,26 @@
+title: Battle
+on-arrival: {!
+nra_power = nra_strength * nra_militancy * (1 + nra_experience)
+current_battle_faction_power = current_battle_faction_strength * current_battle_faction_militancy * (1 + current_battle_faction_experience)
+
+nra_casualties = (nra_strength + current_battle_faction_strength) * (current_battle_faction_power / (nra_power + current_battle_faction_power)) * 0.1
+current_battle_faction_casualties = (nra_strength + current_battle_faction_strength) * (nra_power / (nra_power + current_battle_faction_power)) * 0.1
+
+nra_strength -= nra_casualties
+current_battle_faction_strength -= current_battle_faction_casualties
+
+if nra_power > current_battle_faction_power {
+    nra_momentum += 1
+    nra_legitimacy += 1
+    nra_experience += 0.1
+    current_battle_faction_momentum -= 1
+    current_battle_faction_legitimacy -= 1
+}
+else {
+    current_battle_faction_momentum += 1
+    current_battle_faction_legitimacy += 1
+    current_battle_faction_experience += 0.1
+    nra_momentum -= 1
+    nra_legitimacy -= 1
+}
+!}
