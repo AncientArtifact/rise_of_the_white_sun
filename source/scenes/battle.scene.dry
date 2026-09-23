@@ -9,7 +9,7 @@ current_battle_faction_casualties = (nra_strength + current_battle_faction_stren
 nra_strength -= nra_casualties
 current_battle_faction_strength -= current_battle_faction_casualties
 
-if nra_power > current_battle_faction_power {
+if (nra_power > current_battle_faction_power) {
     nra_momentum += 1
     nra_legitimacy += 1
     nra_experience += 0.1
