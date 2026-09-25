@@ -400,14 +400,17 @@ window.hideProvinceTab = function() {
     window.dendryUI.dendryEngine.state.qualities.current_province_name =
       capitalizedProvinceName;
 
-    Q.current_province_faction =
-      Q[clickedProvince + "_faction"];
-    Q.current_province_governor =
-      Q[clickedProvince + "_governor"];
-    Q.current_province_order =
-      Q[clickedProvince + "_order"];
-
     window.showProvinceTab(capitalizedProvinceName);
+
+    window.updateProvinceVariables = function() {
+    dendryUI.dendryEngine.state.qualities.current_province_faction =
+      dendryUI.dendryEngine.state.qualities[clickedProvince + "_faction"];
+    dendryUI.dendryEngine.state.qualities.current_province_governor =
+      dendryUI.dendryEngine.state.qualities[clickedProvince + "_governor"];
+    dendryUI.dendryEngine.state.qualities.current_province_order =
+      dendryUI.dendryEngine.state.qualities[clickedProvince + "_order"];
+}
+    window.updateProvinceVariables();
   });
 });
 }());
