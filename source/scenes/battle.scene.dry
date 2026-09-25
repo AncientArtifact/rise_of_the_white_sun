@@ -10,17 +10,18 @@ nra_strength -= nra_casualties
 current_battle_faction_strength -= current_battle_faction_casualties
 
 if (nra_power > current_battle_faction_power) {
-    nra_momentum += 1
-    nra_legitimacy += 1
     nra_experience += 0.1
-    current_battle_faction_momentum -= 1
-    current_battle_faction_legitimacy -= 1
 }
 else {
-    current_battle_faction_momentum += 1
-    current_battle_faction_legitimacy += 1
     current_battle_faction_experience += 0.1
-    nra_momentum -= 1
-    nra_legitimacy -= 1
+}
+
+if (nra_power > current_battle_faction_power && (current_battle_faction = 'feng' || current_battle_faction = 'bei')) {
+    nra_momentum += 5
+    nra_legitimacy += 5
+}
+else {
+    current_battle_faction_momentum += 5
+    current_battle_faaction_legitimacy += 5
 }
 !}
