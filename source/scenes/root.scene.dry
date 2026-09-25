@@ -160,19 +160,36 @@ Q.cecjingwei = 0;
 Q.cechanmin = 0;
 Q.ceczhongkai = 0;
 
-// The array of forces - paramilitary groups
-Q.current_battle_faction = 'chen';
+// The array of forces - military groups
+Q.current_battle_faction = '';
+
 Q.nra_strength = 20;
 Q.nra_militancy = 0.1;
+Q.nra_momentum = 0;
+Q.nra_legitimacy = 5;
+Q.nra_experience = 0;
+
 Q.bei_strength = 300;
 Q.bei_militancy = 0.5;
+Q.bei_momentum = 0;
+Q.bei_legitimacy = 65;
+Q.bei_experience = 0;
+
 Q.feng_strength = 200;
 Q.feng_militancy = 0.7;
+Q.feng_momentum = 0;
+Q.feng_legitimacy = 35;
+Q.feng_experience = 0;
+
 Q.red_strength = 2;
 Q.red_militancy = 0.1;
+Q.red_experience = 0;
+
 Q.gmj_strength = 100;
 Q.gmj_militancy = 0.5;
+Q.gmj_experience = 0;
 Q.gmj_enabled = 0;
+
 Q.conscription = 2;
 
 // The state of the country
