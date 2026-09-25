@@ -1,5 +1,9 @@
 title: Battle
 on-arrival: {!
+current_battle_faction_strength = Q[current_battle_faction + "_strength"];
+current_battle_faction_militancy = Q[current_battle_faction + "_militancy"];
+current_battle_faction_experience = Q[current_battle_faction + "_experience"];
+
 nra_power = nra_strength * nra_militancy * (1 + nra_experience)
 current_battle_faction_power = current_battle_faction_strength * current_battle_faction_militancy * (1 + current_battle_faction_experience)
 
