@@ -16,12 +16,15 @@ else {
     current_battle_faction_experience += 0.1
 }
 
-if (nra_power > current_battle_faction_power && (current_battle_faction = 'feng' || current_battle_faction = 'bei')) {
+if (
+    nra_power > current_battle_faction_power &&
+    (current_battle_faction === 'feng' || current_battle_faction === 'bei')
+) {
     nra_momentum += 5
     nra_legitimacy += 5
 }
 else {
     current_battle_faction_momentum += 5
-    current_battle_faaction_legitimacy += 5
+    current_battle_faction_legitimacy += 5
 }
 !}
