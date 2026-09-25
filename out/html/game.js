@@ -200,13 +200,10 @@ window.hideMap = function() {
 
     document.getElementById("powerstruggle_tab").style.display =
         qualities.sunyatsen_dead === 1 ? "inline" : "none";
-
     document.getElementById("northernexpedition_tab").style.display =
         qualities.northern_expedition_begun === 1 ? "inline" : "none";
-
     document.getElementById("wuhannanjing_tab").style.display =
         qualities.wuhan_nanjing_split === 1 ? "inline" : "none";
-
     document.getElementById("civilwar_tab").style.display =
         qualities.cpc_civilwar === 1 ? "inline" : "none";
 };
@@ -281,6 +278,18 @@ window.hideMap = function() {
         window.updateSidebar();
         window.updateSidebarRight();
     };
+
+  window.clearCurrentBattleFaction = function () {
+        const qualities = window.dendryUI.dendryEngine.state.qualities;
+        state.qualities.current_battle_faction = '';
+        state.qualities.current_battle_faction_militancy = '';
+        state.qualities.current_battle_faction_strength = '';
+        state.qualities.current_battle_faction_power = '';
+        state.qualities.current_battle_faction_experience = '';
+        state.qualities.current_battle_faction_momentum = '';
+        state.qualities.current_battle_faction_legitimacy = '';
+  }
+    
   
   // keep track of initial values
   window.justLoaded = true;
