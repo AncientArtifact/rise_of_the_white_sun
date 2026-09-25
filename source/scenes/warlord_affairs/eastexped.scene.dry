@@ -5,14 +5,11 @@ card-image: img/portraits/ChenJiongming.jpg
 tags: warlord_affairs
 view-if: eastexped_timer = 0 and eastexped_active = 1
 on-arrival: {!
-
 Q.week_actions += 1;
 Q.eastexped_timer += 3;
 Q.chen_strength = 50;
 Q.chen_militancy = 0.2;
-Q.nrapower = Q.nra_strength*Q.nra_militancy;
-Q.chenpower = Q.chen_strength*Q.chen_militancy;
-
+Q.chen_experience = 0;
 !}
 
 = The Eastern Expedition
@@ -27,10 +24,31 @@ We finally have a chance to defeat Chen Jiongming in battle. Now, it's time to m
 @firsttrial
 choose-if: firsttrialdone = 0
 unavailable-subtitle: Huizhou has fallen into our hands.
-go-to: losehuizhou if nrapower < chenpower; winhuizhou if nrapower >= chenpower
+go-to: battlehuizhou
+
+@battlehuizhou
+on-arrival: {! nra_power = nra_strength * nra_militancy * (1 + nra_experience)
+chen_power = chen_strength * chen_militancy * (1 + chen_experience)
+
+nra_casualties = (nra_strength + chen_strength) * (chen_power / (nra_power + chen_power)) * 0.1
+chen_casualties = (nra_strength + chen_strength) * (nra_power / (nra_power + chen_power)) * 0.1
+
+nra_strength -= nra_casualties
+chen_strength -= chen_casualties
+
+if (nra_power > chen_power) {
+    nra_experience += 0.1
+    nra_winhuizhou = 1
+}
+else {
+    chen_experience += 0.1
+    nra_losehuizhou = 1
+}
+!}
+go-to: winhuizhou if nra_winhuizhou = 1; losehuizhou if nra_losehuizhou = 1
 
 @winhuizhou
-on-arrival: nra_strength -= 10; chen_strength -= 20; firsttrialdone = 1;
+on-arrival: firsttrialdone = 1;
 
 We have defeated Chen Jiongming in Huizhou and have inflicted large casualties against his army! This is a cause to celebrate.
 
@@ -43,7 +61,6 @@ go-to: main
 go-to: main
 
 @losehuizhou
-on-arrival: nra_strength -= 20; chen_strength -= 10;
 
 Chen Jiongming's armies have defeated us! We have been repelled back to our starting position.
 
@@ -52,10 +69,31 @@ Chen Jiongming's armies have defeated us! We have been repelled back to our star
 @secondtrial
 choose-if: firsttrialdone = 1
 unavailable-subtitle: We must march into Huizhou before reaching Shanwei.
-go-to: loseshanwei if nrapower < chenpower; winshanwei if nrapower >= chenpower
+go-to: battleshanwei
+
+@battleshanwei
+on-arrival: {! nra_power = nra_strength * nra_militancy * (1 + nra_experience)
+chen_power = chen_strength * chen_militancy * (1 + chen_experience)
+
+nra_casualties = (nra_strength + chen_strength) * (chen_power / (nra_power + chen_power)) * 0.1
+chen_casualties = (nra_strength + chen_strength) * (nra_power / (nra_power + chen_power)) * 0.1
+
+nra_strength -= nra_casualties
+chen_strength -= chen_casualties
+
+if (nra_power > chen_power) {
+    nra_experience += 0.1
+    nra_winshanwei = 1
+}
+else {
+    chen_experience += 0.1
+    nra_loseshanwei = 1
+}
+!}
+go-to: winshanwei if nra_winshanwei = 1; loseshanwei if nra_loseshanwei = 1
 
 @winshanwei
-on-arrival: nra_strength -= 10; chen_strength -= 20; secondtrialdone = 1; eastexped_active = 0; eastexped_done = 1;
+on-arrival: secondtrialdone = 1; eastexped_active = 0; eastexped_done = 1;
 
 We have defeated Chen Jiongming in Shanwei and have sent him all the way to Shantou! Afterwards, Chen Jiongming has escaped Guangdong.
 
@@ -64,7 +102,7 @@ The traitor is finally gone and Guangdong is only steps away from being united!
 - @done: Hurrah!
 
 @loseshanwei
-on-arrival: nra_strength -= 20; chen_strength -= 10; firsttrialdone = 0;
+on-arrival: firsttrialdone = 0;
 
 Chen Jiongming's armies have defeated us! We have been repelled back to our starting position.
 
