@@ -400,6 +400,13 @@ window.hideProvinceTab = function() {
     window.dendryUI.dendryEngine.state.qualities.current_province_name =
       capitalizedProvinceName;
 
+    Q.current_province_faction =
+      Q[clickedProvince + "_faction"];
+    Q.current_province_governor =
+      Q[clickedProvince + "_governor"];
+    Q.current_province_order =
+      Q[clickedProvince + "_order"];
+
     window.showProvinceTab(capitalizedProvinceName);
   });
 });
