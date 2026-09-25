@@ -372,7 +372,7 @@ window.hideMap = function() {
     window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
   
- window.showProvinceTab = function(name) {
+window.showProvinceTab = function(name) {
     var tab = document.getElementById("province_tab");
     var title = document.getElementById("province_tab_name");
 
@@ -384,33 +384,53 @@ window.hideMap = function() {
 
 window.hideProvinceTab = function() {
     var tab = document.getElementById("province_tab");
+
     if (tab) {
         tab.style.display = "none";
     }
 };
- document.addEventListener("DOMContentLoaded", function () {
-  document.addEventListener("click", function (event) {
-    var province = event.target.closest(".province");
-    if (!province) return;
 
-    var clickedProvince = province.id.replace(/_n$/, "");
-    var capitalizedProvinceName =
-      clickedProvince.toUpperCase() + ' PROVINCE';
+window.updateProvinceVariables = function(clickedProvince) {
+    var qualities = window.dendryUI.dendryEngine.state.qualities;
 
-    window.dendryUI.dendryEngine.state.qualities.current_province_name =
-      capitalizedProvinceName;
+    var faction = qualities[clickedProvince + "_faction"] || "N/A";
+    var governor = qualities[clickedProvince + "_governor"] || "N/A";
+    var order = qualities[clickedProvince + "_order"] || "N/A";
 
-    window.showProvinceTab(capitalizedProvinceName);
+    qualities.current_province_faction = faction;
+    qualities.current_province_governor = governor;
+    qualities.current_province_order = order;
 
-    window.updateProvinceVariables = function() {
-    dendryUI.dendryEngine.state.qualities.current_province_faction =
-      dendryUI.dendryEngine.state.qualities[clickedProvince + "_faction"];
-    dendryUI.dendryEngine.state.qualities.current_province_governor =
-      dendryUI.dendryEngine.state.qualities[clickedProvince + "_governor"];
-    dendryUI.dendryEngine.state.qualities.current_province_order =
-      dendryUI.dendryEngine.state.qualities[clickedProvince + "_order"];
-}
-    window.updateProvinceVariables();
-  });
+    var factionElement = document.getElementById("province_tab_faction");
+    var governorElement = document.getElementById("province_tab_governor");
+    var orderElement = document.getElementById("province_tab_order");
+
+    if (factionElement) {
+        factionElement.textContent = faction;
+    }
+    if (governorElement) {
+        governorElement.textContent = governor;
+    }
+    if (orderElement) {
+        orderElement.textContent = order;
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("click", function(event) {
+        var province = event.target.closest(".province");
+        if (!province) {
+            return;
+        }
+
+        var clickedProvince = province.id.replace(/_n$/, "");
+        var provinceName = clickedProvince.toUpperCase() + " PROVINCE";
+        var qualities = window.dendryUI.dendryEngine.state.qualities;
+
+        qualities.current_province_name = provinceName;
+
+        window.updateProvinceVariables(clickedProvince);
+        window.showProvinceTab(provinceName);
+    });
 });
 }());
