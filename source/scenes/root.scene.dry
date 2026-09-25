@@ -329,83 +329,125 @@ Q.cpc_in_government = 0;
 //manchuria
 Q.liaoning_governor = 'Zhang Zuolin';
 Q.liaoning_faction = 'Fengtian';
+Q.liaoning_order = 0;
 Q.jilin_governor = 'Zhang Zuolin';
 Q.jilin_faction = 'Fengtian';
+Q.jilin_order = 0;
 Q.heilongjiang_governor = 'Zhang Zuolin';
 Q.heilongjiang_faction = 'Fengtian';
+Q.heilongjiang_order = 0;
 Q.rehe_governor = 'Feng Yuxiang';
 Q.rehe_faction = 'Zhili';
+Q.rehe_order = 0;
 Q.shenyang_governor = 'Zhang Zuolin';
 Q.shenyang_faction = 'Fengtian';
+Q.shenyang_order = 0;
+
 //north
 Q.hebei_governor = 'Wu Peifu';
 Q.hebei_faction = 'Zhili';
+Q.hebei_order = 0;
 Q.beijing_governor = 'Cao Kun';
 Q.beijing_faction = 'Zhili';
+Q.beijing_order = 0;
 Q.hubei_governor = 'Wu Peifu';
 Q.hubei_faction = 'Zhili';
+Q.hubei_order = 0;
 Q.shandong_governor = 'Zheng Shiqi';
 Q.shandong_faction = 'Anhui';
+Q.shandong_order = 0;
 Q.henan_governor = 'Wu Peifu';
 Q.henan_faction = 'Zhili';
+Q.henan_order = 0;
 Q.shanxi_governor = 'Yan Xishan';
 Q.shanxi_faction = 'Neutral';
+Q.shanxi_order = 0;
 Q.suiyuan_governor = 'Feng Yuxiang';
 Q.suiyuan_faction = 'Zhili';
+Q.suiyuan_order = 0;
 Q.shaanxi_governor = 'Feng Yuxiang';
 Q.shaanxi_faction = 'Zhili';
+Q.shaanxi_order = 0;
 Q.chahar_governor = 'Feng Yuxiang';
 Q.chahar_faction = 'Zhili';
+Q.chahar_order = 0;
+
 //east
 Q.nanjing_governor = 'Sun Chuanfang';
 Q.nanjing_faction = 'Zhili';
+Q.nanjing_order = 0;
 Q.anhui_governor = 'Sun Chuanfang';
 Q.anhui_faction = 'Zhili';
+Q.anhui_order = 0;
 Q.jiangsu_governor = 'Qi Xieyuan';
 Q.jiangsu_faction = 'Zhili';
+Q.jiangsu_order = 0;
 Q.fujian_governor = 'Duan Qirui';
 Q.fujian_faction = 'Anhui';
+Q.fujian_order = 0;
 Q.jiangxi_governor = 'Deng Huzhou';
 Q.jiangxi_faction = 'Zhili';
+Q.jiangxi_order = 0;
 Q.zhejiang_governor = 'Lu Yongxiang';
 Q.zhejiang_faction = 'Anhui';
+Q.zhejiang_order = 0;
 Q.zhejiang_n_governor = 'Lu Yongxiang';
 Q.zhejiang_n_faction = 'Anhui';
+Q.zhejiang_n_order = 0;
 Q.shanghai_governor = 'Lu Yongxiang';
 Q.shanghai_faction = 'Anhui';
+Q.shanghai_order = 0;
+
 //outer
 Q.mongolia_governor = 'Khorloogiin Choibalsan';
 Q.mongolia_faction = 'Mongolia';
+Q.mongolia_order = 0;
 Q.ningxia_governor = 'Ma Family Warlords';
 Q.ningxia_faction = 'Ma Clique';
+Q.ningxia_order = 0;
 Q.gansu_governor = 'Ma Family Warlords';
 Q.gansu_faction = 'Ma Clique';
+Q.gansu_order = 0;
 Q.qinghai_governor = 'Ma Family Warlords';
 Q.qinghai_faction = 'Ma Clique';
+Q.qinghai_order = 0;
 Q.xinjiang_governor = 'Yang Zengxin';
 Q.xinjiang_faction = 'Sinkiang Clique';
+Q.xinjiang_order = 0;
 Q.tibet_governor = 'Dalai Lama';
 Q.tibet_faction = 'Tibet';
+Q.tibet_order = 0;
+
 //center
 Q.wuhan_governor = 'Wu Peifu';
 Q.wuhan_faction = 'Zhili';
+Q.wuhan_order = 0;
 Q.hunan_governor = 'Zhao Hengti';
 Q.hunan_faction = 'Zhili';
+Q.hunan_order = 0;
 Q.sichuan_governor = 'Multiple';
 Q.sichuan_faction = 'N/A';
+Q.sichuan_order = 0;
 Q.guizhou_governor = 'Wang Wenhua';
 Q.guizhou_faction = 'Guizhou';
+Q.guizhou_order = 0;
+
 //south
 Q.yunnan_governor = 'Tang Jiyao';
 Q.yunnan_faction = 'Yunnan';
+Q.yunnan_order = 0;
 Q.guangxi_governor = 'Lu Rongting';
 Q.guangxi_faction = 'Old Guangxi';
+Q.guangxi_order = 0;
 Q.guangdong_governor = 'Sun Yat-sen';
 Q.guangdong_faction = 'Guomindang';
+Q.guangdong_order = 0;
 Q.guangzhou_governor = 'Sun Yat-sen';
 Q.guangzhou_faction = 'Guomindang';
+Q.guangzhou_order = 0;
 Q.hainan_governor = 'Sun Yat-sen';
 Q.hainan_faction = 'Guomindang';
+Q.hainan_order = 0;
 
 // have we reformed these institutions to be more democratic?
 Q.judicial_reform = 0;
