@@ -38,11 +38,11 @@ chen_strength -= chen_casualties
 
 if (nra_power > chen_power) {
     nra_experience += 0.1
-    nra_winhuizhou = 1
+    Q.nra_winhuizhou = 1
 }
 else {
     chen_experience += 0.1
-    nra_losehuizhou = 1
+    Q.nra_losehuizhou = 1
 }
 !}
 go-to: winhuizhou if nra_winhuizhou = 1; losehuizhou if nra_losehuizhou = 1
@@ -83,11 +83,11 @@ chen_strength -= chen_casualties
 
 if (nra_power > chen_power) {
     nra_experience += 0.1
-    nra_winshanwei = 1
+    Q.nra_winshanwei = 1
 }
 else {
     chen_experience += 0.1
-    nra_loseshanwei = 1
+    Q.nra_loseshanwei = 1
 }
 !}
 go-to: winshanwei if nra_winshanwei = 1; loseshanwei if nra_loseshanwei = 1
