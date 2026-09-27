@@ -17,12 +17,12 @@ After Sun Yat-sen's death, a power struggle has erupted between the three main f
 
 @left
 on-arrival: {!
-clearAdvisors();
+window.clearAdvisors();
 !}
 go-to: left2
 
 @left2
-on-arrival: liaozhongkai_advisor = 1; mikhailborodin_advisor = 1; soongchingling_advisor = 1; dengyanda_advisor = 1;
+on-arrival: liaozhongkai_advisor = 1; mikhailborodin_advisor = 1; soongchingling_advisor = 1; dengyanda_advisor = 1; n_advisors = 4;
 
 You have chosen the Communist Faction. You have picked the advisors: Liao Zhongkai, Mikhail Borodin, Deng Yanda and Soong Ching-ling. Is your choice correct?
 
@@ -46,7 +46,7 @@ window.clearAdvisors();
 go-to: centerleft2
 
 @centerleft2
-on-arrival: wangjingwei_advisor = 1; tvsoong_advisor = 1; zhangfakui_advisor = 1; eugenechen_advisor = 1;
+on-arrival: wangjingwei_advisor = 1; tvsoong_advisor = 1; zhangfakui_advisor = 1; eugenechen_advisor = 1; n_advisors = 4;
 
 
 You have chosen the Leftist Faction. You have picked the advisors: Wang Jingwei, T.V. Soong, Zhang Fakui and Eugene Chen. Is your choice correct?
@@ -70,7 +70,7 @@ window.clearAdvisors();
 go-to: right2
 
 @right2
-on-arrival: huhanmin_advisor = 1; daijitao_advisor = 1; linsen_advisor = 1; zhangrenjie_advisor = 1;
+on-arrival: huhanmin_advisor = 1; daijitao_advisor = 1; linsen_advisor = 1; zhangrenjie_advisor = 1; n_advisors = 4;
 
 You have chosen the Rightist Faction. You have picked the advisors: Hu Hanmin, Dai Jitao, Lin Sen and Zhang Renjie. Is your choice correct?
 
