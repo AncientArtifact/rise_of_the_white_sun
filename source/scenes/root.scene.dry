@@ -628,6 +628,7 @@ window.clearAdvisors = function() {
     if (Q[advisor+'_advisor'] === 1) {
     Q[advisor+'_advisor'] = 0;
    }
+  Q.n_advisors = 0;
  }
 }
 
