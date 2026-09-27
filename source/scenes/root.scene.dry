@@ -623,7 +623,7 @@ Q.heyingqin_advisor = 0;
 Q.lizongren_advisor = 0;
 Q.tangshengzhi_advisor = 0;
 
-function clearAdvisors() {
+window.clearAdvisors = function() {
   for (advisor of Q.advisors) {
     if (Q[advisor+'_advisor'] === 1) {
     Q[advisor+'_advisor'] = 0;
