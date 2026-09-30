@@ -40,6 +40,6 @@ subtitle: Chiang Kai-shek will aim to paint himself as Sun Yat-sen's true succes
 view-if: sunyatsen_dead = 1
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; whampoa_strength += 20; left_strength -= 10; center_left_strength -= 10; center_strength -= 10; right_strength -= 10;
+on-arrival: advisor_action_timer = 6; whampoa_strength += 10; left_strength -= 2; center_left_strength -= 2; center_strength -= 2; right_strength -= 2;
 
 Chiang Kai-shek's legitimacy and influence has been increased.
