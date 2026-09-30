@@ -10,6 +10,10 @@ Q.eastexped_timer += 3;
 Q.chen_strength = 50;
 Q.chen_militancy = 0.2;
 Q.chen_experience = 0;
+Q.nra_winhuizhou = 0;
+Q.nra_losehuizhou = 0;
+Q.nra_winshanwei = 0;
+Q.nra_loseshanwei = 0;
 !}
 
 = The Eastern Expedition
