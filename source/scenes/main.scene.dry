@@ -1,5 +1,5 @@
 title: **Next month**
-set-bg: img/bgchina.jpg
+set-bg: img/bgcanton.jpg
 is-hand: true
 on-arrival: {!
 var advisorCount = Q.n_advisors + ' /6 advisors available.';
