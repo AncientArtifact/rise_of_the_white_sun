@@ -23,7 +23,7 @@ max-cards: 5
 - @shuffle_leadership_pinned
 
 @main_easy
-set-bg: img/bgchina.jpg
+set-bg: img/bgcanton.jpg
 is-hand: true
 on-arrival: {!
 if (Q.advisor_action_timer <= 0) {
