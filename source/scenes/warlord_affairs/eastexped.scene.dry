@@ -44,11 +44,11 @@ Q.chen_casualties = (Q.nra_strength + Q.chen_strength)
 Q.nra_strength -= Q.nra_casualties;
 Q.chen_strength -= Q.chen_casualties;
 
-Q.nra_vcasualties = Q.nra_casualties*1000;
-Q.chen_vcasualties = Q.nra_casualties*1000;
+Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
+Q.chen_vcasualties = Math.round(Q.nra_casualties*1000);
 
-Q.nra_vstrength = Q.chen_strength*1000;
-Q.chen_vstrength = Q.chen_strength*1000;
+Q.nra_vstrength = Math.round(Q.chen_strength*1000);
+Q.chen_vstrength = Math.round(Q.chen_strength*1000);
 
 if (Q.nra_power > Q.chen_power) {
     Q.nra_experience += 0.1;
@@ -61,7 +61,6 @@ if (Q.nra_power > Q.chen_power) {
 go-to: huizhoubattlescreen
 
 @huizhoubattlescreen
-go-to: winhuizhou if nra_winhuizhou = 1; losehuizhou if nra_losehuizhou = 1
 
 <div>
   <div id="battle_screen">
@@ -72,8 +71,8 @@ go-to: winhuizhou if nra_winhuizhou = 1; losehuizhou if nra_losehuizhou = 1
       <div style="width: 40%;">
         <div>National Revolutionary Army</div>
         <div style="margin-top: 10px;">
-          <strong>Strength</strong><br>
-          [+ nra_vstrength +],000
+          <strong>Troops</strong><br>
+          [+ nra_vstrength +]
         </div>
         <div style="margin-top: 8px;">
           <strong>Casualties</strong><br>
@@ -101,7 +100,11 @@ go-to: winhuizhou if nra_winhuizhou = 1; losehuizhou if nra_losehuizhou = 1
   </div>
 </div>
 
+- @winshanwei: Continue...
+- @loseshanwei: Continue...
+
 @winhuizhou
+view-if: nra_winhuizhou = 1
 on-arrival: firsttrialdone = 1;
 
 We have defeated Chen Jiongming in Huizhou and have inflicted large casualties against his army! This is a cause to celebrate.
@@ -115,6 +118,7 @@ go-to: main
 go-to: main
 
 @losehuizhou
+view-if: nra_losehuizhou = 1
 
 Chen Jiongming's armies have defeated us! We have been repelled back to our starting position.
 
@@ -140,11 +144,11 @@ Q.chen_casualties = (Q.nra_strength + Q.chen_strength)
 Q.nra_strength -= Q.nra_casualties;
 Q.chen_strength -= Q.chen_casualties;
 
-Q.nra_vcasualties = Q.nra_casualties*1000;
-Q.chen_vcasualties = Q.chen_casualties*1000;
+Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
+Q.chen_vcasualties = Math.round(Q.nra_casualties*1000);
 
-Q.nra_vstrength = Q.nra_strength*1000;
-Q.chen_vstrength = Q.chen_strength*1000;
+Q.nra_vstrength = Math.round(Q.chen_strength*1000);
+Q.chen_vstrength = Math.round(Q.chen_strength*1000);
 
 if (Q.nra_power > Q.chen_power) {
     Q.nra_experience += 0.1;
@@ -157,7 +161,6 @@ if (Q.nra_power > Q.chen_power) {
 go-to: shanweibattlescreen
 
 @shanweibattlescreen
-go-to: winshanwei if nra_winshanwei = 1; loseshanwei if nra_loseshanwei = 1
 
 <div>
   <div id="battle_screen">
@@ -168,7 +171,7 @@ go-to: winshanwei if nra_winshanwei = 1; loseshanwei if nra_loseshanwei = 1
       <div style="width: 40%;">
         <div>National Revolutionary Army</div>
         <div style="margin-top: 10px;">
-          <strong>Strength</strong><br>
+          <strong>Troops</strong><br>
           [+ nra_vstrength +],000
         </div>
         <div style="margin-top: 8px;">
@@ -197,7 +200,11 @@ go-to: winshanwei if nra_winshanwei = 1; loseshanwei if nra_loseshanwei = 1
   </div>
 </div>
 
+- @winshanwei: Continue...
+- @loseshanwei: Continue...
+
 @winshanwei
+view-if: nra_winshanwei = 1
 on-arrival: secondtrialdone = 1; eastexped_active = 0; eastexped_done = 1;
 
 We have defeated Chen Jiongming in Shanwei and have sent him all the way to Shantou! Afterwards, Chen Jiongming has escaped Guangdong.
@@ -207,6 +214,7 @@ The traitor is finally gone and Guangdong is only steps away from being united!
 - @done: Hurrah!
 
 @loseshanwei
+view-if: nra_loseshanwei = 1
 on-arrival: firsttrialdone = 0;
 
 Chen Jiongming's armies have defeated us! We have been repelled back to our starting position.
