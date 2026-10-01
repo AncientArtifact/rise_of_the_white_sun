@@ -56,14 +56,7 @@ go-to: huizhoubattlescreen
 go-to: winhuizhou if nra_winhuizhou = 1; losehuizhou if nra_losehuizhou = 1
 
 <div>
-  <div id="battle_screen" style="
-    width: 540px;
-    height: 300px;
-    background-color: #dedede;
-    color: #222;
-    padding: 15px;
-    box-sizing: border-box;
-  ">
+  <div id="battle_screen">
     <div style="
       text-align: center;
       border-bottom: 1px solid #999;
