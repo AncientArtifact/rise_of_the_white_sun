@@ -150,27 +150,33 @@ if (Q.gmj_strength) {
 }
 !}
 
-= **Militaries**
+= **Main Armies**
 
 <span style="color: #10186e">**National Revolutionary Army**</span> Strength: [+ nra_strength_2 +] thousand
 
-<span style="color: #10186e">**National Revolutionary Army**</span> Militarization: [+ nra_militancy : militancy +]
+<span style="color: #10186e">**National Revolutionary Army**</span> Quality: [+ nra_militancy : militancy +]
 
 <span style="color: #9e1515">**Chinese Red Army**</span> Strength: [+ red_strength_2 +] thousand
 
-<span style="color: #9e1515">**Chinese Red Army**</span> Militarization: [+ red_militancy : militancy +]
+<span style="color: #9e1515">**Chinese Red Army**</span> Quality: [+ red_militancy : militancy +]
 
 <span style="color: #aba133">**Zhili Army**</span> Strength: [+ bei_strength_2 +] thousand
 
-<span style="color: #aba133">**Zhili Army**</span> Militarization: [+ bei_militancy : militancy +]
+<span style="color: #aba133">**Zhili Army**</span> Quality: [+ bei_militancy : militancy +]
 
 <span style="color: #ab881f">**Fengtian Army**</span> Strength: [+ feng_strength_2 +] thousand
 
-<span style="color: #ab881f">**Fengtian Army**</span> Militarization: [+ feng_militancy : militancy +]
+<span style="color: #ab881f">**Fengtian Army**</span> Quality: [+ feng_militancy : militancy +]
 
 [? if gmj_enabled = 1 : <span style="color: #943452">**Guominjun**</span> Strength: [+ gmj_strength_2 +] thousand ?]
 
 [? if gmj_enabled = 1 : <span style="color: #943452">**Guominjun**</span> Strength: [+ gmj_militancy : militancy +] ?]
+
+= **Regional Armies**
+
+[? if eastexped_done = 0 : <span style="color: #b57abf">**Chen Jiongming's Army**</span> Strength: [+ chen_strength +] thousand ?]
+
+[? if eastexped_done = 0 : <span style="color: #b57abf">**Chen Jiongming's Army**</span> Quality: [+ chen_militancy: militancy +] ?]
 
 @polls
 on-arrival: {!
