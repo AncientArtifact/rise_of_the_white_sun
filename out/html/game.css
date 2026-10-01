@@ -687,10 +687,9 @@ table {
 
 #battle_screen {
     width: 540px;
-    height: 300px;
+    height: 340px;
     background-color: #dedede;
     color: #222;
     padding: 15px;
     box-sizing: border-box;
-    margin-bottom: 40px;
 }
