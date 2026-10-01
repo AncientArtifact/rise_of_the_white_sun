@@ -194,6 +194,10 @@ Q.gmj_militancy = 0.5;
 Q.gmj_experience = 0;
 Q.gmj_enabled = 0;
 
+Q.chen_strength = 50;
+Q.chen_militancy = 0.2;
+Q.chen_experience = 0;
+
 Q.conscription = 2;
 
 // The state of the country
