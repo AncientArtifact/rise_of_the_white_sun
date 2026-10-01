@@ -3,7 +3,6 @@ new-page: true
 is-card: true
 card-image: img/portraits/ChenJiongming.jpg
 tags: warlord_affairs
-view-if: eastexped_timer = 0 and eastexped_active = 1
 on-arrival: {!
 Q.week_actions += 1;
 Q.eastexped_timer += 3;
