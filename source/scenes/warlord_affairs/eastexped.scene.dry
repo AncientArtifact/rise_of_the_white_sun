@@ -2,6 +2,7 @@ title: Eastern Expedition
 new-page: true
 is-card: true
 card-image: img/portraits/ChenJiongming.jpg
+view-if: eastexped_timer = 0 and eastexped_active = 1
 tags: warlord_affairs
 on-arrival: {!
 Q.week_actions += 1;
