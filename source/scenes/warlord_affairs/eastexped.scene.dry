@@ -6,9 +6,6 @@ tags: warlord_affairs
 on-arrival: {!
 Q.week_actions += 1;
 Q.eastexped_timer += 3;
-Q.chen_strength = 50;
-Q.chen_militancy = 0.2;
-Q.chen_experience = 0;
 Q.chen_casualties = 0;
 Q.nra_casualties = 0;
 Q.nra_winhuizhou = 0;
