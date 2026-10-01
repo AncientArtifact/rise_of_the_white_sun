@@ -41,14 +41,14 @@ Q.nra_casualties = (Q.nra_strength + Q.chen_strength)
 Q.chen_casualties = (Q.nra_strength + Q.chen_strength)
     * (Q.nra_power / (Q.nra_power + Q.chen_power)) * 0.1;
 
+Q.nra_vstrength = Math.round(Q.chen_strength*1000);
+Q.chen_vstrength = Math.round(Q.chen_strength*1000);
+
 Q.nra_strength -= Q.nra_casualties;
 Q.chen_strength -= Q.chen_casualties;
 
 Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
 Q.chen_vcasualties = Math.round(Q.nra_casualties*1000);
-
-Q.nra_vstrength = Math.round(Q.chen_strength*1000);
-Q.chen_vstrength = Math.round(Q.chen_strength*1000);
 
 if (Q.nra_power > Q.chen_power) {
     Q.nra_experience += 0.1;
@@ -130,7 +130,7 @@ unavailable-subtitle: We must march into Huizhou before reaching Shanwei.
 go-to: battleshanwei
 
 @battleshanwei
-on-arrival: {! Q.chen_strength -= 10; Q.chen_experience + 0.1;
+on-arrival: {! Q.chen_experience + 0.1;
 
 Q.nra_power = Q.nra_strength * Q.nra_militancy * (1 + Q.nra_experience);
 Q.chen_power = Q.chen_strength * Q.chen_militancy * (1 + Q.chen_experience);
@@ -141,14 +141,14 @@ Q.nra_casualties = (Q.nra_strength + Q.chen_strength)
 Q.chen_casualties = (Q.nra_strength + Q.chen_strength)
     * (Q.nra_power / (Q.nra_power + Q.chen_power)) * 0.1;
 
+Q.nra_vstrength = Math.round(Q.chen_strength*1000);
+Q.chen_vstrength = Math.round(Q.chen_strength*1000);
+
 Q.nra_strength -= Q.nra_casualties;
 Q.chen_strength -= Q.chen_casualties;
 
 Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
 Q.chen_vcasualties = Math.round(Q.nra_casualties*1000);
-
-Q.nra_vstrength = Math.round(Q.chen_strength*1000);
-Q.chen_vstrength = Math.round(Q.chen_strength*1000);
 
 if (Q.nra_power > Q.chen_power) {
     Q.nra_experience += 0.1;
