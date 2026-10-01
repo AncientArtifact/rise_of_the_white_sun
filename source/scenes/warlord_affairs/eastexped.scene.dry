@@ -170,7 +170,7 @@ go-to: shanweibattlescreen
         <div style="color: #10186e;">National Revolutionary Army</div>
         <div style="margin-top: 10px;">
           <strong>Troops</strong><br>
-          [+ nra_vstrength +],000
+          [+ nra_vstrength +]
         </div>
         <div style="margin-top: 8px;">
           <strong>Casualties</strong><br>
