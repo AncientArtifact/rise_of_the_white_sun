@@ -41,14 +41,14 @@ Q.nra_casualties = (Q.nra_strength + Q.chen_strength)
 Q.chen_casualties = (Q.nra_strength + Q.chen_strength)
     * (Q.nra_power / (Q.nra_power + Q.chen_power)) * 0.1;
 
-Q.nra_vstrength = Math.round(Q.chen_strength*1000);
+Q.nra_vstrength = Math.round(Q.nra_strength*1000);
 Q.chen_vstrength = Math.round(Q.chen_strength*1000);
 
 Q.nra_strength -= Q.nra_casualties;
 Q.chen_strength -= Q.chen_casualties;
 
 Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
-Q.chen_vcasualties = Math.round(Q.nra_casualties*1000);
+Q.chen_vcasualties = Math.round(Q.chen_casualties*1000);
 
 if (Q.nra_power > Q.chen_power) {
     Q.nra_experience += 0.1;
@@ -141,14 +141,14 @@ Q.nra_casualties = (Q.nra_strength + Q.chen_strength)
 Q.chen_casualties = (Q.nra_strength + Q.chen_strength)
     * (Q.nra_power / (Q.nra_power + Q.chen_power)) * 0.1;
 
-Q.nra_vstrength = Math.round(Q.chen_strength*1000);
+Q.nra_vstrength = Math.round(Q.nra_strength*1000);
 Q.chen_vstrength = Math.round(Q.chen_strength*1000);
 
 Q.nra_strength -= Q.nra_casualties;
 Q.chen_strength -= Q.chen_casualties;
 
 Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
-Q.chen_vcasualties = Math.round(Q.nra_casualties*1000);
+Q.chen_vcasualties = Math.round(Q.chen_casualties*1000);
 
 if (Q.nra_power > Q.chen_power) {
     Q.nra_experience += 0.1;
