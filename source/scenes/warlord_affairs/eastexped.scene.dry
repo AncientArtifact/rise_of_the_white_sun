@@ -69,7 +69,7 @@ go-to: huizhoubattlescreen
     </div>
     <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; margin: 20px 30px;">
       <div style="width: 40%;">
-        <div>National Revolutionary Army</div>
+        <div style="color: #10186e;">National Revolutionary Army</div>
         <div style="margin-top: 10px;">
           <strong>Troops</strong><br>
           [+ nra_vstrength +]
@@ -81,7 +81,7 @@ go-to: huizhoubattlescreen
       </div>
       <div style="width: 20%; font-size: 20px;">VS</div>
       <div style="width: 40%;">
-        <div>Chen Jiongming's Army</div>
+        <div style="color: #b57abf;">Chen Jiongming's Army</div>
         <div style="margin-top: 10px;">
           <strong>Troops</strong><br>
           [+ chen_vstrength +]
@@ -169,7 +169,7 @@ go-to: shanweibattlescreen
     </div>
     <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; margin: 20px 30px;">
       <div style="width: 40%;">
-        <div>National Revolutionary Army</div>
+        <div style="color: #10186e;">National Revolutionary Army</div>
         <div style="margin-top: 10px;">
           <strong>Troops</strong><br>
           [+ nra_vstrength +],000
@@ -181,7 +181,7 @@ go-to: shanweibattlescreen
       </div>
       <div style="width: 20%; font-size: 20px;">VS</div>
       <div style="width: 40%;">
-        <div>Chen Jiongming's Army</div>
+        <div style="color: #b57abf;">Chen Jiongming's Army</div>
         <div style="margin-top: 10px;">
           <strong>Troops</strong><br>
           [+ chen_vstrength +]
