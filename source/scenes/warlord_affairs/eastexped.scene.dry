@@ -32,28 +32,30 @@ unavailable-subtitle: Huizhou has fallen into our hands.
 go-to: battlehuizhou
 
 @battlehuizhou
-on-arrival: {! nra_power = nra_strength * nra_militancy * (1 + nra_experience)
-chen_power = chen_strength * chen_militancy * (1 + chen_experience)
+on-arrival: {! Q.nra_power = Q.nra_strength * Q.nra_militancy * (1 + Q.nra_experience);
+Q.chen_power = Q.chen_strength * Q.chen_militancy * (1 + Q.chen_experience);
 
-nra_casualties = (nra_strength + chen_strength) * (chen_power / (nra_power + chen_power)) * 0.1
-chen_casualties = (nra_strength + chen_strength) * (nra_power / (nra_power + chen_power)) * 0.1
+Q.nra_casualties = (Q.nra_strength + Q.chen_strength)
+    * (Q.chen_power / (Q.nra_power + Q.chen_power)) * 0.1;
 
-nra_strength -= nra_casualties
-chen_strength -= chen_casualties
+Q.chen_casualties = (Q.nra_strength + Q.chen_strength)
+    * (Q.nra_power / (Q.nra_power + Q.chen_power)) * 0.1;
 
-if (nra_power > chen_power) {
-    nra_experience += 0.1
-    Q.nra_winhuizhou = 1
-}
-else {
-    chen_experience += 0.1
-    Q.nra_losehuizhou = 1
+Q.nra_strength -= Q.nra_casualties;
+Q.chen_strength -= Q.chen_casualties;
+
+if (Q.nra_power > Q.chen_power) {
+    Q.nra_experience += 0.1;
+    Q.nra_winhuizhou = 1;
+} else {
+    Q.chen_experience += 0.1;
+    Q.nra_losehuizhou = 1;
 }
 !}
 go-to: huizhoubattlescreen
 
 @huizhoubattlescreen
-go-to: winhuizhou if Q.nra_winhuizhou = 1; losehuizhou if Q.nra_losehuizhou = 1
+go-to: winhuizhou if nra_winhuizhou = 1; losehuizhou if nra_losehuizhou = 1
 
 <div>
   <div id="battle_screen">
@@ -114,28 +116,30 @@ unavailable-subtitle: We must march into Huizhou before reaching Shanwei.
 go-to: battleshanwei
 
 @battleshanwei
-on-arrival: {! nra_power = nra_strength * nra_militancy * (1 + nra_experience)
-chen_power = chen_strength * chen_militancy * (1 + chen_experience)
+on-arrival: {! Q.nra_power = Q.nra_strength * Q.nra_militancy * (1 + Q.nra_experience);
+Q.chen_power = Q.chen_strength * Q.chen_militancy * (1 + Q.chen_experience);
 
-nra_casualties = (nra_strength + chen_strength) * (chen_power / (nra_power + chen_power)) * 0.1
-chen_casualties = (nra_strength + chen_strength) * (nra_power / (nra_power + chen_power)) * 0.1
+Q.nra_casualties = (Q.nra_strength + Q.chen_strength)
+    * (Q.chen_power / (Q.nra_power + Q.chen_power)) * 0.1;
 
-nra_strength -= nra_casualties
-chen_strength -= chen_casualties
+Q.chen_casualties = (Q.nra_strength + Q.chen_strength)
+    * (Q.nra_power / (Q.nra_power + Q.chen_power)) * 0.1;
 
-if (nra_power > chen_power) {
-    nra_experience += 0.1
-    Q.nra_winshanwei = 1
-}
-else {
-    chen_experience += 0.1
-    Q.nra_loseshanwei = 1
+Q.nra_strength -= Q.nra_casualties;
+Q.chen_strength -= Q.chen_casualties;
+
+if (Q.nra_power > Q.chen_power) {
+    Q.nra_experience += 0.1;
+    Q.nra_winshanwei = 1;
+} else {
+    Q.chen_experience += 0.1;
+    Q.nra_loseshanwei = 1;
 }
 !}
 go-to: shanweibattlescreen
 
 @shanweibattlescreen
-go-to: winshanwei if Q.nra_winshanwei = 1; loseshanwei if Q.nra_loseshanwei = 1
+go-to: winshanwei if nra_winshanwei = 1; loseshanwei if nra_loseshanwei = 1
 
 <div>
   <div id="battle_screen">
