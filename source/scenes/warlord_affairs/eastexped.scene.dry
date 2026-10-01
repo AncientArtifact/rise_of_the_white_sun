@@ -10,6 +10,8 @@ Q.eastexped_timer += 3;
 Q.chen_strength = 50;
 Q.chen_militancy = 0.2;
 Q.chen_experience = 0;
+Q.chen_casualties = 0;
+Q.nra_casualties = 0;
 Q.nra_winhuizhou = 0;
 Q.nra_losehuizhou = 0;
 Q.nra_winshanwei = 0;
@@ -94,7 +96,70 @@ else {
     Q.nra_loseshanwei = 1
 }
 !}
+go-to: shanweibattlescreen
+
+@shanweibattlescreen
 go-to: winshanwei if nra_winshanwei = 1; loseshanwei if nra_loseshanwei = 1
+
+<div>
+  <div id="battle_screen" style="
+    width: 540px;
+    height: 300px;
+    background-color: #dedede;
+    color: #222;
+    padding: 15px;
+    box-sizing: border-box;
+  ">
+    <div style="
+      text-align: center;
+      border-bottom: 1px solid #999;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    ">
+      <span style="font-size: 24px;">
+        Battle of Shanwei
+      </span>
+    </div>
+    <div style="
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      margin: 20px 30px;
+    ">
+      <div style="width: 40%;">
+        <div>National Revolutionary Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Casualties</strong><br>
+          125
+        </div>
+      </div>
+      <div style="
+        width: 20%;
+        font-size: 20px;
+      ">
+        VS
+      </div>
+      <div style="width: 40%;">
+        <div>Chen Jiongming's Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Casualties</strong><br>
+          350
+        </div>
+      </div>
+    </div>
+    <div style="
+      text-align: center;
+      border-top: 1px solid #999;
+      padding-top: 15px;
+      margin-top: 20px;
+    ">
+      <div style="font-size: 14px;">OUTCOME</div>
+      [? if nra_winshanwei = 1 : <div style="font-size: 20px; color: #66BB6A; margin-top: 5px;">National Revolutionary Army Victory</div> ?]
+      [? if nra_loseshanwei = 1 : <div style="font-size: 20px; color: #d42f2f; margin-top: 5px;">Chen Jiongming Victory</div> ?]
+    </div>
+  </div>
+</div>
 
 @winshanwei
 on-arrival: secondtrialdone = 1; eastexped_active = 0; eastexped_done = 1;
