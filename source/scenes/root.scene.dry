@@ -198,6 +198,14 @@ Q.chen_strength = 50;
 Q.chen_militancy = 0.2;
 Q.chen_experience = 0;
 
+Q.deng_strength = 60;
+Q.deng_militancy = 0.2;
+Q.deng_experience = 0;
+
+Q.yang_strength = 20;
+Q.yang_militancy = 0.25;
+Q.yang_experience = 0;
+
 Q.conscription = 2;
 
 // The state of the country
