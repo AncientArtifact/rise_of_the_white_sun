@@ -23,7 +23,7 @@ In the following months, the Guomindang prepared. Now, what is the result of thi
 - @one: The Army.
 
 @one
-go-to: winarmy if nra_power >= 4; losearmy if nra_power <= 4
+go-to: winarmy if nra_power >= 40; losearmy if nra_power < 40
 
 @winarmy
 new-page: true
