@@ -199,6 +199,9 @@ go-to: hainanbattlescreen
   </div>
 </div>
 
+- @winhainan: Continue...
+- @losehainan: Continue...
+
 
 @winhainan
 view-if: nra_winhainan = 1
