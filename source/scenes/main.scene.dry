@@ -1,5 +1,4 @@
 title: **Next month**
-set-bg: img/bgcanton.jpg
 is-hand: true
 on-arrival: {!
 var advisorCount = Q.n_advisors + ' /6 advisors available.';
@@ -23,7 +22,6 @@ max-cards: 5
 - @shuffle_leadership_pinned
 
 @main_easy
-set-bg: img/bgcanton.jpg
 is-hand: true
 on-arrival: {!
 if (Q.advisor_action_timer <= 0) {
