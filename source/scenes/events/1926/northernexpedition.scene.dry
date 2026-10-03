@@ -104,7 +104,7 @@ face-image: img/portraits/LuRongting.jpg
 - @five: Yunnan?
 
 @five
-go-to: winyun if yun_relation >= 50; loseyun if yun_relation < 50
+go-to: winyun if yun_relation >= 60; loseyun if yun_relation < 60
 
 @winyun
 new-page: true
