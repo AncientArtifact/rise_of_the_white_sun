@@ -14,6 +14,7 @@ for (var c of Q.classes) {
 }
 
 Q.chen_strength = Math.round(Q.chen_strength);
+Q.nra_strength = Math.round(Q.nra_strength);
 
 Q.pro_republic = Math.round(Q.pro_republic);
 Q.warlordist = Math.round(Q.warlordist);
