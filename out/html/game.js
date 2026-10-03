@@ -207,6 +207,15 @@ window.hideMap = function() {
     document.getElementById("civilwar_tab").style.display =
         qualities.cpc_civilwar === 1 ? "inline" : "none";
 };
+
+  window.changeStyleNorthernExpedition = function() {
+    const qualities = window.dendryUI.dendryEngine.state.qualities;
+
+    document.getElementById("game-title").style.color =
+        qualities.northern_expedition_begun === 1 ? "#ffffff" : "#431";
+    document.getElementById("game-author").style.color =
+        qualities.northern_expedition_begun === 1 ? "#ffffff" : "#431";
+  }
   
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
