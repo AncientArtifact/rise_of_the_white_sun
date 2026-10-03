@@ -87,9 +87,6 @@ You have chosen the Rightist Faction. You have picked the advisors: Hu Hanmin, D
 - @center: None of them, i'll pick my own advisors.
 
 @center
-on-arrival: {!
-window.clearAdvisors();
-!}
 go-to: center2
 
 @center2
