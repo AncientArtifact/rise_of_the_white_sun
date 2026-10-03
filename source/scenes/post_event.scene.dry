@@ -13,8 +13,11 @@ for (var c of Q.classes) {
     }
 }
 
-Q.chen_strength = Math.round(Q.chen_strength);
 Q.nra_strength = Math.round(Q.nra_strength);
+Q.red_strength = Math.round(Q.red_strength);
+Q.bei_strength = Math.round(Q.bei_strength);
+Q.feng_strength = Math.round(Q.feng_strength);
+Q.chen_strength = Math.round(Q.chen_strength);
 Q.deng_strength = Math.round(Q.deng_strength);
 Q.yang_strength = Math.round(Q.yang_strength);
 
