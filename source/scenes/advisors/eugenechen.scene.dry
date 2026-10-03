@@ -9,11 +9,11 @@ new-page: true
 
 Eugene Chen, or Chen Youren, is part of the left faction. He has good foreign negotiation skills.
 
-- @internat_relation
+- @chen_internat_relation
 - @foreign_affairs
 - @root: Return to main
 
-@internat_relation
+@chen_internat_relation
 title: International Relations
 subtitle: We will contact foreign powers from our base in Guangdong.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
