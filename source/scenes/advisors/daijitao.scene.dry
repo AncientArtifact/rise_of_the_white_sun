@@ -9,12 +9,12 @@ new-page: true
 
 Dai Jitao is a member of the right and an expert theologist and propagandist.
 
-- @ideology
-- @rally
-- @media
+- @dai_ideology
+- @dai_rally
+- @dai_media
 - @root: Return to main
 
-@ideology
+@dai_ideology
 title: Work on Political Theory.
 subtitle: Dai can work on the Guomindang's ideology.
 choose-if: advisor_action_timer <= 0
@@ -22,7 +22,7 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1;
 go-to: ideology
 
-@rally
+@dai_rally
 title: Hold rallies.
 subtitle: Dai can organize the masses.
 choose-if: advisor_action_timer == 0
@@ -30,7 +30,7 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1;
 go-to: rally
 
-@media
+@dai_media
 title: Work on our media campaigns.
 subtitle: Dai can make slogans and propaganda leaflets for us.
 choose-if: advisor_action_timer == 0
