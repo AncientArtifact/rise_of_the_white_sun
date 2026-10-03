@@ -8,10 +8,12 @@ on-arrival: {!
 
 Q.week_actions += 1;
 Q.southexped_timer += 3;
-Q.deng_strength = 60;
-Q.deng_militancy = 0.1;
-Q.nrapower = Q.nra_strength*Q.nra_militancy;
-Q.dengpower = Q.deng_strength*Q.deng_militancy;
+Q.deng_casualties = 0;
+Q.nra_casualties = 0;
+Q.nra_winbeihai = 0;
+Q.nra_losebeihai = 0;
+Q.nra_winhainan = 0;
+Q.nra_losehainan = 0;
 
 !}
 
@@ -27,10 +29,84 @@ Deng Benyin's Bashu Alliance in Beihai and Hainan has been a pain in our backsid
 @thirdtrial
 choose-if: thirdtrialdone = 0
 unavailable-subtitle: Beihai is already ours.
-go-to: losebeihai if nrapower < dengpower; winbeihai if nrapower >= dengpower
+go-to: battlebeihai
+
+@battlebeihai
+on-arrival: {! Q.nra_power = Q.nra_strength * Q.nra_militancy * (1 + Q.nra_experience);
+Q.deng_power = Q.deng_strength * Q.deng_militancy * (1 + Q.deng_experience);
+
+Q.nra_casualties = (Q.nra_strength + Q.deng_strength)
+    * (Q.deng_power / (Q.nra_power + Q.deng_power)) * 0.1;
+
+Q.deng_casualties = (Q.nra_strength + Q.deng_strength)
+    * (Q.nra_power / (Q.nra_power + Q.deng_power)) * 0.1;
+
+Q.nra_vstrength = Math.round(Q.nra_strength*1000);
+Q.deng_vstrength = Math.round(Q.deng_strength*1000);
+
+Q.nra_strength -= Q.nra_casualties;
+Q.deng_strength -= Q.deng_casualties;
+
+Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
+Q.deng_vcasualties = Math.round(Q.deng_casualties*1000);
+
+if (Q.nra_power > Q.deng_power) {
+    Q.nra_experience += 0.1;
+    Q.nra_winbeihai = 1;
+} else {
+    Q.deng_experience += 0.1;
+    Q.nra_losebeihai = 1;
+}
+!}
+go-to: beihaibattlescreen
+
+@beihaibattlescreen
+
+<div>
+  <div id="battle_screen">
+    <div style="text-align: center; border-bottom: 1px solid #999; padding-bottom: 10px; margin-bottom: 15px;">
+      <span style="font-size: 24px;">Battle of Beihai</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; margin: 20px 30px;">
+      <div style="width: 40%;">
+        <div style="color: #10186e;">National Revolutionary Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ nra_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ nra_vcasualties +]
+        </div>
+      </div>
+      <div style="width: 20%; font-size: 20px;">VS</div>
+      <div style="width: 40%;">
+        <div style="color: #d2cbd6;">Bashu Alliance</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ deng_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ deng_vcasualties +]
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; border-top: 1px solid #999; padding-top: 15px; margin-top: 20px;">
+      <div style="font-size: 14px;">OUTCOME</div>
+      [? if nra_winbeihai = 1 : <div style="font-size: 20px; color: #66BB6A; margin-top: 5px;">National Revolutionary Army Victory</div> ?]
+      [? if nra_losebeihai = 1 : <div style="font-size: 20px; color: #d42f2f; margin-top: 5px;">Bashu Alliance Victory</div> ?]
+    </div>
+  </div>
+</div>
+
+- @winbeihai: Continue...
+- @losebeihai: Continue...
+
 
 @winbeihai
-on-arrival: nra_strength -= 10; deng_strength -= 20; thirdtrialdone = 1;
+view-if: nra_winbeihai = 1
+on-arrival: thirdtrialdone = 1;
 
 We have defeated Deng Benyin in Beihai and have inflicted large casualties against his army! This is a cause to celebrate.
 
@@ -43,7 +119,7 @@ go-to: main
 go-to: main
 
 @losebeihai
-on-arrival: nra_strength -= 20; deng_strength -= 10;
+view-if: nra_losebeihai = 1
 
 Deng Benyin's armies have defeated us! We have been repelled back to our starting position.
 
@@ -51,11 +127,82 @@ Deng Benyin's armies have defeated us! We have been repelled back to our startin
 
 @fourthtrial
 choose-if: thirdtrialdone = 1
-unavailable-subtitle: We must march into Huizhou before reaching hainan.
-go-to: losehainan if nrapower < dengpower; winhainan if nrapower >= dengpower
+unavailable-subtitle: We must march into Beihai before reaching Hainan.
+go-to: battlehainan
+
+@battlehainan
+on-arrival: {! Q.nra_power = Q.nra_strength * Q.nra_militancy * (1 + Q.nra_experience);
+Q.deng_power = Q.deng_strength * Q.deng_militancy * (1 + Q.deng_experience);
+
+Q.nra_casualties = (Q.nra_strength + Q.deng_strength)
+    * (Q.deng_power / (Q.nra_power + Q.deng_power)) * 0.1;
+
+Q.deng_casualties = (Q.nra_strength + Q.deng_strength)
+    * (Q.nra_power / (Q.nra_power + Q.deng_power)) * 0.1;
+
+Q.nra_vstrength = Math.round(Q.nra_strength*1000);
+Q.deng_vstrength = Math.round(Q.deng_strength*1000);
+
+Q.nra_strength -= Q.nra_casualties;
+Q.deng_strength -= Q.deng_casualties;
+
+Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
+Q.deng_vcasualties = Math.round(Q.deng_casualties*1000);
+
+if (Q.nra_power > Q.deng_power) {
+    Q.nra_experience += 0.1;
+    Q.nra_winhainan = 1;
+} else {
+    Q.deng_experience += 0.1;
+    Q.nra_losehainan = 1;
+}
+!}
+go-to: hainanbattlescreen
+
+@hainanbattlescreen
+
+<div>
+  <div id="battle_screen">
+    <div style="text-align: center; border-bottom: 1px solid #999; padding-bottom: 10px; margin-bottom: 15px;">
+      <span style="font-size: 24px;">Battle of Hainan</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; margin: 20px 30px;">
+      <div style="width: 40%;">
+        <div style="color: #10186e;">National Revolutionary Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ nra_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ nra_vcasualties +]
+        </div>
+      </div>
+      <div style="width: 20%; font-size: 20px;">VS</div>
+      <div style="width: 40%;">
+        <div style="color: #d2cbd6;">Bashu Alliance</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ deng_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ deng_vcasualties +]
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; border-top: 1px solid #999; padding-top: 15px; margin-top: 20px;">
+      <div style="font-size: 14px;">OUTCOME</div>
+      [? if nra_winhainan = 1 : <div style="font-size: 20px; color: #66BB6A; margin-top: 5px;">National Revolutionary Army Victory</div> ?]
+      [? if nra_losehainan = 1 : <div style="font-size: 20px; color: #d42f2f; margin-top: 5px;">Bashu Alliance Victory</div> ?]
+    </div>
+  </div>
+</div>
+
 
 @winhainan
-on-arrival: nra_strength -= 10; deng_strength -= 20; fourthtrialdone = 1; southexped_active = 0; southexped_done = 1;
+view-if: nra_winhainan = 1
+on-arrival: fourthtrialdone = 1; southexped_active = 0; southexped_done = 1;
 
 We have defeated Deng Benyin in Hainan and have finally crushed the last remaining resistance in Guangdong!
 
@@ -64,7 +211,8 @@ With Chen Jiongming in exile, Yang Ximin and Liu Zhenhuan's armies crushed, Shen
 - @done: Hurrah!
 
 @losehainan
-on-arrival: nra_strength -= 20; deng_strength -= 10; thirdtrialdone = 0;
+view-if: nra_losehainan = 1
+on-arrival: thirdtrialdone = 0;
 
 Deng Benyin's armies have defeated us! We have been repelled back to our starting position.
 
