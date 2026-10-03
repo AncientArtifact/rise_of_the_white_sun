@@ -169,5 +169,5 @@ go-to: nine
 on-arrival: {!
 window.changeStyleNorthernExpedition();
 !}
-audio: audio/indomitablespirit.mp3 audio/heroicwarriors.mp3
+audio: shuffle audio/indomitablespirit.mp3 audio/heroicwarriors.mp3 audio/zhangzuolin.mp3
 set-bg: img/bgnorthernexped.jpg
