@@ -26,7 +26,7 @@ title: Build up the National Revolutionary Army
 subtitle: -1 funds - Increase our propaganda measures to recruit more members into the NRA.
 choose-if: funds >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: funds -= 1; nra_strength += 30
+on-arrival: funds -= 1; nra_strength += 10
 
 We have recruited more members into the NRA.
 
