@@ -178,6 +178,14 @@ if (Q.gmj_strength) {
 
 [? if eastexped_done = 0 : <span style="color: #b57abf">**Chen Jiongming's Army**</span> Quality: [+ chen_militancy: militancy +] ?]
 
+[? if southexped_done = 0 : <span style="color: #d2cbd6">**Bashu Alliance**</span> Strength: [+ deng_strength +] thousand ?]
+
+[? if southexped_done = 0 : <span style="color: #d2cbd6">**Bashu Alliance**</span> Quality: [+ deng_militancy: militancy +] ?]
+
+[? if nra_winyang = 0 : <span style="color: #121440">**Guangzhou Protectors Army**</span> Strength: [+ yang_strength +] thousand ?]
+
+[? if nra_winyang = 0 : <span style="color: #121440">**Guangzhou Protectors Army**</span> Quality: [+ yang_militancy: militancy +] ?]
+
 @polls
 on-arrival: {!
 Q.pro_tridemist_disp = Math.round(Q.pro-tridemist);
