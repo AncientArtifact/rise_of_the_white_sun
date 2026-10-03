@@ -161,6 +161,7 @@ Probably. Maybe, maybe not. But whatever the costs, we'll fight for the National
 
 @eight
 on-arrival: northern_expedition_begun = 1;
+audio:
 go-to: nine
 
 @nine
