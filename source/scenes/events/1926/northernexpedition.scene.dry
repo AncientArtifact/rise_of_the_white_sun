@@ -161,5 +161,11 @@ Probably. Maybe, maybe not. But whatever the costs, we'll fight for the National
 
 @eight
 on-arrival: northern_expedition_begun = 1;
+go-to: nine
+
+@nine
+on-arrival: {!
+window.changeStyleNorthernExpedition();
+!}
 audio: shuffle audio/indomitablespirit.mp4 audio/heroicwarriors.mp4
 set-bg: img/bgnorthernexped.jpg
