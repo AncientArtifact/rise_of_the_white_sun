@@ -137,7 +137,7 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.gxc_relation = 20;
-Q.cpc_relation = 35;
+Q.cpc_relation = 40;
 Q.yun_relation = 60;
 Q.gui_relation = 35;
 Q.zhi_relation = 0;
