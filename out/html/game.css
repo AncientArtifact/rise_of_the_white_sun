@@ -80,6 +80,10 @@ font-weight: bold;
 text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
 text-align: center;
 }
+#temp-bg {
+width: 100vw;
+height: 100vh;
+}
 #content {
   position: relative;
   background-color: var(--content-bg-color);
