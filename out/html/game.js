@@ -216,6 +216,12 @@ window.hideMap = function() {
     document.getElementById("game-author").style.color =
         qualities.northern_expedition_begun === 1 ? "#ffffff" : "#431";
   }
+
+  window.showDisplayOnStart = function() {
+    document.getElementById("stats_sidebar").style.display = "block"
+    document.getElementById("stats_sidebar_right").style.display = "block"
+    document.getElementById("content").style.display = "block"
+  }
   
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
