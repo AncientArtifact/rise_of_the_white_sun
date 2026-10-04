@@ -47,6 +47,21 @@ header, #content, footer {
   margin: 0 auto;
   overflow: auto;
 }
+#startmenu {
+background-color: rgb(243, 243, 243);
+box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 12px 0px;
+color: rgb(68, 51, 17);
+display: block;
+margin-bottom: 0px;
+margin-top: 0px;
+max-width: 540px;
+padding-bottom: 26.4px;
+padding-left: 6.4px;
+padding-right: 26.4px;
+padding-top: 17.6px;
+position: relative;
+unicode-bidi: isolate;
+}
 #content {
   position: relative;
   background-color: var(--content-bg-color);
