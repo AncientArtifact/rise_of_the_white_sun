@@ -58,14 +58,15 @@ max-width: 1080px !important;
 min-width: 1080px !important;
 margin-bottom: 0px;
 margin-top: 0px;
-margin-left: auto;
-margin-right: auto;
+margin-left: auto !important;
+margin-right: auto !important;
 padding-bottom: 17.6px;
 padding-left: 6.4px;
 padding-right: 6.4px;
 padding-top: 17.6px;
 position: relative;
 unicode-bidi: isolate;
+overflow: visible !important;
 }
 #startmenu-image {
 margin-left: auto !important;
