@@ -51,7 +51,9 @@ header, #content, footer {
 background-color: rgb(243, 243, 243);
 box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 12px 0px;
 color: rgb(68, 51, 17);
-display: block;
+display: flex;
+justify-content: center;
+align-items: center;
 margin-bottom: 0px;
 margin-top: 0px;
 max-width: 540px;
