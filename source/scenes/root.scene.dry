@@ -6,7 +6,13 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= **Chinese Democracy: Rise of the White Sun**
+<div id="startmenu">
+            <div id="startmenu-header">
+              <h1 class="start-game-title">CHINESE DEMOCRACY:</h1>
+              <h2 class="start-game-title">RISE OF THE WHITE SUN</h2>
+            </div>
+        <img src="img/kmtstartmenu.jpg" id="startmenu-image">
+</div>
 
 @start_menu_2
 
@@ -17,6 +23,8 @@ go-to: start_menu_2
 
 @start
 on-arrival: {!
+window.showDisplayOnStart();
+
 Q.started = 1;
 // time elapsed
 Q.time = 1;
