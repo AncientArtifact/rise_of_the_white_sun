@@ -216,12 +216,6 @@ window.hideMap = function() {
     document.getElementById("game-author").style.color =
         qualities.northern_expedition_begun === 1 ? "#ffffff" : "#431";
   }
-
-  window.hideDisplayOnStart = function() {
-    document.getElementById("tools_wrapper").style.display = "none"
-    document.getElementById("content").style.display = "none"
-    document.getElementById("startmenu").style.display = "block"
-  }
   
   window.showDisplayOnStart = function() {
     document.getElementById("tools_wrapper").style.display = "block"
