@@ -8,8 +8,8 @@ go-to: start_menu_2
 
 <div id="startmenu">
             <div id="startmenu-header">
-              <h1 class="start-game-title">CHINESE DEMOCRACY:</h1>
-              <h2 class="start-game-title">RISE OF THE WHITE SUN</h2>
+              <p class="start-game-title">CHINESE DEMOCRACY:</p>
+              <p class="start-game-title">RISE OF THE WHITE SUN</p>
             </div>
         <img src="img/kmtstartmenu.jpg" id="startmenu-image">
 </div>
