@@ -218,8 +218,7 @@ window.hideMap = function() {
   }
 
   window.showDisplayOnStart = function() {
-    document.getElementById("stats_sidebar").style.display = "block"
-    document.getElementById("stats_sidebar_right").style.display = "block"
+    document.getElementById("tools_wrapper").style.display = "block"
     document.getElementById("content").style.display = "block"
   }
   
