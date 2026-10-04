@@ -47,35 +47,41 @@ header, #content, footer {
   margin: 0 auto;
   overflow: auto;
 }
+#content > #startmenu {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 #startmenu {
-font-family: "Minion Pro", Georgia, serif;
-background-color: rgb(243, 243, 243);
-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 12px 0px;
-color: rgb(68, 51, 17);
-display: block;
-width: 100% !important;
-max-width: none !important;
-margin-bottom: 0px;
-margin-top: 0px;
-margin-left: auto;
-margin-right: auto;
-padding-bottom: 17.6px;
-padding-left: 6.4px;
-padding-right: 6.4px;
-padding-top: 17.6px;
-position: relative;
-unicode-bidi: isolate;
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  background: #f3f0ea;
+  border: 1px solid rgba(0,0,0,0.25);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+.startmenu-header {
+  text-align: center;
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
 }
 #startmenu-image {
-margin-left: auto;
-margin-right: auto;
-max-width: 800px !important;
-height: auto;
+  display: block;
+  width: min(100%, 860px);
+  height: auto;
+  margin: 0 auto;
 }
 .start-game-title {
-font-weight: bold !important;
-text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2)
-text-align: center;
+  font-weight: 700 !important;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.18);
+  text-align: center;
 }
 #content {
   position: relative;
