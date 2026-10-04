@@ -217,6 +217,12 @@ window.hideMap = function() {
         qualities.northern_expedition_begun === 1 ? "#ffffff" : "#431";
   }
 
+  window.hideDisplayOnStart = function() {
+    document.getElementById("tools_wrapper").style.display = "none"
+    document.getElementById("content").style.display = "none"
+    document.getElementById("startmenu").style.display = "block"
+  }
+  
   window.showDisplayOnStart = function() {
     document.getElementById("tools_wrapper").style.display = "block"
     document.getElementById("content").style.display = "block"
