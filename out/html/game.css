@@ -75,6 +75,7 @@ max-width: 1000px !important;
 height: auto !important;
 }
 .start-game-title {
+font-size: 32px;
 font-weight: bold;
 text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
 text-align: center;
