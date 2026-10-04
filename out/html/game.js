@@ -221,6 +221,7 @@ window.hideMap = function() {
     document.getElementById("tools_wrapper").style.display = "block"
     document.getElementById("content").style.display = "block"
     document.getElementById("startmenu").style.display = "none"
+    document.getElementById("temp-bg").style.display = "none"
   }
   
   // This function allows you to modify the text before it's displayed.
