@@ -292,18 +292,6 @@ window.hideMap = function() {
         window.updateSidebar();
         window.updateSidebarRight();
     };
-
-  window.clearCurrentBattleFaction = function () {
-        const qualities = window.dendryUI.dendryEngine.state.qualities;
-        state.qualities.current_battle_faction = '';
-        state.qualities.current_battle_faction_militancy = '';
-        state.qualities.current_battle_faction_strength = '';
-        state.qualities.current_battle_faction_power = '';
-        state.qualities.current_battle_faction_experience = '';
-        state.qualities.current_battle_faction_momentum = '';
-        state.qualities.current_battle_faction_legitimacy = '';
-  }
-    
   
   // keep track of initial values
   window.justLoaded = true;
