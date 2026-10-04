@@ -69,6 +69,7 @@ unicode-bidi: isolate;
 overflow: visible !important;
 }
 #startmenu-image {
+display: block !important;
 margin-left: auto !important;
 margin-right: auto !important;
 max-width: 1000px !important;
