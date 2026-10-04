@@ -64,6 +64,10 @@ padding-top: 17.6px;
 position: relative;
 unicode-bidi: isolate;
 }
+.start-game-title {
+font-weight: bold;
+text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2)
+}
 #content {
   position: relative;
   background-color: var(--content-bg-color);
