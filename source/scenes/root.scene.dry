@@ -2,12 +2,17 @@ title: Root Scene
 new-page: true
 go-to: post_event if started = 1; start_menu if started = 0
 
+<div id="startmenu">
+            <div id="startmenu-header">
+              <p class="start-game-title">CHINESE DEMOCRACY:</p>
+              <p class="start-game-title">RISE OF THE WHITE SUN</p>
+            </div>
+        <img src="img/kmtstartmenu.jpg" id="startmenu-image">
+</div>
+
 @start_menu
 new-page: true
 go-to: start_menu_2
-on-arrival: {!
-window.hideDisplayOnStart();
-!}
 
 @start_menu_2
 
