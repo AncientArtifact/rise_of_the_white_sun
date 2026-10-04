@@ -218,8 +218,9 @@ window.hideMap = function() {
   }
 
   window.showDisplayOnStart = function() {
-    document.getElementById("tools_wrapper").style.display = "flex"
-    document.getElementById("content").style.display = "flex"
+    document.getElementById("tools_wrapper").style.display = "block"
+    document.getElementById("content").style.display = "block"
+    document.getElementById("startmenu").style.display = "none"
   }
   
   // This function allows you to modify the text before it's displayed.
