@@ -48,6 +48,7 @@ header, #content, footer {
   overflow: auto;
 }
 #startmenu {
+font-family: "Minion Pro", Georgia, serif;
 background-color: rgb(243, 243, 243);
 box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 12px 0px;
 color: rgb(68, 51, 17);
