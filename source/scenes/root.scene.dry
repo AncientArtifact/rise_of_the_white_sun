@@ -5,10 +5,10 @@ go-to: post_event if started = 1; start_menu if started = 0
 <div id="startmenu">
             <div id="startmenu-header">
               <p class="start-game-title">
-               <span style="color: #010194;"CH</span><span style="color: #ffffff;"INE</span><span style="color: #010194;"SE</span> <span style="color: #fe0101;"DEMOCRACY:</span>
+               <span style="color: #010194;">CH</span><span style="color: #ffffff;">INE</span><span style="color: #010194;">SE</span> <span style="color: #fe0101;">DEMOCRACY:</span>
               </p>
               <p class="start-game-title">
-               <span style="color: #fe0101;"RISE OF THE WHITE SUN</span>
+               <span style="color: #fe0101;">RISE OF THE WHITE SUN</span>
               </p>
             </div>
         <img src="img/kmtstartmenu.jpg" id="startmenu-image">
