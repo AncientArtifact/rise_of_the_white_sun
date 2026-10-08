@@ -405,7 +405,7 @@ Q.total_other_support = Q.workers_other + Q.old_middle_other + Q.new_middle_othe
 Q.total_support = Q.total_kmt_support + Q.total_cpc_support + Q.total_zhi_support + Q.total_feng_support + Q.total_anh_support + Q.total_other_support;
 
 Q.kmt_support = Math.round((Q.total_kmt_support / Q.total_support)*1000) / 10;
-Q.anti_kmt_support = Math.round((Q.total_cpc_support + Q.total_feng_support + Q.total_zhi_support + Q.total_anh_support + Q.total_other_support / Q.total_support)*1000) / 10;
+Q.anti_kmt_support = Math.round(((Q.total_cpc_support + Q.total_feng_support + Q.total_zhi_support + Q.total_anh_support + Q.total_other_support)/ Q.total_support) * 1000) / 10;
 
 Q.hainan_faction = Q.guangdong_faction
 Q.zhejiang_n_faction = Q.zhejiang_faction
