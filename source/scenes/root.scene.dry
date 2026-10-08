@@ -109,42 +109,6 @@ Q.whampoa_strength = 0;
 Q.whampoa_dissent = 0;
 Q.whampoa_built = 0;
 
-// secret events...
-Q.unions_independent = 0;
-Q.centrists_resign = 0;
-Q.left_split = 0;
-Q.reformists_resigned = 0;
-
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
-Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
-Q.nazi_urgency = 0;
-// radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
-Q.radicalization = 0;
-// Support for the WTB plan and proto-Keynesian works creation plans in general
-Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
-Q.pacifism = 0;
-// Support for democratic reform within the SPD relative to 1928
-Q.democratization = 0;
-// Support for a communist coalition relative to 1928
-Q.communist_coalition = 0;
-// economic_plan: have we adopted *any* economic plan?
-// 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
-Q.economic_plan = 0;
-// have we officially adopted the WTB plan?
-Q.wtb_adopted = 0;
-// have we formed the iron front?
-Q.iron_front_formed = 0;
-// people's party support
-Q.peoples_party_support = 0;
-// support for nationalizations
-Q.nationalization_support = 0;
-Q.nationalization_adopted = 0;
-// moderate economic plan
-Q.moderate_plan_support = 0;
-Q.moderate_plan_adopted = 0;
-
 // organizations
 
 // inter-party relations
@@ -231,28 +195,14 @@ Q.socialism = 10;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
 
-// coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
-// when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
-Q.coup_progress = 0;
-Q.capital_strike_progress = 0;
-
 
 // Proportion of different social groups
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.workers = 18; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 55; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 4.2;
-Q.catholics = 0.1;
-
-// unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
-
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
-
-// what about incomes for different classes? rural workers? middle-class workers?
+Q.workers = 15; // industry and trade
+Q.old_middle = 15; // "old mittelstand"
+Q.new_middle = 20; // "new mittelstand"
+Q.rural = 50; // agriculture and forestry employment... but many of those are proletarians so...
+Q.unemployed = 0; // PLACEHOLDER
+Q.catholics = 0; // PLACEHOLDER
 
 // inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 5.1;
