@@ -67,6 +67,16 @@ for (var party of Q.parties) {
     Q[party+'_votes_display'] = Math.round(Q[party+'_normalized']*100);
 }
 
+Q.kmt_support = (Q.workers * Q.workers_kmt +
+ Q.old_middle * Q.old_middle_kmt +
+ Q.new_middle * Q.new_middle_kmt +
+ Q.rural * Q.rural_kmt) / 100;
+
+Q.anti_kmt_support =
+(Q.workers * (Q.workers_cpc + Q.workers_zhi + Q.workers_feng + Q.workers_anh + Q.workers_other) +
+ Q.old_middle * (Q.old_middle_cpc + Q.old_middle_zhi + Q.old_middle_feng + Q.old_middle_anh + Q.old_middle_other) +
+ Q.new_middle * (Q.new_middle_cpc + Q.new_middle_zhi + Q.new_middle_feng + Q.new_middle_anh + Q.new_middle_other) +
+ Q.rural * (Q.rural_cpc + Q.rural_zhi + Q.rural_feng + Q.rural_anh + Q.rural_other)) / 100;
 
 // set faction strength/dissent to 0
 for (var c of Q.factions) {
