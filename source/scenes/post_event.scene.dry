@@ -67,17 +67,6 @@ for (var party of Q.parties) {
     Q[party+'_votes_display'] = Math.round(Q[party+'_normalized']*100);
 }
 
-Q.kmt_support = (Q.workers * Q.workers_kmt +
- Q.old_middle * Q.old_middle_kmt +
- Q.new_middle * Q.new_middle_kmt +
- Q.rural * Q.rural_kmt) / 100;
-
-Q.anti_kmt_support =
-(Q.workers * (Q.workers_cpc + Q.workers_zhi + Q.workers_feng + Q.workers_anh + Q.workers_other) +
- Q.old_middle * (Q.old_middle_cpc + Q.old_middle_zhi + Q.old_middle_feng + Q.old_middle_anh + Q.old_middle_other) +
- Q.new_middle * (Q.new_middle_cpc + Q.new_middle_zhi + Q.new_middle_feng + Q.new_middle_anh + Q.new_middle_other) +
- Q.rural * (Q.rural_cpc + Q.rural_zhi + Q.rural_feng + Q.rural_anh + Q.rural_other)) / 100;
-
 // set faction strength/dissent to 0
 for (var c of Q.factions) {
     if (Q[c+'_dissent'] < 0) {
@@ -377,6 +366,46 @@ if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.wee
         Q.rural_feng += 1;
      }
  }
+
+Q.total_workers_support = (Q.workers_kmt
++ Q.workers_cpc
++ Q.workers_zhi
++ Q.workers_feng
++ Q.workers_anh
++ Q.workers_other);
+
+Q.total_old_middle_support = (Q.old_middle_kmt
++ Q.old_middle_cpc
++ Q.old_middle_zhi
++ Q.old_middle_feng
++ Q.old_middle_anh
++ Q.old_middle_other);
+
+Q.total_new_middle_support = (Q.new_middle_kmt
++ Q.new_middle_cpc
++ Q.new_middle_zhi
++ Q.new_middle_feng
++ Q.new_middle_anh
++ Q.new_middle_other);
+
+Q.total_rural_support = (Q.rural_kmt
++ Q.rural_cpc
++ Q.rural_zhi
++ Q.rural_feng
++ Q.rural_anh
++ Q.rural_other);
+
+Q.total_kmt_support = Q.workers_kmt + Q.old_middle_kmt + Q.new_middle_kmt + Q.rural_kmt;
+Q.total_cpc_support = Q.workers_cpc + Q.old_middle_cpc + Q.new_middle_cpc + Q.rural_cpc;
+Q.total_zhi_support = Q.workers_zhi + Q.old_middle_zhi + Q.new_middle_zhi + Q.rural_zhi;
+Q.total_feng_support = Q.workers_feng + Q.old_middle_feng + Q.new_middle_feng + Q.rural_feng;
+Q.total_anh_support = Q.workers_anh + Q.old_middle_anh + Q.new_middle_anh + Q.rural_anh;
+Q.total_other_support = Q.workers_other + Q.old_middle_other + Q.new_middle_other + Q.rural_other;
+
+Q.total_support = Q.total_kmt_support + Q.total_cpc_support + Q.total_zhi_support + Q.total_feng_support + Q.total_anh_support + Q.total_other_support;
+
+Q.kmt_support = Math.round((Q.total_kmt_support / Q.total_support)*100)
+Q.anti_kmt_support = Math.round((Q.total_cpc_support + Q.total_feng_support + Q.total_zhi_support + Q.total_anh_support + Q.total_other_support)*1000) / 10;
 
 Q.hainan_faction = Q.guangdong_faction
 Q.zhejiang_n_faction = Q.zhejiang_faction
