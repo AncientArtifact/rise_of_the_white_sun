@@ -263,6 +263,9 @@ Q.unemployed_feng = 0;
 Q.unemployed_anh = 0;
 Q.unemployed_other = 9;
 
+Q.kmt_support = 0;
+Q.anti-kmt_support = 0;
+
 // Current Reichstag composition
 // % of Reichstag in Jan 1928
 // source: wikipedia
