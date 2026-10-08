@@ -195,6 +195,10 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 = **Popular Support:**
 
+Support for the KMT: [+ kmt_support +]%
+
+Support for other factions: [+ anti-kmt_support +]%
+
 <span style="color: #10186e">**KMT**</span>: [+ kmt_votes +]%
 
 <span style="color: #9e1515">**CPC**</span>: [+ cpc_votes +]%
