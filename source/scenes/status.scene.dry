@@ -197,7 +197,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 Support for the KMT: [+ kmt_support +]%
 
-Support for other factions: [+ anti-kmt_support +]%
+Support for other factions: [+ anti_kmt_support +]%
 
 <span style="color: #10186e">**KMT**</span>: [+ kmt_votes +]%
 
