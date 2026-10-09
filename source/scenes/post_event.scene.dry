@@ -367,6 +367,23 @@ if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.wee
      }
  }
 
+Q.quarterly_education_tick = Q.education*1.5;
+Q.quarterly_infrastructure_tick = Q.infrastructure*1.1;
+Q.quarterly_justice_reform_tick = (Q.justice_reform*1.2) - (Q.corruption*0.9);
+Q.quarterly_police_reform_tick = (Q.police_reform*1.1) - (Q.corruption*0.9);
+Q.quarterly_tax_tick = Q.tax_income*-1.5;
+Q.quarterly_corruption_tick = Q.corruption*-2.1;
+Q.quarterly_conscription_tick = (Q.conscription*-1.8) + (Q.nra_militancy);
+
+Q.quarterly_support_tick = (Q.quarterly_education_tick 
++ Q.quarterly_infrastructure_tick 
++ Q.quarterly_justice_reform_tick
++ Q.quarterly_police_reform_tick
++ Q.quarterly_tax_tick
++ Q.quarterly_corruption_tick
++ Q.quarterly_conscription_tick
+);
+
 Q.total_workers_support = (Q.workers_kmt
 + Q.workers_cpc
 + Q.workers_zhi
@@ -411,6 +428,10 @@ Q.kmt_rural_display = Math.round((Q.rural_kmt / Q.total_rural_support)*1000) / 1
 
 Q.kmt_support = Math.round((Q.total_kmt_support / Q.total_support)*1000) / 10;
 Q.anti_kmt_support = Math.round(((Q.total_cpc_support + Q.total_feng_support + Q.total_zhi_support + Q.total_anh_support + Q.total_other_support)/ Q.total_support) * 1000) / 10;
+
+if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.week === 1) {
+    Q.kmt_support += Q.quarterly_support_tick;
+}
 
 Q.hainan_faction = Q.guangdong_faction
 Q.zhejiang_n_faction = Q.zhejiang_faction
