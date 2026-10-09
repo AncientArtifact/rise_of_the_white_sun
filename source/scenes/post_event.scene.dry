@@ -404,6 +404,11 @@ Q.total_other_support = Q.workers_other + Q.old_middle_other + Q.new_middle_othe
 
 Q.total_support = Q.total_kmt_support + Q.total_cpc_support + Q.total_zhi_support + Q.total_feng_support + Q.total_anh_support + Q.total_other_support;
 
+Q.kmt_workers_display = Math.round((Q.workers_kmt / Q.total_workers_support)*1000) / 10;
+Q.kmt_old_middle_display = Math.round((Q.old_middle_kmt / Q.total_old_middle_support)*1000) / 10;
+Q.kmt_new_middle_display = Math.round((Q.new_middle_kmt / Q.total_new_middle_support)*1000) / 10;
+Q.kmt_rural_display = Math.round((Q.rural_kmt / Q.total_rural_support)*1000) / 10;
+
 Q.kmt_support = Math.round((Q.total_kmt_support / Q.total_support)*1000) / 10;
 Q.anti_kmt_support = Math.round(((Q.total_cpc_support + Q.total_feng_support + Q.total_zhi_support + Q.total_anh_support + Q.total_other_support)/ Q.total_support) * 1000) / 10;
 
