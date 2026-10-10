@@ -85,7 +85,7 @@ go-to: wingxc if guangxi_governor = "Li Zongren"; losegxc
 @wingxc
 new-page: true
 face-image: img/lizongren2.jpg
-on-arrival: guangxi_faction = "Guomindang"; gxc_relation += 10; nra_strength += 20;
+on-arrival: guangxi_faction = "Guomindang"; gxc_relation += 10; nra_strength + gxc_strength;
 
 = The Northern Expedition
 
@@ -104,26 +104,27 @@ face-image: img/portraits/LuRongting.jpg
 - @five: Yunnan?
 
 @five
-go-to: winyun if yun_relation >= 60; loseyun if yun_relation < 60
+go-to: winyun if yun_relation >= 70; loseyun if yun_relation < 70
 
 @winyun
 new-page: true
-on-arrival: yun_relation += 10; nra_strength += 20;
+on-arrival: yun_relation += 10; nra_strength + yun_strength;
 face-image: img/portraits/TangJiyao.jpg
 
 = The Northern Expedition
 
-After Tang Jiyao's failed invasion of Yunnan, our relations have soured. Still, Tang joins our efforts to reunify China. Yunnanese general Zhu Peide also joins us in the fight.
+After Tang Jiyao's failed invasion of Guangzhou, our relations have soured. Still, Tang joins our efforts to reunify China. Yunnanese general Zhu Peide also joins us in the fight.
 
 - @six: Guangdong.
 
 @loseyun
 new-page: true
 face-image: img/portraits/ZhuPeide.jpg
+on-arrival: nra_strength += 20;
 
 = The Northern Expedition
 
-After Tang Jiyao's failed invasion of Yunnan, our relations have soured. Looks like we're better off without him. However, Zhu Peide, a Yunnanese general has decided to join us.
+After Tang Jiyao's failed invasion of Guangzhou, our relations have soured. Looks like we're better off without him. However, Zhu Peide, a Yunnanese general has decided to join us.
 
 - @six: Guangdong.
 
