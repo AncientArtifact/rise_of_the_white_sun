@@ -123,7 +123,7 @@ Income: [? if income > 0 : <span style="color: #66BB6A;">+[+ income +]</span> ?]
 
 Expenses: [? if total_costs < 0 : <span style="color: #66BB6A;">+[+ total_costs +]</span> ?][? if total_costs > 0 : <span style="color: #d42f2f;">-[+ total_costs +]</span> ?][? if total_costs = 0 : <span style="color: #FFB74D;">[+ total_costs +]</span> ?]
 
-   Expenses from the military: [? if military_costs < 0 : <span style="color: #d42f2f;">-[+ military_costs +]</span> ?][? if military_costs = 0 : <span style="color: #FFB74D;">[+ military_costs +]</span> ?]
+   Expenses from the military: [? if military_costs > 0 : <span style="color: #d42f2f;">-[+ military_costs +]</span> ?][? if military_costs = 0 : <span style="color: #FFB74D;">[+ military_costs +]</span> ?]
 
    Expenses from debt interest: [? if interest < 0 : <span style="color: #d42f2f;">-[+ interest +]</span> ?][? if interest = 0 : <span style="color: #FFB74D;">[+ interest +]</span> ?]
 
