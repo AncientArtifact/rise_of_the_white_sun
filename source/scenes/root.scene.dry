@@ -170,6 +170,14 @@ Q.gmj_militancy = 0.5;
 Q.gmj_experience = 0;
 Q.gmj_enabled = 0;
 
+Q.gxc_strength = 70;
+Q.gxc_militancy = 0.25;
+Q.gxc_experience = 0;
+
+Q.yun_strength = 100;
+Q.yun_militancy = 0.25;
+Q.yun_experience = 0;
+
 Q.chen_strength = 50;
 Q.chen_militancy = 0.2;
 Q.chen_experience = 0;
