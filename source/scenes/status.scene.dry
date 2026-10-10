@@ -170,7 +170,21 @@ if (Q.gmj_strength) {
 
 [? if gmj_enabled = 1 : <span style="color: #943452">**Guominjun**</span> Strength: [+ gmj_strength_2 +] thousand ?]
 
-[? if gmj_enabled = 1 : <span style="color: #943452">**Guominjun**</span> Strength: [+ gmj_militancy : militancy +] ?]
+[? if gmj_enabled = 1 : <span style="color: #943452">**Guominjun**</span> Quality: [+ gmj_militancy : militancy +] ?]
+
+= **Provincial Armies**
+
+[? if guangxi_faction = "Old Guangxi" : <span style="color: #aba133">**Guangxi Army**</span> Strength: [+ gxc_strength +] thousand ?]
+
+[? if guangxi_faction = "Old Guangxi" : <span style="color: #aba133">**Guangxi Army**</span> Quality: [+ gxc_militancy : militancy +] ?]
+
+[? if guangxi_faction = "New Guangxi" : <span style="color: #8aa87d">**Guangxi Army**</span> Strength: [+ gxc_strength +] thousand ?]
+
+[? if guangxi_faction = "New Guangxi" : <span style="color: #8aa87d">**Guangxi Army**</span> Quality: [+ gxc_militancy : militancy +] ?]
+
+<span style="color: #723d85">**Yunnanese Army**</span> Strength: [+ yun_strength +] thousand
+
+<span style="color: #723d85">**Yunnanese Army**</span> Quality: [+ yun_militancy : militancy +]
 
 = **Regional Armies**
 
