@@ -297,6 +297,7 @@ if (Q.nra_power > Q.yun_power) {
     Q.yun_experience += 0.1;
     Q.antiyun_lose = 1;
 }
+!}
 go-to: self_yunnanbattlescreen
 
 @self_yunnanbattlescreen
