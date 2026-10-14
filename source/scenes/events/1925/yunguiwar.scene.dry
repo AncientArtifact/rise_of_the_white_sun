@@ -8,6 +8,7 @@ new-page: true
 face-image: img/portraits/TangJiyao.jpg
 on-arrival: {!
 Q.yun_casualties = 0;
+Q.nra_casualties = 0;
 Q.antiyun_casualties = 0;
 Q.antiyun_experience = Q.nra_experience + Q.gxc_experience;
 Q.antiyun_strength = Q.nra_strength + Q.gxc_strength;
@@ -127,8 +128,6 @@ The Guomindang has failed.
 
 - @freeachiev: Congratulations.
 
-@freeachiev
-go-to: game_over
 
 @shen
 view-if: guangxi_governor = "Shen Hongying"
@@ -161,11 +160,100 @@ go-to: winshenbribe if gxc_relation > 20; betrayshenbribe
 
 Shen Hongying stands with us! Now, Tang Jiyao must fight his forces combined with ours to reach Guangzhou.
 
-- @winshen: The battle begins.
+- @shen_battle: The battle begins.
 
-@winshen
+@shen_battle
+on-arrival: {! Q.antiyun_power = Q.antiyun_strength * Q.antiyun_militancy * (1 + Q.antiyun_experience);
+Q.yun_power = Q.yun_strength * Q.yun_militancy * (1 + Q.yun_experience);
 
-The *Yunnan-Guangxi War* has slowed down as the Guangxi and NRA troops block Tang Jiyao's advance. This is a victory for the Guomindang.
+Q.antiyun_casualties = (Q.antiyun_strength + Q.yun_strength)
+    * (Q.yun_power / (Q.antiyun_power + Q.yun_power)) * 0.1;
+
+Q.yun_casualties = (Q.antiyun_strength + Q.yun_strength)
+    * (Q.antiyun_power / (Q.antiyun_power + Q.yun_power)) * 0.1;
+
+Q.antiyun_vstrength = Math.round(Q.antiyun_strength*1000);
+Q.yun_vstrength = Math.round(Q.yun_strength*1000);
+
+Q.antiyun_strength -= Q.antiyun_casualties;
+Q.yun_strength -= Q.yun_casualties;
+
+Q.antiyun_vcasualties = Math.round(Q.antiyun_casualties*1000);
+Q.yun_vcasualties = Math.round(Q.yun_casualties*1000);
+
+if (Q.antiyun_power > Q.yun_power) {
+    Q.antiyun_experience += 0.1;
+    Q.antiyun_win = 1;
+} else {
+    Q.yun_experience += 0.1;
+    Q.antiyun_lose = 1;
+}
+!}
+go-to: shen_yunnanbattlescreen
+
+@shen_yunnanbattlescreen
+
+<div>
+  <div id="battle_screen">
+    <div style="text-align: center; border-bottom: 1px solid #999; padding-bottom: 10px; margin-bottom: 15px;">
+      <span style="font-size: 24px;">Yunnan-Guangxi War</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; margin: 20px 30px;">
+      <div style="width: 40%;">
+        <div style="color: #10186e;">Kuomintang and Guangxi Alliance</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ antiyun_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ antiyun_vcasualties +]
+        </div>
+      </div>
+      <div style="width: 20%; font-size: 20px;">VS</div>
+      <div style="width: 40%;">
+        <div style="color: #723d85;">Yunnanese Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ yun_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ yun_vcasualties +]
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; border-top: 1px solid #999; padding-top: 15px; margin-top: 20px;">
+      <div style="font-size: 14px;">OUTCOME</div>
+      [? if antiyun_win = 1 : <div style="font-size: 20px; color: #66BB6A; margin-top: 5px;">Kuomintang and Guangxi Victory</div> ?]
+      [? if antiyun_lose = 1 : <div style="font-size: 20px; color: #d42f2f; margin-top: 5px;">Yunnanese Victory</div> ?]
+    </div>
+  </div>
+</div>
+
+- @shen_winyun: Continue...
+- @shen_loseyun: Continue...
+
+@shen_winyun
+view-if: antiyun_win = 1
+on-arrival: yun_relation -= 10; gxc_relation += 10;
+
+The **Yunnan-Guangxi** war is still ongoing, but a decisive KMT and Guangxi victory has severely hurt Tang Jiyao's forces in the vast mountains of Guangxi.
+
+Eventually, Tang Jiyao will retreat. This is a victory for now.
+
+@shen_loseyun
+view-if: antiyun_lose = 1
+
+We are lost. The Yunnanese army has dealt a decisive victory against both NRA and Guangxi forces. Tang Jiyao's army approaches from the north and the road to Guangzhou is free.
+
+Guangzhou has been seized and our leadership is forced into exile.
+
+The Communists and Soviets refuse to help us as Tang Jiyao conquers the rest of Guangdong.
+
+The Guomindang has failed.
+
+- @freeachiev: Congratulations.
 
 @betrayshenbribe
 
@@ -184,13 +272,83 @@ Tang Jiyao is at the gates of Guangdong. We have no choice but to fight.
 - @battlejiyao: The outcome is...
 
 @battlejiyao
-go-to: winself if nra_strength > 100; loseself
+on-arrival: {! Q.nra_power = Q.nra_strength * Q.nra_militancy * (1 + Q.nra_experience);
+Q.yun_power = Q.yun_strength * Q.yun_militancy * (1 + Q.yun_experience);
 
-@winself
+Q.nra_casualties = (Q.nra_strength + Q.yun_strength)
+    * (Q.yun_power / (Q.nra_power + Q.yun_power)) * 0.1;
+
+Q.yun_casualties = (Q.nra_strength + Q.yun_strength)
+    * (Q.nra_power / (Q.nra_power + Q.yun_power)) * 0.1;
+
+Q.nra_vstrength = Math.round(Q.nra_strength*1000);
+Q.yun_vstrength = Math.round(Q.yun_strength*1000);
+
+Q.nra_strength -= Q.nra_casualties;
+Q.yun_strength -= Q.yun_casualties;
+
+Q.nra_vcasualties = Math.round(Q.nra_casualties*1000);
+Q.yun_vcasualties = Math.round(Q.yun_casualties*1000);
+
+if (Q.nra_power > Q.yun_power) {
+    Q.nra_experience += 0.1;
+    Q.antiyun_win = 1;
+} else {
+    Q.yun_experience += 0.1;
+    Q.antiyun_lose = 1;
+}
+go-to: self_yunnanbattlescreen
+
+@self_yunnanbattlescreen
+
+<div>
+  <div id="battle_screen">
+    <div style="text-align: center; border-bottom: 1px solid #999; padding-bottom: 10px; margin-bottom: 15px;">
+      <span style="font-size: 24px;">Yunnan-Guangdong War</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; margin: 20px 30px;">
+      <div style="width: 40%;">
+        <div style="color: #10186e;">National Revolutionary Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ nra_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ nra_vcasualties +]
+        </div>
+      </div>
+      <div style="width: 20%; font-size: 20px;">VS</div>
+      <div style="width: 40%;">
+        <div style="color: #723d85;">Yunnanese Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ yun_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ yun_vcasualties +]
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; border-top: 1px solid #999; padding-top: 15px; margin-top: 20px;">
+      <div style="font-size: 14px;">OUTCOME</div>
+      [? if antiyun_win = 1 : <div style="font-size: 20px; color: #66BB6A; margin-top: 5px;">National Revolutionary Army Victory</div> ?]
+      [? if antiyun_lose = 1 : <div style="font-size: 20px; color: #d42f2f; margin-top: 5px;">Yunnanese Victory</div> ?]
+    </div>
+  </div>
+</div>
+
+- @self_winyun: Continue...
+- @self_loseyun: Continue...
+
+@self_winyun
+view-if: antiyun_win = 1
 
 We have miraculously defeated Tang Jiyao in the battle! This is a major victory for the Guomindang!
 
-@loseself
+@self_loseyun
+view-if: antiyun_lose = 1
 
 We have been defeated by Tang Jiyao's Yunnanese forces. Guangzhou has been seized and our leadership is forced into exile.
 
