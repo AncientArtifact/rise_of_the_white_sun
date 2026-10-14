@@ -394,6 +394,11 @@ window.hideProvinceTab = function() {
     }
 };
 
+window.addEventListener('mousemove', (e) => {
+  tab.style.translate = `${e.clientX}px ${e.clientY}px`;
+});
+
+
 window.updateProvinceVariables = function(clickedProvince) {
     var qualities = window.dendryUI.dendryEngine.state.qualities;
 
