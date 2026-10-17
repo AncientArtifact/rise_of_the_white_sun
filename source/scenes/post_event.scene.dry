@@ -166,10 +166,6 @@ Q.income = Q.tax_income + Q.party_income + Q.other_income + Q.centralize_bonus +
 
 Q.total_income = Q.income - Q.total_costs;
 
-if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.week === 1) {
-    Q.funds += Q.total_income;
-}
-
     // decrement timers
     for (timer of Q.timers) {
         if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
@@ -425,6 +421,8 @@ Q.anti_kmt_support = Math.round(((Q.total_cpc_support + Q.total_feng_support + Q
 
 if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.week === 1) {
     Q.kmt_support += Q.quarterly_support_tick;
+    Q.nra_strength = Q.nra_strength += Q.quarterly_troops;
+    Q.funds += Q.total_income;
 }
 
 Q.quarterly_troops = (Q.conscription/Q.kmt_support)*10
@@ -432,8 +430,6 @@ Q.quarterly_troops = (Q.conscription/Q.kmt_support)*10
 if (Q.quarterly_troops < 0) {
  Q.quarterly_troops = 0
 }
-
-Q.nra_strength = Q.nra_strength += Q.quarterly_troops
 
 Q.hainan_faction = Q.guangdong_faction
 Q.zhejiang_n_faction = Q.zhejiang_faction
