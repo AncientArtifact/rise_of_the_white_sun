@@ -2,7 +2,7 @@ title: He Yingqin
 is-pinned-card: true
 tags: advisor, whampoa
 card-image: img/portraits/HeYingqin.jpg
-view-if: chiangkaishek_advisor = 1
+view-if: heyingqin_advisor = 1
 new-page: true
 #face-image: img/portraits/HeYingqin.jpg
 
@@ -12,7 +12,6 @@ He Yingqin is a young officer of the NRA and a major ally of Chiang Kai-shek.
   
 - @nra_buildup
 - @nra_quality
-- @successor
 - @root: Return to main
 
 @nra_buildup
