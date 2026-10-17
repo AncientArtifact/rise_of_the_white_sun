@@ -196,9 +196,9 @@ if (Q.gmj_strength) {
 
 [? if southexped_done = 0 : <span style="color: #d2cbd6">**Eight-District Alliance**</span> Quality: [+ deng_militancy: militancy +] ?]
 
-[? if nra_winyang = 0 : <span style="color: #121440">**Army and Navy Marshal Stronghold**</span> Strength: [+ yang_strength +] thousand ?]
+[? if nra_winyang = 0 : <span style="color: #121440">**Guangzhou Guest Armies**</span> Strength: [+ yang_strength +] thousand ?]
 
-[? if nra_winyang = 0 : <span style="color: #121440">**Army and Navy Marshal Stronghold**</span> Quality: [+ yang_militancy: militancy +] ?]
+[? if nra_winyang = 0 : <span style="color: #121440">**Guangzhou Guest Armies**</span> Quality: [+ yang_militancy: militancy +] ?]
 
 @polls
 on-arrival: {!
