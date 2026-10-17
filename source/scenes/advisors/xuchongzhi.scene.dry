@@ -8,7 +8,7 @@ new-page: true
 
 = Xu Chongzhi
 
-Xu Chongzhi is a Guangdongese general aligned with the Kuomintang. He is the commander of the National Revolutionary Army.
+Xu Chongzhi is a Guangdongese general aligned with the Kuomintang. He is the current commander of the National Revolutionary Army, and his old Guangdong army makes up it's base.
 
 - @nra_buildup
 - @nra_quality
@@ -19,7 +19,7 @@ title: Build up the National Revolutionary Army
 subtitle: Increase our propaganda measures to recruit more members into the NRA.
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; nra_strength += 10
+on-arrival: advisor_action_timer = 6; nra_strength += quarterly_troops;
 
 We have recruited more members into the NRA.
 
