@@ -9,7 +9,7 @@ on-arrival: week_actions += 1; nra_timer += 6; nra_militarization_cost = 2 if nr
 
 = National Revolutionary Army
 
-The *National Revolutionary Army* is the Guomindang's military wing. It is still in it's infancy but is quickly expanding in quality and size.
+The *National Revolutionary Army* is the Guomindang's military wing. It is still in its infancy but is quickly expanding in quality and size.
 
 - @militant: Increase funding for the NRA.
 - @cut_nra: Cut funding for the NRA.
