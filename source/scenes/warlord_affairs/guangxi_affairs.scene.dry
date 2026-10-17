@@ -26,7 +26,7 @@ title: Build up the Guangxi 7th Army
 subtitle: -1 funds - Increase our recruitment efforts to recruit more members into the NRA.
 choose-if: funds >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: funds -= 1; gxc_strength += 10
+on-arrival: funds -= 1; gxc_strength += quarterly_strength
 
 We have recruited more members into the NRA.
 
