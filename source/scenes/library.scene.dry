@@ -125,51 +125,47 @@ Strength: [+ gmj_strength +] thousand
 Militarization: [+ gmj_militancy : militancy +]
 
 @factions
-go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
 
-**Internal factions of the SPD**
+**Internal factions of the KMT**
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Left**
+**Communists**
 
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the KPD, and some support extraparliamentary action.
+Communists are members of the CPC within the KMT, or KMT Members with left-leaning ideology. Although they are not inherently marxist and support Sun Yat-sen's plan. They support cooperating with the CPC.
 
 Strength: [+ left_strength : strength +]
 
 Dissent: [+ left_dissent : dissent +]
 
+**Leftists**
+
+Leftists are KMT members with left-leaning ideology. Although they are not inherently marxist and support Sun Yat-sen's plan. They support cooperating with the CPC, but that is subject to change. 
+
+Strength: [+ center_left_strength : strength +]
+
+Dissent: [+ center_left_dissent : dissent +]
+
 **Centrists**
 
-Centrists in the SPD are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
+Centrists in the KMT are unaligned figures and groups such as the Princelings led by Sun Fo and other non-factional members.
 
 Strength: [+ center_strength : strength +]
 
 Dissent: [+ center_dissent : dissent +]
 
-**Labor**
+**Right**
 
-Many SPD members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
+Rightists are traditional KMT members who go against the CPC-KMT United Front. They oppose the Left for this.
 
-Strength: [+ labor_strength : strength +]
+Strength: [+ right_strength : strength +]
 
-Dissent: [+ labor_dissent : dissent +]
+Dissent: [+ right_dissent : dissent +]
 
-**Reformists**
+**Whampoa**
 
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
+The Whampoa Clique are NRA Officers of the KMT. They are led by Chiang Kai-shek.
 
-Strength: [+ reformist_strength : strength +]
+Strength: [+ whampoa_strength : strength +]
 
-Dissent: [+ reformist_dissent : dissent +]
-
-@neorevisionists
-go-to: menu
-
-**Neorevisionists**
-
-Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
-
-Strength: [+ neorevisionist_strength : strength +]
-
-Dissent: [+ neorevisionist_dissent : dissent +]
+Dissent: [+ whampoa_dissent : dissent +]
