@@ -22,29 +22,29 @@ The *National Revolutionary Army* is the Guomindang's military wing. It is still
 
 @militant
 subtitle: -[+ nra_militarization_cost +] funds every quarter
-on-arrival: military_costs += nra_militarization_cost; nra_investment += 1; nra_strength += 10; nra_strength += 10 if conscription > 2; nra_strength += 5 if conscription > 3; nra_militancy += 0.05; 
+on-arrival: military_costs += nra_militarization_cost; nra_investment += 1; nra_strength += quarterly_troops; nra_militancy += 0.05; 
 
 Increasing the strength of the NRA makes us more prepared for the Northern Expedition.
 
 @militant_2
-view-if: funded_nra >= 1
-on-arrival: nra_militancy += 0.1; funded_nra -= 1
+choose-if: funds >= 1
+unavailable-subtitle: Not enough funds.
+subtitle: -1 funds
+on-arrival: nra_militancy += 0.1;
 
 As we have already funded our government funds towards the National Revolutionary Army, we can invest in building up their militancy.
 
 @increase
 choose-if: conscription < 5
 unavailable-subtitle: Conscription is way too high.
-subtitle: +10 thousand
-on-arrival: nra_strength += 10; conscription += 1; rural_kmt -= 10;
+on-arrival: conscription += 1; rural_kmt -= 10;
 
 Increasing conscription is pretty unpopular with the people.
 
 @decrease
 choose-if: conscription > 1
 unavailable-subtitle: Conscription is already way too low.
-subtitle: -10 thousand
-on-arrival: nra_strength -= 10; conscription -= 1; rural_kmt += 5;
+on-arrival: conscription -= 1; rural_kmt += 5;
 
 Decreasing conscription is more popular with the people, although it reduces the NRA's numbers.
 
@@ -57,6 +57,6 @@ The National Revolutionary Army is already serving the purpose it needs to serve
 
 @cut_nra
 subtitle: +1 funds every quarter
-on-arrival: military_costs -= 1; nra_strength -= 10; nra_militancy -= 0.02; left_strength -= 2; left_dissent += 2; workers_cpc += 2; unemployed_cpc += 2;
+on-arrival: military_costs -= 1; nra_militancy -= 0.025;
 
-Cutting our funds to the National Revolutionary Army causes a drop in the membership, and leads some would-be members to join the Communists instead.
+Cutting our funds to the National Revolutionary Army causes the army to have less resources and weapons to fight.
