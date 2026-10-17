@@ -17,10 +17,10 @@ Jiang Jieshi, or Chiang Kai-shek (romanized in Cantonese) is a young officer in 
 
 @nra_buildup
 title: Build up the National Revolutionary Army
-subtitle: Increase our propaganda measures to recruit more members into the NRA.
+subtitle: Increase our conscription measures to recruit more members into the NRA.
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-  on-arrival: advisor_action_timer = 6; nra_strength += quarterly_troops*2;
+on-arrival: advisor_action_timer = 6; nra_strength += quarterly_troops*2;
 
 We have recruited more members into the NRA.
 
