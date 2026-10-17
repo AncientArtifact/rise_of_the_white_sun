@@ -394,6 +394,7 @@ window.hideProvinceTab = function() {
     }
 };
 
+var tab = document.getElementById("province_tab");
 window.addEventListener('mousemove', (e) => {
   tab.style.translate = `${e.clientX}px ${e.clientY}px`;
 });
