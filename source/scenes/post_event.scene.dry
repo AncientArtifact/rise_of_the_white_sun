@@ -359,8 +359,8 @@ Q.total_income = Q.income - Q.total_costs;
 
 Q.quarterly_education_tick = Q.education*1.5;
 Q.quarterly_infrastructure_tick = Q.infrastructure*1.3;
-Q.quarterly_justice_reform_tick = (Q.justice_reform*1.2) - (Q.corruption*0.9);
-Q.quarterly_police_reform_tick = (Q.police_reform*1.1) - (Q.corruption*0.9);
+Q.quarterly_justice_reform_tick = (Q.justice_reform*1.2) - (Q.corruption*0.2);
+Q.quarterly_police_reform_tick = (Q.police_reform*1.1) - (Q.corruption*0.2);
 Q.quarterly_tax_tick = Q.tax_income*-1.1;
 Q.quarterly_corruption_tick = Q.corruption*-2.1;
 Q.quarterly_conscription_tick = (Q.conscription*-1.8) + (Q.nra_militancy);
