@@ -1,0 +1,34 @@
+title: He Yingqin
+is-pinned-card: true
+tags: advisor, whampoa
+card-image: img/portraits/HeYingqin.jpg
+view-if: chiangkaishek_advisor = 1
+new-page: true
+#face-image: img/portraits/HeYingqin.jpg
+
+= He Yingqin
+
+He Yingqin is a young officer of the NRA and a major ally of Chiang Kai-shek.
+  
+- @nra_buildup
+- @nra_quality
+- @successor
+- @root: Return to main
+
+@nra_buildup
+title: Build up the National Revolutionary Army
+subtitle: Increase our conscription measures to recruit more members into the NRA.
+choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; nra_strength += quarterly_troops;
+
+We have recruited more members into the NRA.
+
+
+@nra_quality
+title: Training the National Revolutionary Army
+choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; nra_militancy += 0.1;
+
+The NRA's quality has been increased, with more arms and better training.
