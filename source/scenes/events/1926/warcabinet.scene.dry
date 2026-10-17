@@ -1,0 +1,20 @@
+title: Chiang Kai-shek Appoints his Advisors
+subtitle: Preparation...
+tags: events
+view-if: year = 1926 and month = 7 and week = 3
+max-visits: 1
+priority: 2
+new-page: true
+on-arrival: {!
+window.clearAdvisors();
+Q.chiangkaishek_advisor = 1;
+Q.lizongren_advisor = 1;
+Q.tangshengzhi_advisor = 1;
+Q.heyingqin_advisor = 1;
+!}
+
+= Chiang Kai-shek Appoints his Advisors
+
+Chiang Kai-shek has dominated the Kuomintang. Assembling his allies in the NRA Officer Corps, and allied warlords, the old advisors are gone and his new ones are in.
+
+Li Zongren, He Yingqin and Tang Shengzhi are now advisors.
