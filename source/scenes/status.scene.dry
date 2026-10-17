@@ -156,6 +156,8 @@ if (Q.gmj_strength) {
 
 <span style="color: #10186e">**National Revolutionary Army**</span> Quality: [+ nra_militancy : militancy +]
 
+Troops per quarter: [? if quarterly_troops > 0 : <span style="color: #66BB6A;">+[+ quarterly_troops +]</span> ?][? if quarterly_troops = 0 : <span style="color: #FFB74D;">[+ quarterly_troops +]</span> ?]
+
 <span style="color: #9e1515">**Chinese Red Army**</span> Strength: [+ red_strength_2 +] thousand
 
 <span style="color: #9e1515">**Chinese Red Army**</span> Quality: [+ red_militancy : militancy +]
