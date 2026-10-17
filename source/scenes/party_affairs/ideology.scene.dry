@@ -15,7 +15,7 @@ The KMT is torn between many different ideological currents. What should be our 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
 - @left: Cooperation with the Communists should be prioritized.
-- @center_left: Wang Jingwei can lead us through the storm.
+- @center_left: Democracy and allying with the Communists are good strategy.
 - @center: We should stay in the middle, probably.
 - @right: We should cut ties with the Communists and keep conservative policies.
 - @whampoa: Our military arm deserves some attention.
