@@ -1,35 +1,52 @@
 title: National Revolutionary Army
 new-page: true
 is-card: true
-tags: party_affairs
+tags: govt_affairs
 view-if: nra_timer <= 0
 card-image: img/nationalarmy.jpg
 on-arrival: week_actions += 1; nra_timer += 6; nra_militarization_cost = 2 if nra_militancy > 0.1 else nra_militarization_cost = 1; nra_militarization_cost = 3 if nra_militancy > 0.25
-max-visits: 6
 #subtitle: Military organizing for the Northern Expedition.
 
 = National Revolutionary Army
 
 The *National Revolutionary Army* is the Guomindang's military wing. It is still in it's infancy but is quickly expanding in quality and size.
 
-- @militant: Fund more military-style training and equipment for the NRA.
-- @militant_2: Use our existing funds to support more training for the NRA.
-- @same: Keep the NRA as it is.
+- @militant: Increase funding for the NRA.
 - @cut_nra: Cut funding for the NRA.
+- @militant_2: Use our funds to increase the NRA's quality.
+- @increase: Increase conscription.
+- @decrease: Decrease conscription.
+- @same: Keep the NRA as it is.
 - @easy_discard
 - @cancel_advisor_action
 
 @militant
 subtitle: -[+ nra_militarization_cost +] funds every quarter
-on-arrival: military_costs += nra_militarization_cost; nra_investment += 1; nra_strength += 10; nra_militancy += 0.05;
+on-arrival: military_costs += nra_militarization_cost; nra_investment += 1; nra_strength += quarterly_troops; nra_militancy += 0.05; 
 
-Our military wing continues to recieve more funding and increases preparation for the *Northern Expedition*.
+Increasing the strength of the NRA makes us more prepared for the Northern Expedition.
 
 @militant_2
-view-if: funded_nra >= 1
-on-arrival: nra_militancy += 0.1; funded_nra -= 1
+choose-if: funds >= 1
+unavailable-subtitle: Not enough funds.
+subtitle: -1 funds
+on-arrival: nra_militancy += 0.1;
 
-As we have already funded funds towards the National Revolutionary Army, we can invest in building up their militancy.
+As we have already funded our government funds towards the National Revolutionary Army, we can invest in building up their militancy.
+
+@increase
+choose-if: conscription < 5
+unavailable-subtitle: Conscription is way too high.
+on-arrival: conscription += 1; rural_kmt -= 10;
+
+Increasing conscription is pretty unpopular with the people.
+
+@decrease
+choose-if: conscription > 1
+unavailable-subtitle: Conscription is already way too low.
+on-arrival: conscription -= 1; rural_kmt += 5;
+
+Decreasing conscription is more popular with the people, although it reduces the NRA's numbers.
 
 @same
 
@@ -40,6 +57,6 @@ The National Revolutionary Army is already serving the purpose it needs to serve
 
 @cut_nra
 subtitle: +1 funds every quarter
-on-arrival: military_costs -= 1; nra_strength -= 10; nra_militancy -= 0.05;
+on-arrival: military_costs -= 1; nra_militancy -= 0.025;
 
-Cutting funds to the National Revolutionary Army causes a drop in quality and numbers.
+Cutting our funds to the National Revolutionary Army causes the army to have less resources and weapons to fight.
