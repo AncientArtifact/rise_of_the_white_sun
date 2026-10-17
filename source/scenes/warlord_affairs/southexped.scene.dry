@@ -5,7 +5,6 @@ card-image: img/portraits/DengBenyin.jpg
 tags: warlord_affairs
 view-if: southexped_timer = 0 and southexped_active = 1
 on-arrival: {!
-
 Q.week_actions += 1;
 Q.southexped_timer += 3;
 Q.deng_casualties = 0;
@@ -14,7 +13,6 @@ Q.nra_winbeihai = 0;
 Q.nra_losebeihai = 0;
 Q.nra_winhainan = 0;
 Q.nra_losehainan = 0;
-
 !}
 
 = The Southern Expedition
@@ -81,7 +79,7 @@ go-to: beihaibattlescreen
       </div>
       <div style="width: 20%; font-size: 20px;">VS</div>
       <div style="width: 40%;">
-        <div style="color: #d2cbd6;">Bashu Alliance</div>
+        <div style="color: #d2cbd6;">Eight-District Alliance</div>
         <div style="margin-top: 10px;">
           <strong>Troops</strong><br>
           [+ deng_vstrength +]
@@ -95,7 +93,7 @@ go-to: beihaibattlescreen
     <div style="text-align: center; border-top: 1px solid #999; padding-top: 15px; margin-top: 20px;">
       <div style="font-size: 14px;">OUTCOME</div>
       [? if nra_winbeihai = 1 : <div style="font-size: 20px; color: #66BB6A; margin-top: 5px;">National Revolutionary Army Victory</div> ?]
-      [? if nra_losebeihai = 1 : <div style="font-size: 20px; color: #d42f2f; margin-top: 5px;">Bashu Alliance Victory</div> ?]
+      [? if nra_losebeihai = 1 : <div style="font-size: 20px; color: #d42f2f; margin-top: 5px;">Eight-District Alliance Victory</div> ?]
     </div>
   </div>
 </div>
