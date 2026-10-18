@@ -3,7 +3,7 @@ is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/SunFo.jpg
 new-page: true
-view-if: sunyatsen_advisor = 1
+view-if: sunfo_advisor = 1
 subtitle: MODERN ADMINISTRATOR: +1 for each education and infrastructure bonus.
   
 = Sun Fo
