@@ -4,7 +4,7 @@ tags: advisor, right
 card-image: img/portraits/ZhangRenjie.jpg
 view-if: zhangrenjie_advisor = 1
 new-page: true
-subtitle: BUSINESS CONNECTION: +20% old middle support, +1 corruption
+subtitle: <span style="font-weight: bold;">BUSINESS CONNECTION:</span> +20% old middle support, +1 corruption
 
 = Zhang Renjie
 
