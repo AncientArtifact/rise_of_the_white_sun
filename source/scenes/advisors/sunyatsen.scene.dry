@@ -4,7 +4,7 @@ tags: advisor, centrist
 card-image: img/portraits/SunYat-sen.jpg
 new-page: true
 view-if: sunyatsen_advisor = 1
-subtitle: SANMIN ZHUYI: -5 party dissent every quarter.
+subtitle: [? if sunyatsen_dead = 0 : SANMIN ZHUYI: -5 party dissent every quarter. ?]
 
 = Sun Yat-sen
 
