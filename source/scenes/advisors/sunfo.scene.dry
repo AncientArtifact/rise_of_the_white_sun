@@ -1,0 +1,36 @@
+title: Sun Fo
+is-pinned-card: true 
+tags: advisor, centrist
+card-image: img/portraits/SunFo.jpg
+new-page: true
+view-if: sunyatsen_advisor = 1
+subtitle: MODERN ADMINISTRATOR: +1 for each education and infrastructure bonus.
+  
+= Sun Fo
+
+Sun Fo is the son of Sun Yat-sen. He leads the KMT's "Princelings", a faction of new and young members of the KMT.
+
+- @princeling
+- @education
+- @root: Return to main
+
+@princeling
+title: Advance the Princeling faction.
+subtitle: Sun Fo can help advance his faction of princelings.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; center_strength += 10;
+
+We have reduced tensions within the party.
+
+@education
+title: Fund building schools in the countryside.
+subtitle: -1 funds
+choose-if: funds >= 1
+on-arrival: funds -= 1; education += 1; economic_growth += 0.3; unemployed -= 0.2; west_relation += 1; rural_kmt += 3;
+
+Building schools in rural areas increases our popular support as well as their education.
+
+@root
+title: Return to main
+go-to: main
