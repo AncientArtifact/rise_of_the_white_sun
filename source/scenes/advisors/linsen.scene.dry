@@ -25,10 +25,10 @@ We have decreased relations with the CPC. The leftist factions are upset.
 
 
 @rightkmt
-title: Increase Right-KMT influence.
-subtitle: We can increase the Right-KMT's influence.
+title: Advance the Western Hills Faction.
+subtitle: Lin Sen can advance the interests of his Western Hills Faction.
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1; right_strength += 10; left_dissent += 10; center_left_dissent += 10;
 
-The R-KMT has been empowered.
+The R-KMT has been empowered from this.
