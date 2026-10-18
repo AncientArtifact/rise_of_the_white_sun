@@ -5,6 +5,7 @@ card-image: img/portraits/ChiangKai-shek.jpg
 view-if: chiangkaishek_advisor = 1
 new-page: true
 #face-image: img/portraits/ChiangKai-shek.jpg
+subtitle: [? if northern_expedition_begun = 0 : YOUNG GENERAL: Increased NRA quality ever turn. ?] [? if northern_expedition_begun = 1 : GENERALISSIMO: +10% NRA power in every battle. ?]
 
 = Chiang Kai-shek
 
