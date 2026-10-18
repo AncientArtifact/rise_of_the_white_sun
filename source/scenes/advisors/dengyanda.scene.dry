@@ -1,0 +1,31 @@
+title: Deng Yanda
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/DengYanda.jpg
+view-if: dengyanda_advisor = 1
+new-page: true 
+subtitle: PEASANT ORGANIZER: +10% rural support.
+
+= Deng Yanda
+
+Deng Yanda is a leftist NRA officer who is good with peasants.
+
+- @agriculture
+- @rural
+- @root: Return to main
+
+@agriculture
+title: Agricultural Financing
+subtitle: -1 funds - Increase financing for agricultural credit and insurance.
+choose-if: funds >= 1
+on-arrival: funds -= 1; agricultural_finance += 1; rural_kmt += 5*(1-dissent); rural_cpc -= 3*(1-dissent); economic_growth += 0.2;
+
+We have increased financial support for small farmers, as well as providing subsidies to strengthen the agricultural industry.
+  
+@rural
+subtitle: -1 funds
+choose-if: funds >= 1
+unavailable-subtitle: Not enough funds.
+on-arrival: rural_kmt += 5*(1-dissent); funds -= 1;
+
+We have increased our campaigning among farmers. 
