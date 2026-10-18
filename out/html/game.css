@@ -499,6 +499,7 @@ div.blank-card {
   border: 1px solid var(--border-color);
   background-color: var(--content-bg-color);
   text-align: center;
+  color: #443311 !important;
 }
 
 .card-img {
