@@ -4,7 +4,7 @@ tags: advisor, centrist
 card-image: img/portraits/SunYat-sen.jpg
 new-page: true
 view-if: sunyatsen_advisor = 1
-subtitle-parameter: TEST
+subtitle: TEST
 
 = Sun Yat-sen
 
