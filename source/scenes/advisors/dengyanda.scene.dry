@@ -4,7 +4,7 @@ tags: advisor, left
 card-image: img/portraits/DengYanda.jpg
 view-if: dengyanda_advisor = 1
 new-page: true 
-subtitle: PEASANT ORGANIZER: +10% rural support.
+subtitle: <span style="font-weight: bold;">PEASANT ORGANIZER:</span> +10% rural support.
 
 = Deng Yanda
 
