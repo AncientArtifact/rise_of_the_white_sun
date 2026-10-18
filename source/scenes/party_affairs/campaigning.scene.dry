@@ -15,7 +15,6 @@ The party needs support from many people in China to enstate itself as the true 
 - @workers: The working class, labourers in the cities.
 - @new_middle: The "new middle class" of students, intellectuals and white-collar workers.
 - @old_middle: The "old middle class" of traditional independent businessmen and artisans.
-- @unemployed: The unemployed.
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
 
@@ -47,17 +46,9 @@ We have increased our support among the old middle class.
 subtitle: -1 funds
 choose-if: funds >= 1
 unavailable-subtitle: Not enough funds.
-on-arrival: rural_spd += 5*(1-dissent); funds -= 1;
+on-arrival: rural_kmt += 5*(1-dissent); funds -= 1;
 
 We have increased our campaigning among farmers. [? if peoples_party == 0: We have not historically campaigned much among the farmers, and they do not trust us. ?][? if peoples_party > 0: As a people's party, we have an easier time increasing support among farmers than before. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
-
-@unemployed
-subtitle: -1 funds
-choose-if: funds >= 1
-unavailable-subtitle: Not enough funds.
-on-arrival: unemployed_spd += 3*(1-dissent); funds -= 1;
-
-We have increased our campaigning among the unemployed.
 
 @root
 subtitle: No campaigning, for now.
