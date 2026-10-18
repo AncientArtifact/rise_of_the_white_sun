@@ -23,6 +23,7 @@ on-arrival: funds -= 1; agricultural_finance += 1; rural_kmt += 5*(1-dissent); r
 We have increased financial support for small farmers, as well as providing subsidies to strengthen the agricultural industry.
   
 @rural
+title: Rural Organizing
 subtitle: -1 funds
 choose-if: funds >= 1
 unavailable-subtitle: Not enough funds.
