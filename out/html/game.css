@@ -492,13 +492,13 @@ div.blank-card {
   position: absolute;
   visibility: hidden;
   width: 150px;
-  max-width: 200px;
+  max-width: 150px;
   font-size: 0.9em;
   z-index: 2;
   padding: 0.2em;
   border: 1px solid var(--border-color);
   background-color: var(--content-bg-color);
-  left: 105%;
+  text-align: center;
 }
 
 .card-img {
