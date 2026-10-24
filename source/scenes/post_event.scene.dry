@@ -119,53 +119,6 @@ if (Q.week >= 5) {
         Q.year += 1;
     }
 }
-
-if (Q.infrastructure === 2 || Q.infrastructure === 3) { 
- Q.infrastructure_bonus = 1;
-}
-
-if (Q.infrastructure === 4 || Q.infrastructure === 5) {
- Q.infrastructure_bonus = 2;
-}
-
-if (Q.infrastructure > 6) {
- Q.infrastructure_bonus = 3;
-}
-
-if (Q.education === 2 || Q.education === 3) {
- Q.education_bonus = 1;
-}
-
-if (Q.education === 4 || Q.education === 5) {
- Q.education_bonus = 2;
-}
-
-if (Q.education > 6) {
- Q.education_bonus = 3;
-}
-
-if (Q.centralize === 2 || Q.centralize === 3) {
- Q.centralize_bonus = 1;
-}
-
-if (Q.centralize === 4 || Q.centralize === 5) {
- Q.centralize_bonus = 2;
-}
-
-if (Q.centralize > 6) {
- Q.centralize_bonus = 3;
-}
-
-Q.interest = (Q.loans)*3;
-
-Q.other_income = Q.gambling + Q.opium_money;
-
-Q.total_costs = Q.military_costs + Q.corruption + Q.interest;
-
-Q.income = Q.tax_income + Q.party_income + Q.other_income + Q.centralize_bonus + Q.infrastructure_bonus + Q.education_bonus;
-
-Q.total_income = Q.income - Q.total_costs;
-
     // decrement timers
     for (timer of Q.timers) {
         if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
@@ -357,6 +310,46 @@ Q.total_income = Q.income - Q.total_costs;
      }
  }
 
+const provinces = [
+    "liaoning",
+    "jilin",
+    "heilongjiang",
+    "rehe",
+    "chahar",
+    "suiyuan",
+    "ningxia",
+    "mongolia",
+    "xinjiang",
+    "gansu",
+    "qinghai",
+    "shaanxi",
+    "shanxi",
+    "hebei",
+    "henan",
+    "shandong",
+    "hubei",
+    "tibet",
+    "sichuan",
+    "yunnan",
+    "guizhou",
+    "hunan",
+    "guangdong",
+    "hainan",
+    "guangxi",
+    "fujian",
+    "jiangxi",
+    "zhejiang",
+    "zhejiang_n",
+    "anhui",
+    "jiangsu",
+    "shenyang",
+    "beijing",
+    "nanjing",
+    "shanghai",
+    "wuhan",
+    "guangzhou",
+];
+
 Q.quarterly_education_tick = Q.education*1.5;
 Q.quarterly_infrastructure_tick = Q.infrastructure*1.3;
 Q.quarterly_justice_reform_tick = (Q.justice_reform*1.2) - (Q.corruption*0.2);
@@ -364,6 +357,151 @@ Q.quarterly_police_reform_tick = (Q.police_reform*1.1) - (Q.corruption*0.2);
 Q.quarterly_tax_tick = Q.tax_income*-1.1;
 Q.quarterly_corruption_tick = Q.corruption*-2.1;
 Q.quarterly_conscription_tick = (Q.conscription*-1.8) + (Q.nra_militancy);
+
+if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.week === 1) {
+    if (Q.chiangkaishek_advisor === 1 && Q.northern_expedition_begun === 0) {
+        Q.nra_quality += 0.05;
+    }
+    if (Q.dengyanda_advisor === 1) {
+        Q.rural_kmt += (Q.rural_kmt / Q.total_rural_support)*0.1;
+    }
+    if (Q.eugenechen_advisor === 1) {
+        Q.east_relation += 0.2;
+        Q.west_relation += 0.2;
+        Q.japan_relation += 0.2;
+    }
+    if (Q.huhanmin_advisor === 1) {
+        if (Q.northern_expedition_begun === 0) {
+            Q.quarterly_corruption_tick / 2; 
+            Q.whampoa_strength -= 4;
+        }
+        if (Q.northern_expedition_begun === 1) {
+            Q.quarterly_corruption_tick / 2; 
+            Q.whampoa_strength -= 4;
+            Q.nra_legitimacy + 5;
+        }
+    }
+    if (Q.linsen_advisor === 1) {
+        if (Q.northern_expedition_begun === 0) {
+            Q.right_strength += 2;
+            Q.left_dissent -= 5;
+            Q.center_left_dissent -= 5;
+            Q.center_dissent -= 5;
+            Q.right_dissent -= 5;
+            Q.whampoa_dissent -= 5;
+        }
+        if (Q.northern_expedition_begun === 1) {
+            Q.right_strength += 2;
+            Q.left_dissent -= 5;
+            Q.center_left_dissent -= 5;
+            Q.center_dissent -= 5;
+            Q.right_dissent -= 5;
+            Q.whampoa_dissent -= 5;
+            Q.nra_legitimacy += 5;
+        }
+    }
+    if (Q.mikhailborodin_advisor === 1) {
+        Q.east_relation += 0.25;
+        Q.nra_quality += 0.05;
+    }
+    if (Q.soongchingling_advisor === 1) {
+        Q.worker_kmt += (Q.worker_kmt/2)*0.05;
+        Q.old_middle_kmt += (Q.old_middle_kmt/2)*0.05;
+        Q.new_middle_kmt += (Q.new_middle_kmt/2)*0.05;
+        Q.rural_kmt += (Q.rural_kmt/2)*0.05;
+    }
+    if (Q.sunyatsen_advisor === 1) {
+        Q.left_dissent -= 5;
+        Q.center_left_dissent -= 5;
+        Q.center_dissent -= 5;
+        Q.right_dissent -= 5;
+        Q.whampoa_dissent -= 5;
+    }
+    if (Q.tangshengzhi_advisor === 1) {
+        Q.hunan_order += 15;
+        Q.hubei_order += 15;
+        Q.henan_order += 15;
+    }
+    if (Q.tanyankai_advisor === 1) {
+        forEach(provinces => {
+            if (Q[provinces + "_faction"] === "Guomindang") {
+                Q[provinces + "_order"] += 5;
+            }
+        });
+    }
+    if (Q.wangjingwei_advisor === 1) {
+        Q.worker_kmt += (Q.worker_kmt)*0.1;
+        Q.old_middle_kmt += (Q.old_middle_kmt)*0.1;
+        Q.new_middle_kmt += (Q.new_middle_kmt)*0.1;
+        Q.rural_kmt += (Q.rural_kmt)*0.1;
+    }
+    if (Q.zhangfakui_advisor === 1) {
+        Q.nra_quality += 0.05;
+    }
+    if (Q.zhangrenjie_advisor === 1) {
+        Q.old_middle_kmt += (Q.old_middle_kmt)*0.2;
+    }
+}
+
+if (Q.infrastructure === 2 || Q.infrastructure === 3) { 
+ Q.infrastructure_bonus = 1;
+}
+
+if (Q.infrastructure === 4 || Q.infrastructure === 5) {
+ Q.infrastructure_bonus = 2;
+}
+
+if (Q.infrastructure > 6) {
+ Q.infrastructure_bonus = 3;
+}
+
+if (Q.education === 2 || Q.education === 3) {
+ Q.education_bonus = 1;
+}
+
+if (Q.education === 4 || Q.education === 5) {
+ Q.education_bonus = 2;
+}
+
+if (Q.education > 6) {
+ Q.education_bonus = 3;
+}
+
+if (Q.centralize === 2 || Q.centralize === 3) {
+ Q.centralize_bonus = 1;
+}
+
+if (Q.centralize === 4 || Q.centralize === 5) {
+ Q.centralize_bonus = 2;
+}
+
+if (Q.centralize > 6) {
+ Q.centralize_bonus = 3;
+}
+
+if (Q.liaozhongkai_advisor === 1) {
+    Q.party_income + 1;
+}
+if (Q.sunfo_advisor === 1) {
+    Q.education_bonus += Q.education_bonus;
+    Q.infrastructure_bonus += Q.infrastructure_bonus;
+}
+if (Q.tvsoong_advisor === 1) {
+    Q.centralize_bonus += Q.centralize_bonus;
+}
+if (Q.xuchongzhi_advisor === 1) {
+    Q.military_costs -= 1;
+}
+
+Q.interest = (Q.loans)*3;
+
+Q.other_income = Q.gambling + Q.opium_money;
+
+Q.total_costs = Q.military_costs + Q.corruption + Q.interest;
+
+Q.income = Q.tax_income + Q.party_income + Q.other_income + Q.centralize_bonus + Q.infrastructure_bonus + Q.education_bonus;
+
+Q.total_income = Q.income - Q.total_costs;
 
 Q.quarterly_support_tick = (Q.quarterly_education_tick 
 + Q.quarterly_infrastructure_tick 
@@ -426,7 +564,7 @@ if (Q.quarterly_troops < 0) {
 
 if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.week === 1) {
     Q.kmt_support += Q.quarterly_support_tick;
-    Q.nra_strength = Q.nra_strength += Q.quarterly_troops;
+    Q.nra_strength += Q.quarterly_troops;
     Q.funds += Q.total_income;
 }
 
@@ -436,6 +574,7 @@ Q.guangzhou_faction = Q.guangdong_faction
 Q.hainan_governor = Q.guangdong_governor
 Q.zhejiang_n_governor = Q.zhejiang_governor
 Q.guangzhou_governor = Q.guangdong_governor
+Q.zhejiang_n_order = Q.zhejiang_order
 
  Q.has_event = 0;
  // check if there are any cards in #event, and then go to main if not.
