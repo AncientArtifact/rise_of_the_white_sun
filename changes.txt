@@ -24,3 +24,6 @@ debt event, loans, corruption, education, police options, extra warlord cards
 
 av0.10-
 map, new music, new advisors, income screen
+
+av0.11-
+battle system, popular support reform, advisor passives and hiring, quarterly conscription
