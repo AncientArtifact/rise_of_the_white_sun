@@ -310,46 +310,6 @@ if (Q.week >= 5) {
      }
  }
 
-const provinces = [
-    "liaoning",
-    "jilin",
-    "heilongjiang",
-    "rehe",
-    "chahar",
-    "suiyuan",
-    "ningxia",
-    "mongolia",
-    "xinjiang",
-    "gansu",
-    "qinghai",
-    "shaanxi",
-    "shanxi",
-    "hebei",
-    "henan",
-    "shandong",
-    "hubei",
-    "tibet",
-    "sichuan",
-    "yunnan",
-    "guizhou",
-    "hunan",
-    "guangdong",
-    "hainan",
-    "guangxi",
-    "fujian",
-    "jiangxi",
-    "zhejiang",
-    "zhejiang_n",
-    "anhui",
-    "jiangsu",
-    "shenyang",
-    "beijing",
-    "nanjing",
-    "shanghai",
-    "wuhan",
-    "guangzhou",
-];
-
 Q.quarterly_education_tick = Q.education*1.5;
 Q.quarterly_infrastructure_tick = Q.infrastructure*1.3;
 Q.quarterly_justice_reform_tick = (Q.justice_reform*1.2) - (Q.corruption*0.2);
@@ -372,13 +332,13 @@ if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.wee
     }
     if (Q.huhanmin_advisor === 1) {
         if (Q.northern_expedition_begun === 0) {
-            Q.quarterly_corruption_tick / 2; 
+            Q.quarterly_corruption_tick = Q.quarterly_corruption_tick / 2; 
             Q.whampoa_strength -= 4;
         }
         if (Q.northern_expedition_begun === 1) {
-            Q.quarterly_corruption_tick / 2; 
+            Q.quarterly_corruption_tick = Q.quarterly_corruption_tick / 2; 
             Q.whampoa_strength -= 4;
-            Q.nra_legitimacy + 5;
+            Q.nra_legitimacy += 5;
         }
     }
     if (Q.linsen_advisor === 1) {
@@ -423,7 +383,10 @@ if ((Q.month === 3 || Q.month === 6 || Q.month === 9 || Q.month === 12) && Q.wee
         Q.henan_order += 15;
     }
     if (Q.tanyankai_advisor === 1) {
-        forEach(provinces => {
+        const provinces = ["liaoning", "jilin", "heilongjiang", "rehe", "chahar", "suiyuan", "ningxia", "mongolia", "xinjiang", "gansu", 
+    "qinghai", "shaanxi", "shanxi", "hebei", "henan", "shandong", "hubei", "tibet", "sichuan", "yunnan", "guizhou", "hunan", "guangdong",
+    "hainan", "guangxi", "fujian", "jiangxi", "zhejiang", "zhejiang_n", "anhui", "jiangsu", "shenyang", "beijing", "nanjing", "shanghai",
+    "wuhan", "guangzhou"].forEach(provinces => {
             if (Q[provinces + "_faction"] === "Guomindang") {
                 Q[provinces + "_order"] += 5;
             }
@@ -480,14 +443,14 @@ if (Q.centralize > 6) {
 }
 
 if (Q.liaozhongkai_advisor === 1) {
-    Q.party_income + 1;
+    Q.party_income += 1;
 }
 if (Q.sunfo_advisor === 1) {
-    Q.education_bonus += Q.education_bonus;
-    Q.infrastructure_bonus += Q.infrastructure_bonus;
+    Q.education_bonus = Q.education_bonus*2;
+    Q.infrastructure_bonus = Q.infrastructure_bonus*2;
 }
 if (Q.tvsoong_advisor === 1) {
-    Q.centralize_bonus += Q.centralize_bonus;
+    Q.centralize_bonus = Q.centralize_bonus*2;
 }
 if (Q.xuchongzhi_advisor === 1) {
     Q.military_costs -= 1;
