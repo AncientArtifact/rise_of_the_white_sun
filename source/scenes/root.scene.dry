@@ -23,7 +23,10 @@ go-to: start_menu_2
 - @start: Start game
 - @credits: Credits
 - @game_over.achievements
+- @changelogs: Changelog
 
+@changelogs
+go-to: changelog
 
 @start
 on-arrival: {!
