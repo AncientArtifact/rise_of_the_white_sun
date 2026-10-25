@@ -188,7 +188,7 @@ Troops per quarter: [? if quarterly_troops > 0 : <span style="color: #66BB6A;">+
 
 <span style="color: #723d85">**Yunnanese Army**</span> Quality: [+ yun_militancy : militancy +]
 
-[? if southexped_done = 0 : = **Regional Armies** ?]
+= **Regional Armies**
 
 [? if eastexped_done = 0 : <span style="color: #b57abf">**Chen Jiongming's Army**</span> Strength: [+ chen_strength +] thousand ?]
 
