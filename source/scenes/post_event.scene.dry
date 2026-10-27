@@ -443,26 +443,35 @@ if (Q.centralize > 6) {
 }
 
 if (Q.liaozhongkai_advisor === 1) {
-    Q.party_income += 1;
-}
+    Q.liao_party_income = 1;
+} else {
+  Q.liao_party_income = 0;
+  }
 if (Q.sunfo_advisor === 1) {
-    Q.education_bonus = Q.education_bonus*2;
-    Q.infrastructure_bonus = Q.infrastructure_bonus*2;
-}
+    Q.sunfo_education_bonus = Q.education_bonus;
+    Q.sunfo_infrastructure_bonus = Q.infrastructure_bonus;
+} else {
+  Q.sunfo_education_bonus = 0;
+  Q.sunfo_infrastructure_bonus = 0;
+  }
 if (Q.tvsoong_advisor === 1) {
-    Q.centralize_bonus = Q.centralize_bonus*2;
-}
+    Q.soong_centralize_bonus = Q.centralize_bonus;
+} else {
+  Q.soong_centralize_bonus = 0;
+  }
 if (Q.xuchongzhi_advisor === 1) {
-    Q.military_costs -= 1;
-}
+    Q.xu_military_costs = 1;
+} else {
+  Q.xu_military_costs = 0;
+  }
 
 Q.interest = (Q.loans)*3;
 
 Q.other_income = Q.gambling + Q.opium_money;
 
-Q.total_costs = Q.military_costs + Q.corruption + Q.interest;
+Q.total_costs = (Q.military_costs - Q.xu_military_costs) + Q.corruption + Q.interest;
 
-Q.income = Q.tax_income + Q.party_income + Q.other_income + Q.centralize_bonus + Q.infrastructure_bonus + Q.education_bonus;
+Q.income = Q.tax_income + (Q.party_income + Q.liao_party_income) + Q.other_income + (Q.centralize_bonus + Q.soong_centralize_bonus) + (Q.infrastructure_bonus + Q.sunfo_infrastructure_bonus) + (Q.education_bonus + sunfo_education_bonus);
 
 Q.total_income = Q.income - Q.total_costs;
 
