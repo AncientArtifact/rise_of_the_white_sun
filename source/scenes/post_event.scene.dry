@@ -471,7 +471,7 @@ Q.other_income = Q.gambling + Q.opium_money;
 
 Q.total_costs = (Q.military_costs - Q.xu_military_costs) + Q.corruption + Q.interest;
 
-Q.income = Q.tax_income + (Q.party_income + Q.liao_party_income) + Q.other_income + (Q.centralize_bonus + Q.soong_centralize_bonus) + (Q.infrastructure_bonus + Q.sunfo_infrastructure_bonus) + (Q.education_bonus + sunfo_education_bonus);
+Q.income = Q.tax_income + (Q.party_income + Q.liao_party_income) + Q.other_income + (Q.centralize_bonus + Q.soong_centralize_bonus) + (Q.infrastructure_bonus + Q.sunfo_infrastructure_bonus) + (Q.education_bonus + Q.sunfo_education_bonus);
 
 Q.total_income = Q.income - Q.total_costs;
 
