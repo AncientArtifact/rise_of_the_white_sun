@@ -33,7 +33,7 @@ view-if: sunyatsen_dead = 1
 = **The Power Struggle**
 
 <div>
-  <span style="color: #9e1515">**Communists**</span>: Liao Zhongkai
+  <span style="color: #9e1515">**Radical Left**</span>: Liao Zhongkai
   <p>Influence: [+ left_strength : strength +]</p>
   [? if liaozhongkai_dead = 0 :
     <img src="img/portraits/LiaoZhongkai.jpg" width="150px" height="205px">
