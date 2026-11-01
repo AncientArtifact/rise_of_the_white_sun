@@ -25,6 +25,11 @@ Q.pro_republic = Math.round(Q.pro_republic);
 Q.warlordist = Math.round(Q.warlordist);
 Q.socialism = Math.round(Q.socialism);
 
+if (Q.left_divide = 0) {
+    Q.left_strength = 0;
+    Q.left_dissent = 0;
+}
+
 if (Q.pro_republic < 0) {
     Q.pro_republic = 0;
 }
