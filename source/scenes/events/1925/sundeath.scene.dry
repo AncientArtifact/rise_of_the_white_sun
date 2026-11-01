@@ -20,7 +20,10 @@ With this, his legacy as the man who took down the Qing Dynasty and established 
 
 @continue
 face-image: img/sundeath2.jpg
+on-arrival: left_divide = 1; left_strength += 30; center_left_strength -= 30;
 
 Now, since Sun had failed to appoint a successor, three factions have now begun fighting for power. The Communists and Party Elders under Liao Zhongkai, the Leftists under Wang Jingwei and the Right Anti-Communist Party Elders under Hu Hanmin.
+
+After Sun's death, the L-KMT has definitively split between Liao Zhongkai and Wang Jingwei.
 
 It is unclear who will win the succession crisis. It seems the KMT will face turmoil once again.
