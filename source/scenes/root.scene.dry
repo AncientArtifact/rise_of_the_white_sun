@@ -102,6 +102,7 @@ Q.factions = ['left', 'center_left', 'center', 'right', 'whampoa'];
 // should this be normalized to 100%?
 Q.left_strength = 25;
 Q.left_dissent = 20;
+Q.left_divide = 0;
 Q.center_left_strength = 65;
 Q.center_left_dissent = 5;
 Q.center_strength = 20;
