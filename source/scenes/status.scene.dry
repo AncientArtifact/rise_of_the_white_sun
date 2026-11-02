@@ -93,7 +93,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 = **Internal Factions of the KMT**
 
-[? if left_divide = 1 : {!<span class="tooltip-text" title="The Radical Left are interested in radical, transformative policies and cooperation with the CPC.">Communists</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +] ?]
+[? if left_divide = 1 : {!<span class="tooltip-text" title="The Radical Left are interested in radical, transformative policies and cooperation with the CPC.">Radical Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +] ?]
 
 {!<span class="tooltip-text" title="The Left is interested in cooperating with the CPC, but still sticks with the Three Principles.">Left</span>!} strength: [+ center_left_strength : strength +], dissent: [+ center_left_dissent : dissent +]
 
