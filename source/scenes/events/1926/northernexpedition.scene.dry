@@ -20,29 +20,6 @@ Three years later, Sun Yat-sen passed away. In the midst of the chaos, [+ kmt_le
 
 In the following months, the Guomindang prepared. Now, what is the result of this preparation?
 
-- @one: The Army.
-
-@one
-go-to: winarmy if nra_power >= 40; losearmy if nra_power < 40
-
-@winarmy
-new-page: true
-face-image: img/nrastreet.jpg
-
-= The Northern Expedition
-
-The army is <span style="color: #66BB6A;">very ready</span> for the campaign. We have [+ nra_strength +] thousand soldiers ready and armed to fight.
-
-- @two: The United Front.
-
-@losearmy
-new-page: true
-face-image: img/nrastreet.jpg
-
-= The Northern Expedition
-
-The army is <span style="color: #d42f2f;">less than ready</span>, we will have to improvise during our campaign.
-
 - @two: The United Front.
 
 @two
@@ -80,7 +57,7 @@ Warlord Tang Shengzhi of Hunan has defected and joined us. We have a strong foot
 - @four: Guangxi?
 
 @four
-go-to: wingxc if guangxi_governor = "Li Zongren"; losegxc
+go-to: wingxc if guangxi_faction = "New Guangxi"; losegxc
 
 @wingxc
 new-page: true
@@ -139,7 +116,7 @@ face-image: img/kmt.png
 
 After defeating Chen Jiongming, Yang Ximin, Liu Zhenhuan and Deng Benyin, Guangdong is finally <span style="color: #66BB6A;">completely secure</span>. There won't be any problems back there while we march north.
 
-- @seven: Are we ready?
+- @one: In total...
 
 @losegdc
 new-page: true
@@ -148,6 +125,29 @@ face-image: img/portraits/DengBenyin.jpg
 = The Northern Expedition
 
 Deng Benyin <span style="color: #d42f2f;">still controls the south</span>. Looks like we'll have some problems back home while fighting.
+
+- @one: In total...
+
+@one
+go-to: winarmy if nra_power >= 40; losearmy if nra_power < 40
+
+@winarmy
+new-page: true
+face-image: img/nrastreet.jpg
+
+= The Northern Expedition
+
+The army is <span style="color: #66BB6A;">very ready</span> for the campaign. We have [+ nra_strength +] thousand soldiers ready and armed to fight.
+
+- @seven: Are we ready?
+
+@losearmy
+new-page: true
+face-image: img/nrastreet.jpg
+
+= The Northern Expedition
+
+The army is <span style="color: #d42f2f;">less than ready</span>, we will have to improvise during our campaign.
 
 - @seven: Are we ready?
 
