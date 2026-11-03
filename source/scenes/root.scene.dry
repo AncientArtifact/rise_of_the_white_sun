@@ -117,8 +117,8 @@ Q.whampoa_built = 0;
 
 // inter-party relations
 Q.gxc_relation = 20;
-Q.cpc_relation = 40;
-Q.yun_relation = 60;
+Q.cpc_relation = 60;
+Q.yun_relation = 30;
 Q.gui_relation = 35;
 Q.zhi_relation = 0;
 Q.feng_relation = 0;
