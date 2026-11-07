@@ -11,8 +11,7 @@ view-if: guangxicivilwar_timer = 0 and gcw_over = 0
 Guangxi has split between several factions after Chen Jiongming's invasion. Our favoured faction is Li Zongren, Bai Chongxi, and Huang Shaohong's clique, also known as the "New Guangxi Clique". Other factions include Shen Hongying, a Zhili-favored warlord and Lu Rongting, the Old Guangxi Clique Leader.
 
 - @support: Supply Li Zongren's armies.
-- @aid: Give monetary aid to Li Zongren's clique.
-- @raid: Begin raids along the Guangxi border instead.
+- @raid: Begin raids along the Guangxi border, they might pose a threat in the future.
 - @root: We will not do anything in Guangxi yet.
 - @easy_discard
 
@@ -24,17 +23,9 @@ on-arrival: funds -= 2; gxc_relation += 10;
 
 Li Zongren's soldiers recieve more weapons.
 
-@aid
-subtitle: -1 funds.
-choose-if: funds >= 1
-unavailable-subtitle: Not enough funds.
-on-arrival: funds -= 1; gxc_relation += 5;
-
-Li Zongren's clique has recieved aid from us, which helps in their fight.
-
 @raid
 subtitle: +1 funds - Why would we do this?
-on-arrival: funds += 1; gxc_relation -= 5;
+on-arrival: funds += 1; gxc_relation -= 5; gxc_strength -= 10;
 
 We raided Guangxi border regions instead. This choice is questionable.
 
