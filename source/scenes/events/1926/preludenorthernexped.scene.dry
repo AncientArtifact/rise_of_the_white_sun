@@ -8,12 +8,8 @@ new-page: true
 on-arrival: {!
 Q.nra_casualties = 0;
 Q.nra_hengyang_strength = Math.round(Q.nra_strength/3);
-Q.nra_hengyang_militancy = Q.nra_militancy;
-Q.nra_hengyang_experience = Q.nra_experience;
 Q.bei_hengyang_casualties = 0;
 Q.bei_hengyang_strength = 40;
-Q.bei_hengyang_militancy = Q.bei_militancy;
-Q.bei_hengyang_experience = Q.bei_experience;
 !}
 
 = First Shots
@@ -25,8 +21,8 @@ We have a chance to show our capabilities. Our Hunanese forces will begin a defe
 - @battlehengyang: Sanmin Zhuyi Wansui!
 
 @battlehengyang
-on-arrival: {! Q.nra_power = Q.nra_hengyang_strength * Q.nra_hengyang_militancy * (1 + Q.nra_experience);
-Q.bei_power = Q.bei_strength * Q.bei_militancy * (1 + Q.bei_experience);
+on-arrival: {! Q.nra_power = Q.nra_hengyang_strength * Q.nra_militancy * (1 + Q.nra_experience);
+Q.bei_power = Q.bei_hengyang_strength * Q.bei_militancy * (1 + Q.bei_experience);
 
 Q.nra_hengyang_casualties = (Q.nra_hengyang_strength + Q.bei_hengyang_strength)
     * (Q.bei_power / (Q.nra_power + Q.bei_power)) * 0.1;
