@@ -1,0 +1,128 @@
+title: First Shots
+subtitle: Come at us!
+tags: events
+view-if: year = 1926 and month = 7 and week = 3
+max-visits: 1
+priority: 2
+new-page: true
+on-arrival: {!
+Q.nra_casualties = 0;
+Q.nra_hengyang_strength = Math.round(Q.nra_strength/3);
+Q.nra_hengyang_militancy = Q.nra_militancy;
+Q.nra_hengyang_experience = Q.nra_experience;
+Q.bei_hengyang_casualties = 0;
+Q.bei_hengyang_strength = 40;
+Q.bei_hengyang_militancy = Q.bei_militancy;
+Q.bei_hengyang_experience = Q.bei_experience;
+!}
+
+= First Shots
+
+In the mountains of Hunan, our ally Tang Shengzhi is being attacked by Wu Peifu's forces. Zhao Hengti, the Zhili-aligned warlord of Hunan, has joined Wu Peifu to pacify his revolt in Hengyang.
+
+We have a chance to show our capabilities. Our Hunanese forces will begin a defense of Hengyang, while stronger armies from Zhang Fakui and Chen Mingshu arrive.
+
+- @battlehengyang: Sanmin Zhuyi Wansui!
+
+@battlehengyang
+on-arrival: {! Q.nra_power = Q.nra_hengyang_strength * Q.nra_hengyang_militancy * (1 + Q.nra_experience);
+Q.bei_power = Q.bei_strength * Q.bei_militancy * (1 + Q.bei_experience);
+
+Q.nra_hengyang_casualties = (Q.nra_hengyang_strength + Q.bei_hengyang_strength)
+    * (Q.bei_power / (Q.nra_power + Q.bei_power)) * 0.1;
+
+Q.bei_hengyang_casualties = (Q.nra_hengyang_strength + Q.bei_hengyang_strength)
+    * (Q.nra_power / (Q.nra_power + Q.bei_power)) * 0.1;
+
+if (Q.chiangkaishek_advisor = 1){
+    Q.nra_power += Q.nra_power/10;
+}
+if (Q.heyingqin_advisor = 1){
+    Q.nra_power += Q.nra_power/10;
+}
+if (Q.lizongren_advisor = 1){
+    Q.nra_hengyang_casualties -= Q.nra_hengyang_casualties/5;
+}
+
+Q.nra_vstrength = Math.round(Q.nra_hengyang_strength*1000);
+Q.bei_vstrength = Math.round(Q.bei_hengyang_strength*1000);
+
+Q.nra_strength -= Q.nra_hengyang_casualties;
+Q.bei_strength -= Q.bei_hengyang_casualties;
+
+Q.nra_vcasualties = Math.round(Q.nra_hengyang_casualties*1000);
+Q.bei_vcasualties = Math.round(Q.bei_hengyang_casualties*1000);
+
+if (Q.nra_power > Q.bei_power) {
+    Q.nra_experience += 0.1;
+    Q.nra_winhengyang = 1;
+    Q.nra_momentum += 5;
+    Q.nra_legitimacy += 5;
+} else {
+    Q.bei_experience += 0.1;
+    Q.nra_losehengyang = 1;
+}
+!}
+go-to: hengyangbattlescreen
+
+@hengyangbattlescreen
+
+<div>
+  <div id="battle_screen">
+    <div style="text-align: center; border-bottom: 1px solid #999; padding-bottom: 10px; margin-bottom: 15px;">
+      <span style="font-size: 24px;">Battle of Hengyang</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; margin: 20px 30px;">
+      <div style="width: 40%;">
+        <div style="color: #10186e;">National Revolutionary Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ nra_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ nra_vcasualties +]
+        </div>
+      </div>
+      <div style="width: 20%; font-size: 20px;">VS</div>
+      <div style="width: 40%;">
+        <div style="color: #aba133;">Zhili Army</div>
+        <div style="margin-top: 10px;">
+          <strong>Troops</strong><br>
+          [+ bei_vstrength +]
+        </div>
+        <div style="margin-top: 8px;">
+          <strong>Casualties</strong><br>
+          [+ bei_vcasualties +]
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; border-top: 1px solid #999; padding-top: 15px; margin-top: 20px;">
+      <div style="font-size: 14px;">OUTCOME</div>
+      [? if nra_winhengyang = 1 : <div style="font-size: 20px; color: #66BB6A; margin-top: 5px;">National Revolutionary Army Victory</div> ?]
+      [? if nra_losehengyang = 1 : <div style="font-size: 20px; color: #d42f2f; margin-top: 5px;">Zhili Army Victory</div> ?]
+    </div>
+  </div>
+</div>
+
+- @winhengyang: Continue...
+- @losehengyang: Continue...
+
+@winhengyang
+view-if: nra_winhengyang = 1
+
+We have defeated Zhao Hengti and Wu Peifu's armies in the first stages of the battle. The Fourth Army under Zhang Fakui and Chen Mingshu has arrived at the borders of Hunan. It's time to turn our defense into a full-on offensive!
+
+- @done: Hurrah!
+
+@done
+go-to: main
+
+@losehengyang
+view-if: nra_losehengyang = 1
+
+Zhao Hengti and Wu Peifu's forces have proved to be too good. The Fourth Army has to march back into Hengyang while Tang Shengzhi retreats into Shaoguan.
+
+We'll get them next time!
+
+- @done: Next time!
