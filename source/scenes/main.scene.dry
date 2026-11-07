@@ -39,6 +39,7 @@ max-cards: 5
 - @party
 - @govt
 - @warlord
+- @north
 - #advisor
 - @shuffle_leadership_pinned
 
@@ -63,3 +64,12 @@ card-image: img/warlord.jpg
 is-deck: true
 
 - #warlord_affairs
+
+@north
+view-if: northern_expedition_begun = 1
+title: The Northern Expedition
+card-image: img/nrastreet.jpg
+is-deck: true
+
+- #northern_expedition
+
