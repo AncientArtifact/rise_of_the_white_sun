@@ -1,0 +1,23 @@
+title: The League of Five Provinces
+subtitle: Another faction to deal with...
+tags: events
+view-if: year = 1925 and month = 11 and week = 3
+max-visits: 1
+priority: 2
+new-page: true
+face-image: img/portraits/SunChuanfang.jpg
+
+= The League of Five Provinces
+
+Sun Chuanfang, Zhili general and protege of Wu Peifu, the "Jade Marshal", has solidified his control, basing his rule in Nanjing.
+
+Using his power, he has formed the "League of Five Provinces", Jiangsu, Fujian, Jiangxi, Anhui and Zhejiang.
+
+The rift between Wu Peifu and Sun Chuanfang has begun expanding, seeming as he isn't intervening much with Wu's diplomacy and the Anti-Fengtian war.
+
+Supposedly, their alliance may just be in name only. We see this as an opportunity. If we avoid provoking Sun Chuanfang, we can defeat each Beiyang warlord one-by-one.
+
+- @done: Can the league hold?
+
+@done
+go-to: root
