@@ -6,6 +6,17 @@ max-visits: 1
 priority: 2
 new-page: true
 face-image: img/portraits/SunChuanfang.jpg
+on-arrival: {!
+Q.sun_wu_split = 1;
+Q.sun_strength = Q.bei_strength/2;
+Q.sun_militancy = Q.bei_militancy;
+Q.bei_strength -= Q.sun_strength;
+Q.jiangxi_faction = "League of Five Provinces";
+Q.jiangsu_faction = "League of Five Provinces";
+Q.fujian_faction = "League of Five Provinces";
+Q.anhui_faction = "League of Five Provinces";
+Q.zhejiang_faction = "League of Five Provinces";
+!}
 
 = The League of Five Provinces
 
