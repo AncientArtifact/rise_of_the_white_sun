@@ -1,0 +1,18 @@
+title: Wuhan Theatre
+new-page: true
+is-card: true
+card-image: img/portraits/WuPeifu.jpg
+view-if: nra_winhengyang = 1 or nra_losehengyang = 1
+tags: warlord_affairs
+on-arrival: {!
+Q.week_actions += 1;
+Q.wuhan_timer += 3;
+Q.bei_casualties = 0;
+Q.nra_casualties = 0;
+Q.nra_winchangsha = 0;
+Q.nra_losechangsha = 0;
+Q.nra_winwuchang = 0;
+Q.nra_losewuchang = 0;
+!}
+
+= Wuhan Theatre
