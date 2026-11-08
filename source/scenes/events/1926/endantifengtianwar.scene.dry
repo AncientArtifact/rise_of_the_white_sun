@@ -1,0 +1,18 @@
+title: Conclusion of the Anti-Fengtian War
+subtitle: What a victory...
+tags: events
+view-if: year = 1926 and month = 4 and week = 1
+max-visits: 1
+priority: 2
+new-page: true
+on-arrival: henan_governor = "Liu Zhenhua"; henan_faction = "Zhili"; hebei_faction = "Fengtian"; hebei_governor = "Zhang Zongchang"; beiyang_leader = "Zhang Zuolin"; deputy_beiyang_leader = "N/A"; beiyang_leader_party = "Fengtian"; deputy_beiyang_leader_party = "N/A"; zhejiang_governor = "Sun Chuanfang"; zhejiang_faction = "Zhili"; anhui_governor = "Sun Chuanfang"; anhui_faction = "Zhili"; beijing_governor = "Zhang Zongchang"; beijing_faction = "Fengtian";
+
+After a failed campaign into Mukden, the Guominjun has been defeated by Zhang Zuolin and Wu Peifu. Guo Songling died in the battle. Zhang Zuolin has effectively taken Beijing and split Zhili with Wu Peifu, becoming the Beiyang Government's most powerful leader and dictator. Dark times are ahead for the north.
+
+The Zhang-Wu alliance has held. It is not long until they reach higher ambitions together. Wu Peifu has retaken Henan from Feng Yuxiang.
+
+- @next: Continue...
+
+@next
+
+Although Zhang Zuolin and Wu Peifu has emerged victorious, Wu Peifu's armies are distracted fighting the Guominjun. This is a great opportunity for us.
