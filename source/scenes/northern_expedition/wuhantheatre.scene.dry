@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 card-image: img/portraits/WuPeifu.jpg
 view-if: nra_winhengyang = 1 or nra_losehengyang = 1 and wuhan_timer = 0
-tags: warlord_affairs
+tags: northern_expedition
 on-arrival: {!
 Q.week_actions += 1;
 Q.wuhan_timer += 3;
