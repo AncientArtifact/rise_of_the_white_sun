@@ -65,6 +65,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #aba133">**ZHI**</span>: [+ zhi_relation : relationships +]
 
+[? if sun_wu_split = 1 : <span style="color: #e3c322">**LFP**</span>: [+ zhi_relation : relationships +] ?]
+
 <span style="color: #46703e">**ANH**</span>: [+ anh_relation : relationships +]
 
 <span style="color: #ab881f">**FENG**</span>: [+ feng_relation : relationships +]
@@ -76,9 +78,13 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span style="color: #9e1515">**CPC**</span>: [+ cpc_leader +] & [+ cpc_deputy_leader +]
 
-<span style="color: #aba133">**ZHI**</span>: [+ zhili_leader +] & [+ zhili_deputy_leader +]
+[? if sun_wu_split = 0 : <span style="color: #aba133">**ZHI**</span>: [+ zhili_leader +] & [+ zhili_deputy_leader +] ?]
 
-<span style="color: #d1b24b">**FENG**</span>: [+ fengtian_leader +] & [+ fengtian_deputy_leader +]
+[? if sun_wu_split = 1 : <span style="color: #aba133">**ZHI**</span>: [+ zhili_leader +]?]
+
+[? if sun_wu_split = 1 : <span style="color: #e3c322">**LFP**</span>: [+ zhili_deputy_leader +] ?]
+
+<span style="color: #d1b24b">**FENG**</span>: [+ fengtian_leader +]
 
 <span style="color: #46703e">**ANH**</span>: [+ anhui_leader +]
 
@@ -132,45 +138,32 @@ Expenses: [? if total_costs < 0 : <span style="color: #66BB6A;">+[+ total_costs 
 Total Income: [? if total_income > 0 : <span style="color: #66BB6A;">+[+ total_income +]</span> ?][? if total_income < 0 : <span style="color: #d42f2f;">-[+ total_income +]</span> ?][? if total_income = 0 : <span style="color: #FFB74D;">[+ total_income +]</span> ?]
 
 @paramilitaries
-on-arrival: {!
-if (Q.nra_strength) {
-    Q.nra_strength_2 = Q.nra_strength.toFixed(1);
-}
-if (Q.red_strength) {
-    Q.red_strength_2 = Q.red_strength.toFixed(1);
-}
-if (Q.bei_strength) {
-    Q.bei_strength_2 = Q.bei_strength.toFixed(1);
-}
-if (Q.feng_strength) {
-    Q.feng_strength_2 = Q.feng_strength.toFixed(1);
-}
-if (Q.gmj_strength) {
-    Q.gmj_strength_2 = Q.gmj_strength.toFixed(1);
-}
-!}
 
 = **Main Armies**
 
-<span style="color: #10186e">**National Revolutionary Army**</span> Strength: [+ nra_strength_2 +] thousand
+<span style="color: #10186e">**National Revolutionary Army**</span> Strength: [+ nra_strength +] thousand
 
 <span style="color: #10186e">**National Revolutionary Army**</span> Quality: [+ nra_militancy : militancy +]
 
 Troops per quarter: [? if quarterly_troops > 0 : <span style="color: #66BB6A;">+[+ quarterly_troops +]</span> ?][? if quarterly_troops = 0 : <span style="color: #FFB74D;">[+ quarterly_troops +]</span> ?] thousand
 
-<span style="color: #9e1515">**Chinese Red Army**</span> Strength: [+ red_strength_2 +] thousand
+<span style="color: #9e1515">**Chinese Red Army**</span> Strength: [+ red_strength +] thousand
 
 <span style="color: #9e1515">**Chinese Red Army**</span> Quality: [+ red_militancy : militancy +]
 
-<span style="color: #aba133">**Zhili Army**</span> Strength: [+ bei_strength_2 +] thousand
+<span style="color: #aba133">**Zhili Army**</span> Strength: [+ bei_strength +] thousand
 
 <span style="color: #aba133">**Zhili Army**</span> Quality: [+ bei_militancy : militancy +]
 
-<span style="color: #ab881f">**Fengtian Army**</span> Strength: [+ feng_strength_2 +] thousand
+[? if sun_wu_split = 1 : <span style="color: #e3c322">**League of Five Provinces**</span> Strength: [+ sun_strength +] thousand ?]
+
+[? if sun_wu_split = 1 : <span style="color: #e3c322">**League of Five Provinces**</span> Quality: [+ sun_militancy : militancy +] ?]
+
+<span style="color: #ab881f">**Fengtian Army**</span> Strength: [+ feng_strength +] thousand
 
 <span style="color: #ab881f">**Fengtian Army**</span> Quality: [+ feng_militancy : militancy +]
 
-[? if gmj_enabled = 1 : <span style="color: #943452">**Guominjun**</span> Strength: [+ gmj_strength_2 +] thousand ?]
+[? if gmj_enabled = 1 : <span style="color: #943452">**Guominjun**</span> Strength: [+ gmj_strength +] thousand ?]
 
 [? if gmj_enabled = 1 : <span style="color: #943452">**Guominjun**</span> Quality: [+ gmj_militancy : militancy +] ?]
 
@@ -222,59 +215,3 @@ Old Middle Support: [+ kmt_old_middle_display +]%
 New Middle Support: [+ kmt_new_middle_display +]%
 
 Rural Support: [+ kmt_rural_display +]%
-
-@provinces
-
-= **Provinces of China:**
-
-**Liaoning**: [+ liaoning_governor +] ([? if liaoning_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if liaoning_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if liaoning_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if liaoning_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if liaoning_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if liaoning_faction = N/A: <span style="color: #919191">N/A</span>?][? if liaoning_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Jilin**: [+ jilin_governor +] ([? if jilin_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if jilin_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if jilin_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if jilin_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if jilin_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if jilin_faction = N/A: <span style="color: #919191">N/A</span>?][? if jilin_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Heilongjiang**: [+ heilongjiang_governor +] ([? if heilongjiang_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if heilongjiang_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if heilongjiang_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if heilongjiang_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if heilongjiang_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if heilongjiang_faction = N/A: <span style="color: #919191">N/A</span>?][? if heilongjiang_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Shenyang**: [+ shenyang_governor +] ([? if shenyang_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if shenyang_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if shenyang_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if shenyang_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if shenyang_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if shenyang_faction = N/A: <span style="color: #919191">N/A</span>?][? if shenyang_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Rehe**: [+ rehe_governor +] ([? if rehe_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if rehe_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if rehe_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if rehe_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if rehe_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if rehe_faction = N/A: <span style="color: #919191">N/A</span>?][? if rehe_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Hebei**: [+ hebei_governor +] ([? if hebei_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if hebei_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if hebei_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if hebei_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if hebei_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if hebei_faction = N/A: <span style="color: #919191">N/A</span>?][? if hebei_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Chahar**: [+ chahar_governor +] ([? if chahar_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if chahar_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if chahar_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if chahar_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if chahar_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if chahar_faction = N/A: <span style="color: #919191">N/A</span>?][? if chahar_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Suiyuan**: [+ suiyuan_governor +] ([? if suiyuan_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if suiyuan_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if suiyuan_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if suiyuan_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if suiyuan_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if suiyuan_faction = N/A: <span style="color: #919191">N/A</span>?][? if suiyuan_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Shaanxi**: [+ shaanxi_governor +] ([? if shaanxi_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if shaanxi_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if shaanxi_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if shaanxi_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if shaanxi_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if shaanxi_faction = N/A: <span style="color: #919191">N/A</span>?][? if shaanxi_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Shanxi**: [+ shanxi_governor +] ([? if shanxi_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if shanxi_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if shanxi_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if shanxi_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if shanxi_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if shanxi_faction = N/A: <span style="color: #919191">N/A</span>?][? if shanxi_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Shandong**: [+ shandong_governor +] ([? if shandong_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if shandong_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if shandong_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if shandong_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if shandong_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if shandong_faction = N/A: <span style="color: #919191">N/A</span>?][? if shandong_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Henan**: [+ henan_governor +] ([? if henan_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if henan_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if henan_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if henan_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if henan_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if henan_faction = N/A: <span style="color: #919191">N/A</span>?][? if henan_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Hubei**: [+ hubei_governor +] ([? if hubei_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if hubei_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if hubei_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if hubei_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if hubei_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if hubei_faction = N/A: <span style="color: #919191">N/A</span>?][? if hubei_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Wuhan**: [+ wuhan_governor +] ([? if wuhan_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if wuhan_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if wuhan_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if wuhan_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if wuhan_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if wuhan_faction = N/A: <span style="color: #919191">N/A</span>?][? if wuhan_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Hunan**: [+ hunan_governor +] ([? if hunan_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if hunan_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if hunan_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if hunan_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if hunan_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if hunan_faction = N/A: <span style="color: #919191">N/A</span>?][? if hunan_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Jiangsu**: [+ jiangsu_governor +] ([? if jiangsu_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if jiangsu_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if jiangsu_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if jiangsu_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if jiangsu_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if jiangsu_faction = N/A: <span style="color: #919191">N/A</span>?][? if jiangsu_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Anhui**: [+ anhui_governor +] ([? if anhui_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if anhui_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if anhui_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if anhui_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if anhui_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if anhui_faction = N/A: <span style="color: #919191">N/A</span>?][? if anhui_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Nanjing**: [+ nanjing_governor +] ([? if nanjing_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if nanjing_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if nanjing_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if nanjing_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if nanjing_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if nanjing_faction = N/A: <span style="color: #919191">N/A</span>?][? if nanjing_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Fujian**: [+ fujian_governor +] ([? if fujian_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if fujian_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if fujian_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if fujian_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if fujian_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if fujian_faction = N/A: <span style="color: #919191">N/A</span>?][? if fujian_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Jiangxi**: [+ jiangxi_governor +] ([? if jiangxi_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if jiangxi_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if jiangxi_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if jiangxi_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if jiangxi_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if jiangxi_faction = N/A: <span style="color: #919191">N/A</span>?][? if jiangxi_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Zhejiang**: [+ zhejiang_governor +] ([? if zhejiang_faction = "Zhili": <span style="color: #aba133">Zhili</span>?][? if zhejiang_faction = "Fengtian": <span style="color: #d1b24b">Fengtian</span>?][? if zhejiang_faction = "Anhui": <span style="color: #46703e">Anhui</span>?][? if zhejiang_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if zhejiang_faction = "Guominjun": <span style="color: #943452">Guominjun</span>?][? if zhejiang_faction = N/A: <span style="color: #919191">N/A</span>?][? if zhejiang_faction = "Neutral": <span style="color: #919191">Neutral</span>?])
-
-**Guizhou**: [+ guizhou_governor +] ([? if guizhou_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if guizhou_faction = "Guizhou": <span style="color: #b38e40">Guizhou</span>?][? if guizhou_faction = "Yunnan": <span style="color: #723d85">Yunnan</span>?])
-
-**Sichuan**: [+ sichuan_governor +] ([? if sichuan_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if sichuan_faction = "N/A": <span style="color: #919191">N/A</span>?])
-
-**Yunnan**: [+ yunnan_governor +] ([? if yunnan_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if yunnan_faction = "Yunnan": <span style="color: #723d85">Yunnan</span>?])
-
-**Guangxi**: [+ guangxi_governor +] ([? if guangxi_faction = "Guomindang": <span style="color: #10186e">Guomindang</span>?][? if guangxi_faction = "New Guangxi": <span style="color: #8aa87d">New Guangxi</span>?][? if guangxi_faction = "Old Guangxi": <span style="color: #aba133">Old Guangxi</span>?])
-
-**Guangdong**: [+ guangdong_governor +] (<span style="color: #10186e">Guomindang</span>)
