@@ -20,7 +20,7 @@ With this, his legacy as the man who took down the Qing Dynasty and established 
 
 @continue
 face-image: img/sundeath2.jpg
-on-arrival: left_divide = 1; left_strength += 30; center_left_strength -= 30;
+on-arrival: left_divide = 1; left_strength += center_left_strength/2; center_left_strength -= center_left_strength/2;
 
 Now, since Sun had failed to appoint a successor, three factions have now begun fighting for power. The Communists and Party Elders under Liao Zhongkai, the Leftists under Wang Jingwei and the Right Anti-Communist Party Elders under Hu Hanmin.
 
