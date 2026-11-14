@@ -95,6 +95,8 @@ view-if: sunyatsen_dead = 1
   <progress id="nra-momentum-bar" value="0" max="100"></progress>
 </div>
 
+<span style="color: #10186e">**KMT Legitimacy**</span>
+
 <div id="legitimacy_progress">
   <progress id="nra-legitimacy-bar" value="0" max="100"></progress>
 </div>
