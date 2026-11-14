@@ -13,13 +13,18 @@ for (advisor of Q.advisors) {
   Q.n_advisors = 0;
  }
 !}
-go-to: advisorcheck
+
 
 = Chiang Kai-shek Appoints his Advisors
 
 Chiang Kai-shek has dominated the Kuomintang. Assembling his allies in the NRA Officer Corps, and allied warlords, the old advisors are gone and his new ones are in.
 
 Li Zongren, He Yingqin and Tang Shengzhi are now advisors.
+
+- @next: Continue...
+
+@next
+go-to: advisorcheck
 
 @advisorcheck
 on-arrival: {!
