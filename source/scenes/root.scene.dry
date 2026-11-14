@@ -74,6 +74,7 @@ Q.party_income = 1;
 Q.total_costs = 2;
 Q.total_income = 2;
 Q.military_costs = 1;
+
 Q.education = 0;
 Q.education_bonus = 0;
 Q.centralize = 0;
@@ -81,6 +82,7 @@ Q.centralize_bonus = 0;
 Q.gambling = 1;
 Q.other_income = 1;
 Q.corruption = 1;
+
 Q.infrastructure = 0;
 Q.infrastructure_bonus = 0;
 Q.centralbank = 0;
@@ -168,7 +170,7 @@ Q.gmj_militancy = 0.5;
 Q.gmj_experience = 0;
 Q.gmj_enabled = 0;
 
-Q.gxc_strength = 70;
+Q.gxc_strength = 50;
 Q.gxc_militancy = 0.25;
 Q.gxc_experience = 0;
 
