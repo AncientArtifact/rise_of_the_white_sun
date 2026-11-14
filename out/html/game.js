@@ -227,6 +227,9 @@ window.hideMap = function() {
   window.updateMomentumBar = function() {
     document.getElementById("nra-momentum-bar").value = qualities.nra_momentum;
   }
+  window.updateLegitimacyBar = function() {
+    document.getElementById("nra-legitimacy-bar").value = qualities.nra_legitimacy;
+  }
   
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
