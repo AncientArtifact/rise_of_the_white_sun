@@ -733,3 +733,23 @@ table {
     padding: 15px;
     box-sizing: border-box;
 }
+
+#nra-momentum-bar {
+    width: 100%;
+    height: 16px;
+    appearance: none;
+    border: 1px solid #333;
+    background: #222;
+}
+
+#nra-momentum-bar::-webkit-progress-bar {
+    background: #222;
+}
+
+#nra-momentum-bar::-webkit-progress-value {
+    background: #b52b27;
+}
+
+#nra-momentum-bar::-moz-progress-bar {
+    background: #b52b27;
+}
