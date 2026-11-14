@@ -6,6 +6,7 @@ max-visits: 1
 priority: 2
 new-page: true
 face-image: img/kmt.png
+on-arrival: national_gov_name = "Guangzhou Nationalist Government"
 
 = Establishment of the Guangzhou Nationalist Government
 
