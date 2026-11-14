@@ -225,9 +225,11 @@ window.hideMap = function() {
   }
 
   window.updateMomentumBar = function() {
+    const qualities = window.dendryUI.dendryEngine.state.qualities;
     document.getElementById("nra-momentum-bar").value = qualities.nra_momentum;
   }
   window.updateLegitimacyBar = function() {
+    const qualities = window.dendryUI.dendryEngine.state.qualities;
     document.getElementById("nra-legitimacy-bar").value = qualities.nra_legitimacy;
   }
   
