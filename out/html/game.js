@@ -223,6 +223,10 @@ window.hideMap = function() {
     document.getElementById("startmenu").style.display = "none"
     document.getElementById("temp-bg").style.display = "none"
   }
+
+  window.updateMomentumBar = function() {
+    document.getElementById("nra-momentum-bar").value = qualities.nra_momentum;
+  }
   
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
