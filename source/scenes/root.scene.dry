@@ -55,6 +55,9 @@ Q.fourthtrialdone = 0;
 Q.wuhan_nanjing_split = 0;
 Q.cpc_civil_war = 0;
 Q.northern_expedition_begun = 0;
+Q.wu_defeat = 0;
+Q.sun_defeat = 0;
+Q.zhang_defeat = 0;
 Q.kmt_victory = 0;
 
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
