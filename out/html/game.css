@@ -747,9 +747,29 @@ table {
 }
 
 #nra-momentum-bar::-webkit-progress-value {
-    background: #b52b27;
+    background: #000095;
 }
 
 #nra-momentum-bar::-moz-progress-bar {
-    background: #b52b27;
+    background: #000095;
+}
+
+#nra-legitimacy-bar {
+    width: 100%;
+    height: 16px;
+    appearance: none;
+    border: 1px solid #333;
+    background: #222;
+}
+
+#nra-legitimacy-bar::-webkit-progress-bar {
+    background: #222;
+}
+
+#nra-legitimacy-bar::-webkit-progress-value {
+    background: #000095;
+}
+
+#nra-legitimacy-bar::-moz-progress-bar {
+    background: #000095;
 }
