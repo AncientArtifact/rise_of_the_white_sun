@@ -6,15 +6,26 @@ max-visits: 1
 priority: 2
 new-page: true
 on-arrival: {!
-window.clearAdvisors();
-Q.chiangkaishek_advisor = 1;
-Q.lizongren_advisor = 1;
-Q.tangshengzhi_advisor = 1;
-Q.heyingqin_advisor = 1;
+for (advisor of Q.advisors) {
+    if (Q[advisor+'_advisor'] === 1) {
+    Q[advisor+'_advisor'] = 0;
+   }
+  Q.n_advisors = 0;
+ }
 !}
+go-to: advisorcheck
 
 = Chiang Kai-shek Appoints his Advisors
 
 Chiang Kai-shek has dominated the Kuomintang. Assembling his allies in the NRA Officer Corps, and allied warlords, the old advisors are gone and his new ones are in.
 
 Li Zongren, He Yingqin and Tang Shengzhi are now advisors.
+
+@advisorcheck
+on-arrival: {!
+Q.chiangkaishek_advisor = 1;
+Q.lizongren_advisor = 1;
+Q.tangshengzhi_advisor = 1;
+Q.heyingqin_advisor = 1;
+!}
+go-to: root
