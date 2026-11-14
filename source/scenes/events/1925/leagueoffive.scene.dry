@@ -16,6 +16,8 @@ Q.jiangsu_faction = "League of Five Provinces";
 Q.fujian_faction = "League of Five Provinces";
 Q.anhui_faction = "League of Five Provinces";
 Q.zhejiang_faction = "League of Five Provinces";
+Q.nanjing_faction = "League of Five Provinces";
+Q.shanghai_faction = "League of Five Provinces";
 !}
 
 = The League of Five Provinces
