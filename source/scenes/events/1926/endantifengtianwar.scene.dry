@@ -5,7 +5,7 @@ view-if: year = 1926 and month = 4 and week = 1
 max-visits: 1
 priority: 2
 new-page: true
-on-arrival: henan_governor = "Liu Zhenhua"; henan_faction = "Zhili"; hebei_faction = "Fengtian"; hebei_governor = "Zhang Zongchang"; beiyang_leader = "Zhang Zuolin"; deputy_beiyang_leader = "N/A"; beiyang_leader_party = "Fengtian"; deputy_beiyang_leader_party = "N/A"; zhejiang_governor = "Sun Chuanfang"; zhejiang_faction = "Zhili"; anhui_governor = "Sun Chuanfang"; anhui_faction = "Zhili"; beijing_governor = "Zhang Zongchang"; beijing_faction = "Fengtian";
+on-arrival: henan_governor = "Liu Zhenhua"; henan_faction = "Zhili"; hebei_faction = "Fengtian"; hebei_governor = "Zhang Zongchang"; beiyang_leader = "Zhang Zuolin"; deputy_beiyang_leader = "N/A"; beiyang_leader_party = "Fengtian"; deputy_beiyang_leader_party = "N/A"; zhejiang_governor = "Sun Chuanfang"; anhui_governor = "Sun Chuanfang"; beijing_governor = "Zhang Zongchang"; beijing_faction = "Fengtian";
 
 = Conclusion of the Anti-Fengtian War
 
