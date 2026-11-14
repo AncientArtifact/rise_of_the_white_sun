@@ -309,6 +309,7 @@ Q.beiyang_leader_party = 'Zhili';
 Q.deputy_beiyang_leader = "Gao Lingwei";
 Q.deputy_beiyang_leader_party = 'Zhili';
 Q.national_gov_leader = "Sun Yat-sen";
+Q.national_gov_name = "Army and Navy Marshal Stronghold"
 Q.kmt_in_government = 0;
 Q.zhi_in_government = 1;
 Q.feng_in_government = 1;
