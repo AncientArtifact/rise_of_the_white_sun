@@ -339,6 +339,8 @@ window.hideMap = function() {
     }
 
      window.updateSidebar();
+     window.updateMomentumBar();
+     window.updateLegitimacyBar();
   };
   
   /*
