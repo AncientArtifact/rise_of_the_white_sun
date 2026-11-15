@@ -84,7 +84,7 @@ view-if: sunyatsen_dead = 1
 = **The Northern Expedition**
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 30px;">
- <img src="img/kmt.png" style="width: 50px;"><img src="img/beiyang.png" style="width: 55px;">
+ <img src="img/kmt.png" style="width: 50px;"><img src="img/beiyang.png" style="width: 60px;">
 </div>
 
 <span style="color: #aba133">**Wu Peifu**</span>: [? if wu_defeat = 0 : <span style="color: #d42f2f;">**ACTIVE**</span> ?][? if wu_defeat = 1 : <span style="color: #66BB6A;">**DEFEATED**</span> ?]
