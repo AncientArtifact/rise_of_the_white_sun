@@ -54,9 +54,11 @@ if (Q.nra_power > Q.bei_power) {
     Q.nra_winhengyang = 1;
     Q.nra_momentum += 5;
     Q.nra_legitimacy += 5;
+    Q.hengyang_done = 1;
 } else {
     Q.bei_experience += 0.1;
     Q.nra_losehengyang = 1;
+    Q.hengyang_done = 1;
 }
 !}
 go-to: hengyangbattlescreen
