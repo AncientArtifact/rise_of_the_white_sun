@@ -6,12 +6,7 @@ max-visits: 1
 priority: 2
 new-page: true
 on-arrival: {!
-for (advisor of Q.advisors) {
-    if (Q[advisor+'_advisor'] === 1) {
-    Q[advisor+'_advisor'] = 0;
-   }
-  Q.n_advisors = 0;
- }
+window.clearAdvisors();
 !}
 
 
@@ -32,5 +27,6 @@ Q.chiangkaishek_advisor = 1;
 Q.lizongren_advisor = 1;
 Q.tangshengzhi_advisor = 1;
 Q.heyingqin_advisor = 1;
+Q.n_advisors = 4;
 !}
 go-to: root
