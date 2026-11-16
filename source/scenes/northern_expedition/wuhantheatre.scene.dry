@@ -2,7 +2,9 @@ title: Wuhan Theatre
 new-page: true
 is-card: true
 card-image: img/portraits/WuPeifu.jpg
-view-if: nra_winhengyang = 1 or nra_losehengyang = 1 and wuhan_timer = 0
+view-if: {!
+Q.hengyang_done === 1 && Q.wuhan_timer === 0
+!}
 tags: northern_expedition
 on-arrival: {!
 Q.week_actions += 1;
@@ -11,8 +13,22 @@ Q.bei_casualties = 0;
 Q.nra_casualties = 0;
 Q.nra_winchangsha = 0;
 Q.nra_losechangsha = 0;
+Q.nra_winyuezhou = 0;
+Q.nra_loseyuezhou = 0;
 Q.nra_winwuchang = 0;
 Q.nra_losewuchang = 0;
 !}
 
 = Wuhan Theatre
+
+<img src="img/portraits/WuPeifu.jpg" width="150px" display="flex" justify_content="center">
+
+<span style="color: #aba133">**Wu Peifu's Army**</span>: [+ bei_strength +] thousand
+
+Hengyang: [? if nra_winhengyang = 0 : <span style="color: #d42f2f;">UNCONQUERED</span> ?][? if nra_winhengyang = 1 : <span style="color: #66BB6A;">CAPTURED</span> ?]
+
+Changsha: [? if nra_winchangsha = 0 : <span style="color: #d42f2f;">UNCONQUERED</span> ?][? if nra_winchangsha = 1 : <span style="color: #66BB6A;">CAPTURED</span> ?]
+
+Yuezhou: [? if nra_winyuezhou = 0 : <span style="color: #d42f2f;">UNCONQUERED</span> ?][? if nra_winyuezhou = 1 : <span style="color: #66BB6A;">CAPTURED</span> ?]
+
+**Wuchang**: [? if nra_winwuchang = 0 : <span style="color: #d42f2f;">UNCONQUERED</span> ?][? if nra_winwuchang = 1 : <span style="color: #66BB6A;">CAPTURED</span> ?]
