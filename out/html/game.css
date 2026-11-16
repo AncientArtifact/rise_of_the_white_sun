@@ -818,7 +818,7 @@ table {
 /* ---- Title ---- */
 #stats_sidebar_right h1,
 #stats_sidebar_right strong:first-child {
-  font-family: 'Limelight', 'Poiret One', cursive;
+  font-family: 'Limelight', cursive;
   font-weight: 400;
   font-size: 1.5em;
   text-align: center;
