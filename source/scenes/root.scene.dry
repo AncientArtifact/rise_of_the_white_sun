@@ -615,12 +615,12 @@ Q.lizongren_advisor = 0;
 Q.tangshengzhi_advisor = 0;
 
 window.clearAdvisors = function() {
-  for (advisor of Q.advisors) {
+  for (let advisor of Q.advisors) {
     if (Q[advisor+'_advisor'] === 1) {
     Q[advisor+'_advisor'] = 0;
    }
-  Q.n_advisors = 0;
  }
+  Q.n_advisors = 0;
 }
 
 updateMap();
