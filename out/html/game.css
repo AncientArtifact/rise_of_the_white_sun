@@ -789,7 +789,7 @@ table {
 }
 
 /* ---- Panel (swap this selector for your sidebar's actual id/class) ---- */
-#sidebar, .sidebar, .left_sidebar {
+#stats_sidebar_right {
   position: relative;
   background:
     radial-gradient(ellipse at 50% -10%, rgba(201,168,76,.18), transparent 60%),
@@ -863,7 +863,7 @@ table {
 
 /* ---- Labels ---- */
 .label {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Cinzel', cursive;
   font-weight: 400;
   font-size: 1.15em;
   letter-spacing: .18em;
