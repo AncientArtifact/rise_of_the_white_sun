@@ -25,7 +25,7 @@ He is already unreliable in our eyes, and we see fit for us to break ties with h
 @pay
 choose-if: funds >= 6
 unavailable-subtitle: Not enough funds.
-on-arrival: funds -= 6; nra_strength += 20; nra_militancy -= 0.05;
+on-arrival: funds -= 6; nra_strength += 20; nra_militancy -= 0.05; nra_winyang = 1;
 
 We have reluctantly payed Yang Ximin for his armies to join ours.
 
