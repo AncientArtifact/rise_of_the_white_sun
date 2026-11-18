@@ -15,11 +15,9 @@ The <span style="color: #9e1515">United</span> <span style="color: #10186e">Fron
 [? if kmt_leader = "Hu Hanmin" : <img src ="img/portraits/HuHanmin.jpg" width="150px" height="205px" class="kmtleader_portrait"> ?]
 [? if kmt_leader = "Chiang Kai-shek" : <img src ="img/chiangkaishek4.jpg" width="150px" height="205px" class="kmtleader_portrait"> ?]
 
-<span style="color: 
-#10186e">**KMT**</span> Leader: [+ kmt_leader +]
+<span style="color: #10186e">**KMT**</span> Leader: [+ kmt_leader +]
 
-<span style="color: 
-#10186e">**KMT**</span> Status: [+ national_gov_name +]
+<span style="color: #10186e">**KMT**</span> Status: [+ national_gov_name +]
 
 Place Holder
 Place Holder
