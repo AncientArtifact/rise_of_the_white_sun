@@ -2,9 +2,7 @@ title: Wuhan Theatre
 new-page: true
 is-card: true
 card-image: img/portraits/WuPeifu.jpg
-view-if: {!
-Q.hengyang_done === 1 && Q.wuhan_timer === 0
-!}
+view-if: hengyang_done = 1 and Q.wuhan_timer = 0
 tags: northern_expedition
 on-arrival: {!
 Q.week_actions += 1;
