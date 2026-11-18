@@ -18,6 +18,7 @@ max-cards: 5
 - @party
 - @govt
 - @warlord
+- @north
 - #advisor
 - @shuffle_leadership_pinned
 
