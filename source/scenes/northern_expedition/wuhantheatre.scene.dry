@@ -22,9 +22,7 @@ Q.nra_losewuchang = 0;
 = Wuhan Theatre
 
 <div style="display: flex; justify-content: center;">
-    <img src="img/beiyang.png" width="50px" height="50px">
     <img src="img/portraits/WuPeifu.jpg" class="kmtleader_portrait">
-    <img src="img/beiyang.png" width="50px" height="50px">
 </div>
 
 <span style="text-align: center">*The Jade Marshal*</span>
@@ -42,8 +40,6 @@ Yuezhou: [? if nra_winyuezhou = 0 : <span style="color: #d42f2f;">UNCONQUERED</s
 Wu Peifu, the Zhili warlord, protege of Cao Kun, sits at his throne in Wuchang. 
 If we topple him there, we can seize the provinces of Hunan and Hubei and unify the municipalities of Hankou, Wuchang and Hanyang into the city of Wuhan.
 Such a metropolis would be powerful to take hold of, and would be a major jumping-off point for campaigns into Nanjing, Beijing and Sichuan due to it's central position.
-
-Wu's Zhili armies await, along with his ally Zhao Hengti in Hunan.
 
 - @hengyang: March north into Hengyang.
 - @changsha: March north into Changsha.
