@@ -83,7 +83,7 @@ view-if: sunyatsen_dead = 1
 = **The Northern Expedition**
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 30px;">
- <img src="img/kmt.png" style="width: 50px;"><img src="img/beiyang.png" style="width: 60px;">
+ <img src="img/kmt.png" style="width: 70px;"><img src="img/beiyang.png" style="width: 85px;">
 </div>
 
 <span style="text-align: center; color: #d42f2f;">*The Sun and the Star collide.*</span>
