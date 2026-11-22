@@ -47,7 +47,7 @@ The KMT can fund educational and cultural programs to let our members and suppor
 choose-if: funds > 0
 unavailable-subtitle: Not enough funds.
 subtitle: -1 funds
-on-arrival: funds -= 1; nra_strength  += 10; nra_militancy += 0.01; nra_timer = 0; funded_nra += 1
+on-arrival: funds -= 1; nra_strength += quarterly_troops; nra_militancy += 0.01; nra_timer = 0; funded_nra += 1
 
 We have increased recruiting to the NRA.
 
