@@ -95,13 +95,11 @@ view-if: sunyatsen_dead = 1
 <span style="color: #d1b24b">Zhang Zuolin</span>: [? if zhang_defeat = 0 : <span style="color: #d42f2f;">**UNDEFEATED**</span> ?][? if zhang_defeat = 1 : <span style="color: #66BB6A;">**DEFEATED**</span> ?]
 
 <span style="color: #10186e">KMT Momentum</span>
-
 <div id="momentum_progress">
   <progress id="nra-momentum-bar" value="0" max="100"></progress>
 </div>
 
 <span style="color: #10186e">KMT Legitimacy</span>
-
 <div id="legitimacy_progress">
   <progress id="nra-legitimacy-bar" value="0" max="100"></progress>
 </div>
