@@ -19,7 +19,7 @@ Q.bei_strength = Math.round(Q.bei_strength * 10) / 10;
 Q.sun_strength = Math.round(Q.sun_strength * 10) / 10;
 Q.feng_strength = Math.round(Q.feng_strength * 10) / 10;
 Q.chen_strength = Math.round(Q.chen_strength * 10) / 10;
-Q.deng_strength = Math.round(Q.deng_strength * 10) / 10);
+Q.deng_strength = Math.round(Q.deng_strength * 10) / 10;
 Q.yang_strength = Math.round(Q.yang_strength * 10) / 10;
 
 Q.pro_republic = Math.round(Q.pro_republic);
