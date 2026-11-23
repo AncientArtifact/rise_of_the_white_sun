@@ -269,6 +269,7 @@ window.updateLegitimacyBar = function() {
         var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
         $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
         dendryUI.dendryEngine._runActions(scene.onDisplay);
+        window.updateTabs();
     };
 
     window.updateSidebarRight = function () {
@@ -280,6 +281,7 @@ window.updateLegitimacyBar = function() {
         var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
         $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
         dendryUI.dendryEngine._runActions(scene.onDisplay);
+        window.updateTabs();
         window.updateMomentumBar();
         window.updateLegitimacyBar();
     };
