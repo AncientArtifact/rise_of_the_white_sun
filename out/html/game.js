@@ -224,14 +224,19 @@ window.hideMap = function() {
     document.getElementById("temp-bg").style.display = "none"
   }
 
-  window.updateMomentumBar = function() {
-    const qualities = window.dendryUI.dendryEngine.state.qualities;
-    document.getElementById("nra-momentum-bar").value = qualities.nra_momentum;
+ window.updateMomentumBar = function() {
+  const bar = document.getElementById("nra-momentum-bar");
+  if (bar) {
+    bar.value = window.dendryUI.dendryEngine.state.qualities.nra_momentum;
   }
-  window.updateLegitimacyBar = function() {
-    const qualities = window.dendryUI.dendryEngine.state.qualities;
-    document.getElementById("nra-legitimacy-bar").value = qualities.nra_legitimacy;
+};
+
+window.updateLegitimacyBar = function() {
+  const bar = document.getElementById("nra-legitimacy-bar");
+  if (bar) {
+    bar.value = window.dendryUI.dendryEngine.state.qualities.nra_legitimacy;
   }
+};
   
   // This function allows you to modify the text before it's displayed.
   // E.g. wrapping chat-like messages in spans.
