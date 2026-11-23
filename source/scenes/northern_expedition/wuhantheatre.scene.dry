@@ -25,7 +25,9 @@ Q.nra_losewuchang = 0;
     <img src="img/portraits/WuPeifu.jpg" class="kmtleader_portrait">
 </div>
 
-<span style="text-align: center; color: #aba133;">*The Jade Marshal*</span>
+<div style="text-align: center;">
+    <span style="color: #aba133;">*The Jade Marshal*</span>
+</div>
 
 <span style="color: #aba133">**Wu Peifu's Army**</span>: [+ bei_strength +] thousand
 
