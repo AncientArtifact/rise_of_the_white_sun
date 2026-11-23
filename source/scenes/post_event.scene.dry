@@ -578,7 +578,6 @@ Q.zhejiang_n_order = Q.zhejiang_order
  }
 
 window.updateMap();
-window.updateTabs();
 !}
 go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0; main.main_easy if has_event = 0 and difficulty < 0
 
