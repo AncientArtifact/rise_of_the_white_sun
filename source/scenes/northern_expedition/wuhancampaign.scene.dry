@@ -1,4 +1,4 @@
-title: Wuhan Theatre
+title: Wuhan Campaign
 new-page: true
 is-card: true
 card-image: img/portraits/WuPeifu.jpg
@@ -19,7 +19,7 @@ Q.nra_winwuchang = 0;
 Q.nra_losewuchang = 0;
 !}
 
-= Wuhan Theatre
+= Wuhan Campaign
 
 <div style="display: flex; justify-content: center;">
     <img src="img/beiyang.png" width="130px" height="130px" style="margin-top: 60px;">
