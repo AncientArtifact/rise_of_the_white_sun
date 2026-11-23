@@ -280,6 +280,8 @@ window.updateLegitimacyBar = function() {
         var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
         $('#qualities_right').append(dendryUI.contentToHTML.convert(displayContent));
         dendryUI.dendryEngine._runActions(scene.onDisplay);
+        window.updateMomentumBar();
+        window.updateLegitimacyBar();
     };
     window.changeTab = function (newTab, tabId, isRight) {
         if (tabId == 'poll_tab_left' && dendryUI.dendryEngine.state.qualities.historical_mode) {
