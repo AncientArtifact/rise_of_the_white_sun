@@ -22,9 +22,9 @@ Q.nra_losewuchang = 0;
 = Wuhan Theatre
 
 <div style="display: flex; justify-content: center;">
-    <img src="img/fivecolorflag.png" width="140px" height="85px">
+    <img src="img/beiyang.png" width="130px" height="130px" style="margin-top: 60px;">
     <img src="img/portraits/WuPeifu.jpg" class="kmtleader_portrait">
-    <img src="img/beiyangcoa.png" width="130px" height="130px">
+    <img src="img/beiyangcoa.png" width="130px" height="130px" style="margin-top: 60px;">
 </div>
 
 <div style="text-align: center;">
